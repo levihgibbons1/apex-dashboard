@@ -59,18 +59,28 @@ function render(s) {
       </dl></div>`;
   }).join("");
 
-  const stages = s.stages || [];
-  const done = stages.filter(x => x.status === "done").length;
-  const doing = stages.filter(x => x.status === "doing").length;
-  $("stage-count").textContent = `${done} of ${stages.length} done${doing ? `, ${doing} underway` : ""}`;
-  $("bar").innerHTML = stages.map(x => `<div class="seg ${esc(x.status)}" title="${esc(x.title)}"><div class="fill"></div><div class="lbl">${esc(x.short || x.title)}</div></div>`).join("");
-  $("timeline").innerHTML = stages.map(x => `
-    <li><span class="dot ${esc(x.status)}"></span>
-      <div><div class="tl-head"><b>${esc(x.title)}</b>${pill(x.status, WORDS[x.status] || x.status)}</div>
-      <div class="tl-d">${esc(x.detail)}</div></div></li>`).join("");
-  const tg = s.target;
-  $("target").innerHTML = (tg ? `<span class="pill busy">${esc(tg.label)}: ${esc(tg.estimate)}</span>` : "") +
+  const items = s.checklist || [];
+  const score = items.reduce((n, x) => n + (x.status === "done" ? 1 : x.status === "doing" ? 0.5 : 0), 0);
+  const pct = items.length ? Math.round((score / items.length) * 100) : 0;
+  const doneN = items.filter(x => x.status === "done").length;
+  const doingN = items.filter(x => x.status === "doing").length;
+  $("stage-count").textContent = `${pct}% done` + (doingN ? ` · ${doingN} in progress` : "");
+  const tg = s.target || {};
+  $("target").innerHTML = (tg.label || tg.estimate
+    ? `<span class="pill busy">${esc(tg.label || "Tester build")}${tg.estimate ? ": " + esc(tg.estimate) : ""}</span>`
+    : "") +
     (s.scope_url ? ` <a class="inl" href="${esc(s.scope_url)}" target="_blank" rel="noopener">See the full v0.1 scope ↗</a>` : "");
+  $("pct").innerHTML = `<div class="pct-num">${pct}% <span>done</span></div><div class="pct-sub">Target ${esc(tg.estimate || "not set")}</div>`;
+  const bar = $("bar");
+  bar.innerHTML = `<i style="width:${pct}%"></i>`;
+  bar.setAttribute("aria-valuenow", String(pct));
+  bar.setAttribute("aria-label", `Tester build ${pct}% done`);
+  $("timeline").innerHTML = items.map(st => `
+    <li class="step">
+      <span class="icon ${esc(st.status)}">${st.status === "done" ? "✓" : ""}</span>
+      <div><div class="t">${esc(st.title)}</div><div class="d">${esc(st.detail)}</div></div>
+      ${pill(st.status, WORDS[st.status] || st.status)}
+    </li>`).join("") || `<li class="sub">No checklist yet.</li>`;
   $("later").innerHTML = s.later ? `<b>After that:</b> ${esc(s.later)}` : "";
 
   $("tests-note").textContent = s.tests_note || "";

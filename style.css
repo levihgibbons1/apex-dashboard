@@ -124,3 +124,11 @@ a.link:hover b{color:var(--red)}
 @media (max-width:760px){.agent dl{grid-template-columns:1fr}.agent dt{margin-top:4px}}
 
 .target{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:-4px 0 16px;font-size:13.5px}
+
+/* single tester-build progress bar */
+.pct{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;margin:0 0 10px}
+.pct-num{font-size:clamp(36px,5vw,52px);font-weight:800;letter-spacing:-.03em;line-height:1}
+.pct-num span{font-size:.45em;font-weight:700;color:var(--muted);letter-spacing:0}
+.pct-sub{font-size:15px;color:var(--muted);font-weight:600}
+.meter{height:12px;border-radius:99px;background:#2a1d1e;overflow:hidden;margin-bottom:22px}
+.meter>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red3),var(--red));border-radius:99px}

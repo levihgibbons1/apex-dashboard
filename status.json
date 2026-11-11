@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-11-11T13:49:00-08:00",
+  "last_updated": "2026-11-11T14:15:00-08:00",
   "target": {
-    "label": "Tester v0.1",
-    "estimate": "About Nov 24 to Dec 1"
+    "label": "Tester build",
+    "estimate": "Sun Nov 15"
   },
   "scope_url": "https://cursor.com/canvas/store-40ecd17f-4915-49fe-abf6-73b273cd7e0f/bc6a904b-d45a-4569-8b2e-aab5f8132013",
   "now": {
     "title": "Task 1: Natro paths and live tests",
-    "summary": "The laptop is back online and working again. It added walking back to the hive from every field (17 return paths from Natro), plus a safety rule so Apex never presses reset keys or clicks unless the Bee Swarm screen is showing.",
+    "summary": "The laptop is testing the walk-back paths in the game, and checking that a reset lands on your hive (it looks for the Make Honey prompt).",
     "worker": "apex-laptop",
     "worker_status": "busy",
     "started": "2026-11-11T10:56:00-08:00",
@@ -56,6 +56,11 @@
         "title": "Safety: only press keys when the game screen shows",
         "status": "done",
         "detail": "Added at 1:19 PM after a test started on a non-game screen and blind key presses opened a Roblox settings page."
+      },
+      {
+        "title": "Reset lands on your hive (Make Honey check)",
+        "status": "doing",
+        "detail": "Slower reset keys so the respawn menu can be answered, then confirm with the Make Honey prompt and retry once if needed. Added at 2:10 PM."
       }
     ]
   },
@@ -65,26 +70,26 @@
       "role": "Worker: tests in the live game",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Testing the new walk-back-to-hive paths in the live game.",
+      "doing": "Testing walk-back paths and the Make Honey reset check in the live game.",
       "branch": "routes/natro-port",
       "status_since": "2026-11-11T12:52:55-08:00",
-      "last_finished": "Added walking back to the hive without a camera turn or reset, like Natro.",
-      "last_finished_at": "2026-11-11T13:37:17-08:00",
+      "last_finished": "Reset is slower so the respawn menu can be answered, then confirmed with Make Honey.",
+      "last_finished_at": "2026-11-11T14:10:11-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T13:49:00-08:00"
+      "last_seen": "2026-11-11T14:15:00-08:00"
     },
     {
       "name": "BSS macro",
       "role": "Director: hands out tasks, checks results, merges once tests pass",
       "machine": "Main PC",
       "status": "online",
-      "doing": "Checking on the laptop and reviewing its work.",
+      "doing": "Making the progress page easier to read.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
       "last_finished": "Merged pull request #3 (your menu design).",
       "last_finished_at": "2026-11-11T13:10:57-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/3",
-      "last_seen": "2026-11-11T13:49:00-08:00"
+      "last_seen": "2026-11-11T14:15:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -98,44 +103,6 @@
       "last_finished_at": "",
       "last_finished_url": "",
       "last_seen": "2026-11-11T11:37:00-08:00"
-    }
-  ],
-  "stages": [
-    {
-      "title": "Foundation and gather loop",
-      "short": "Foundation",
-      "status": "done",
-      "detail": "Apex can gather one field and convert, on repeat. Merged into the main copy on Nov 11."
-    },
-    {
-      "title": "Paths: Natro routes, return paths, your own hive slot",
-      "short": "Paths",
-      "status": "doing",
-      "detail": "46 Natro routes plus 17 walk-back-to-hive routes are in pull request #2 and being tested live."
-    },
-    {
-      "title": "Gathering: proper convert, 12 patterns, 17 field settings",
-      "short": "Gathering",
-      "status": "todo",
-      "detail": "Convert at the hive with a Make Honey check, Natro's 12 gather patterns, and settings for all 17 fields."
-    },
-    {
-      "title": "Overnight reliability",
-      "short": "Reliability",
-      "status": "doing",
-      "detail": "Recovery and a watchdog so it runs all night. First code is written (auto-rejoin, reset-loop guard, stall check) but not tested live yet."
-    },
-    {
-      "title": "Extras: hotbar timers and Discord webhook",
-      "short": "Extras",
-      "status": "todo",
-      "detail": "Use hotbar items on timers, and send status updates to your Discord."
-    },
-    {
-      "title": "Tester build v0.1",
-      "short": "Tester v0.1",
-      "status": "todo",
-      "detail": "The packaged app plus short tester notes. Estimate: about Nov 24 to Dec 1."
     }
   ],
   "later": "v0.2: Polar Bear quest. After that: free Red AI, boosts, planters, Mondo and Vicious, then launch (Discord, and Reddit only in the Advertising Megathread).",
@@ -169,16 +136,20 @@
   "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
   "needs_you": [
     {
+      "title": "Check the test account's Roblox security settings",
+      "detail": "A 2-Step Verification email was sent after a glitch (Apex was pressing keys when the game wasn't on screen). That is fixed. Ignore or delete that code, and make sure the security settings look unchanged."
+    },
+    {
+      "title": "Turn off HP warranty popups on the test laptop",
+      "detail": "The HP Product Status box can cover the game and throw off a test. Turn off HP Support Assistant notifications."
+    },
+    {
       "title": "Keep the test laptop on the charger",
       "detail": "It's back online. Set Windows Power options so it never sleeps or shows battery popups while plugged in."
     },
     {
       "title": "Add an auto-rejoin toggle to the Settings tab",
-      "detail": "The new auto-rejoin setting (on by default) only lives in settings.json right now. Your UI, so your call when."
-    },
-    {
-      "title": "Re-pick the pollen bar fill colour on your PCs",
-      "detail": "On the laptop the bag colour isn't the default, so the bag percent can't be read. If the UI doesn't expose this, the laptop will make the bar find itself instead."
+      "detail": "The new auto-rejoin setting (on by default) only lives in the settings file right now. Your UI, so your call when."
     }
   ],
   "prs": [
@@ -186,8 +157,8 @@
       "number": 2,
       "title": "Built-in routes ported from Natro Macro, fastest first",
       "status": "Open, testing live",
-      "commits": 33,
-      "updated": "2026-11-11T13:37:17-08:00",
+      "commits": 35,
+      "updated": "2026-11-11T14:10:20-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
@@ -208,6 +179,16 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T14:10:11-08:00",
+      "title": "Reset: slower keys for the respawn menu, confirmed by Make Honey, one retry.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
+    {
+      "when": "2026-11-11T13:49:17-08:00",
+      "title": "After a reset, a stricter hive check and steadier zoom.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
     {
       "when": "2026-11-11T13:37:17-08:00",
       "title": "Walking home needs no camera turn or reset (as in Natro).",
@@ -257,11 +238,56 @@
       "when": "2026-11-11T11:22:46-08:00",
       "title": "Find Natro's top-bar anchor with a partial match on the light panel.",
       "url": "https://github.com/levihgibbons/apex-macro/commit/61fa1fa8c07f8911c0f8571c9af32efdacdb9582"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "paths-out",
+      "title": "Paths out to fields",
+      "status": "doing",
+      "detail": "12 of 17 fields pass 3 for 3. Still left: Stump (the Stump Snail gets in the way), Coconut, and Pepper, plus a re-check of Blue Flower and Rose."
     },
     {
-      "when": "2026-11-11T11:18:41-08:00",
-      "title": "Self-test: --fields runs many fields in a row, fastest trip first.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/71e69312acc2fd5554bf8bb9e5e1fe314d6f560d"
+      "id": "paths-back",
+      "title": "Paths back to the hive",
+      "status": "doing",
+      "detail": "All 17 were copied from Natro today and are being tested in the game now."
+    },
+    {
+      "id": "hive-convert",
+      "title": "Find your own hive slot and convert properly (Make Honey)",
+      "status": "doing",
+      "detail": "The code is written: Apex lines up on your hive and checks for the Make Honey prompt. Still being tested in the game."
+    },
+    {
+      "id": "patterns",
+      "title": "Natro's 12 gather patterns plus field defaults",
+      "status": "todo",
+      "detail": "Not started. Your menu currently has 5 patterns; Natro's 12 will be added after the paths."
+    },
+    {
+      "id": "speed-buffs",
+      "title": "Speed and jump buffs (Haste, Bear Morph, and others)",
+      "status": "doing",
+      "detail": "Can already read Haste in the game. Still working out jump effects and testing paths with buffs on."
+    },
+    {
+      "id": "recovery",
+      "title": "Auto-rejoin and recovery (deaths, disconnects, freezes)",
+      "status": "doing",
+      "detail": "The code is written, plus a safety fix so Apex presses nothing unless Bee Swarm is on screen. Not yet tested overnight."
+    },
+    {
+      "id": "hook-ui",
+      "title": "Hook your menu to the macro",
+      "status": "todo",
+      "detail": "Not started. Your menu is in the project, but the Start button is not connected to the macro yet."
+    },
+    {
+      "id": "overnight-test",
+      "title": "8-hour overnight test",
+      "status": "todo",
+      "detail": "Not started."
     }
   ]
 }

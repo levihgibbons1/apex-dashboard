@@ -68,6 +68,9 @@ function render(s) {
     <li><span class="dot ${esc(x.status)}"></span>
       <div><div class="tl-head"><b>${esc(x.title)}</b>${pill(x.status, WORDS[x.status] || x.status)}</div>
       <div class="tl-d">${esc(x.detail)}</div></div></li>`).join("");
+  const tg = s.target;
+  $("target").innerHTML = (tg ? `<span class="pill busy">${esc(tg.label)}: ${esc(tg.estimate)}</span>` : "") +
+    (s.scope_url ? ` <a class="inl" href="${esc(s.scope_url)}" target="_blank" rel="noopener">See the full v0.1 scope ↗</a>` : "");
   $("later").innerHTML = s.later ? `<b>After that:</b> ${esc(s.later)}` : "";
 
   $("tests-note").textContent = s.tests_note || "";

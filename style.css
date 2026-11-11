@@ -122,3 +122,5 @@ a.link:hover b{color:var(--red)}
 .inl:hover{color:var(--red)}
 .dimtxt{color:var(--dim)}
 @media (max-width:760px){.agent dl{grid-template-columns:1fr}.agent dt{margin-top:4px}}
+
+.target{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin:-4px 0 16px;font-size:13.5px}

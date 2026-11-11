@@ -1,8 +1,13 @@
 {
-  "last_updated": "2026-11-11T11:26:00-08:00",
+  "last_updated": "2026-11-11T11:38:00-08:00",
+  "target": {
+    "label": "Tester v0.1",
+    "estimate": "About Nov 24 to Dec 1"
+  },
+  "scope_url": "https://cursor.com/canvas/store-40ecd17f-4915-49fe-abf6-73b273cd7e0f/bc6a904b-d45a-4569-8b2e-aab5f8132013",
   "now": {
     "title": "Task 1: Natro paths and live tests",
-    "summary": "Testing the Natro routes in the live game on your alt, PenampungPett (movespeed 29). Right now the laptop is checking speed buffs.",
+    "summary": "Testing the Natro routes in the live game on your alt, PenampungPett (movespeed 29). The laptop also wrote the first reliability code (auto-rejoin and reset-loop guard), which still needs a live test.",
     "worker": "apex-laptop",
     "worker_status": "busy",
     "started": "2026-11-11T10:56:00-08:00",
@@ -10,47 +15,37 @@
       {
         "title": "Laptop set up and running Opus at medium effort",
         "status": "done",
-        "detail": "Confirmed by you today. The laptop is online and taking tasks."
+        "detail": "Confirmed by you today."
       },
       {
-        "title": "Set up the shared task files",
+        "title": "Shared task files, and path timing that follows your movespeed",
         "status": "done",
-        "detail": "Saved at 11:03 AM today."
-      },
-      {
-        "title": "Make path timing follow your movespeed",
-        "status": "done",
-        "detail": "Patterns and recorded routes now scale with your speed (reference 28)."
+        "detail": "Done at 11:03 AM."
       },
       {
         "title": "Fix where Apex reads the pollen counter",
         "status": "done",
-        "detail": "The pollen panel sat 20 px lower on the laptop, so the gather check never saw it change. Fixed at 11:10 AM."
+        "detail": "The panel sat 20 px lower on the laptop, so Pine Tree looked like 0 out of 5 even though every trip landed. Fixed at 11:10 AM."
       },
       {
-        "title": "Let the self-test run many fields in a row",
+        "title": "Fix how Apex finds Natro's top bar (for speed buffs)",
         "status": "done",
-        "detail": "Added at 11:18 AM. Fastest trip runs first."
-      },
-      {
-        "title": "Fix how Apex finds Natro's top bar on screen",
-        "status": "done",
-        "detail": "Fixed at 11:22 AM with a looser match on the light panel."
+        "detail": "Found on 116 out of 116 saved screenshots. Fixed at 11:22 AM. Haste icons are still untested live."
       },
       {
         "title": "Test hive to the red cannon",
         "status": "doing",
-        "detail": "Today: hive 3, 3 out of 3. Earlier: all 6 hives, 21 out of 21."
+        "detail": "Hive 3: 5/5, hive 4: 4/4, hive 5: 2/2, hive 6: 2/2. Hives 1 and 2 were taken on all 9 servers, so they're not tested yet."
       },
       {
         "title": "Test full trips to Pine Tree",
-        "status": "todo",
-        "detail": "Earlier: 5 out of 5, about 51 to 56 seconds each. Not re-tested today yet."
+        "status": "done",
+        "detail": "5 out of 5 today (hive 3): cannon, glide, sprinkler and gather check."
       },
       {
         "title": "Test the other fields",
-        "status": "todo",
-        "detail": "No results yet."
+        "status": "doing",
+        "detail": "Running now. No results recorded yet."
       }
     ]
   },
@@ -60,26 +55,26 @@
       "role": "Worker: tests in the live game",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Checking speed buffs while it tests the Natro routes on PenampungPett (Task 1).",
+      "doing": "Testing the Natro routes on other fields in the live game, checking screenshots from each run (Task 1).",
       "branch": "routes/natro-port",
       "status_since": "2026-11-11T10:56:52-08:00",
-      "last_finished": "Fixed how Apex finds Natro's top bar on screen.",
-      "last_finished_at": "2026-11-11T11:22:46-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/commit/61fa1fa8c07f8911c0f8571c9af32efdacdb9582",
-      "last_seen": "2026-11-11T11:24:00-08:00"
+      "last_finished": "Wrote the first reliability code: auto-rejoin, disconnect check, reset-loop guard, stall check.",
+      "last_finished_at": "2026-11-11T11:34:59-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/commit/997722fa012a631b044fc2d6ac2ff99b113d1ce6",
+      "last_seen": "2026-11-11T11:37:00-08:00"
     },
     {
       "name": "BSS macro",
       "role": "Director: hands out tasks, checks results, merges once tests pass",
       "machine": "Main PC",
       "status": "online",
-      "doing": "Watching apex-laptop and keeping this dashboard up to date. Checks in every hour.",
+      "doing": "Reviewing and merging pull requests once tests pass, watching apex-laptop, and keeping this dashboard updated.",
       "branch": "",
-      "status_since": "2026-11-11T11:24:22-08:00",
-      "last_finished": "Sent Task 1 (Natro paths and live tests) to apex-laptop.",
-      "last_finished_at": "2026-11-11T10:56:52-08:00",
-      "last_finished_url": "",
-      "last_seen": "2026-11-11T11:24:22-08:00"
+      "status_since": "2026-11-11T11:37:08-08:00",
+      "last_finished": "Reviewed and merged pull request #1 into the main copy.",
+      "last_finished_at": "2026-11-11T11:37:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/1",
+      "last_seen": "2026-11-11T11:37:08-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -92,7 +87,7 @@
       "last_finished": "Set up the laptop as a worker.",
       "last_finished_at": "",
       "last_finished_url": "",
-      "last_seen": "2026-11-11T11:24:00-08:00"
+      "last_seen": "2026-11-11T11:37:00-08:00"
     }
   ],
   "stages": [
@@ -100,77 +95,107 @@
       "title": "Foundation and gather loop",
       "short": "Foundation",
       "status": "done",
-      "detail": "Apex can gather one field and convert, on repeat. In pull request #1. I'll merge it once tests pass."
+      "detail": "Apex can gather one field and convert, on repeat. Merged into the main copy on Nov 11."
     },
     {
-      "title": "Natro paths and self-tests",
-      "short": "Natro paths",
+      "title": "Paths: Natro routes, return paths, your own hive slot",
+      "short": "Paths",
       "status": "doing",
-      "detail": "46 built-in routes are in pull request #2. Task 1 is testing them in the live game."
+      "detail": "46 Natro routes are in pull request #2 and being tested live. Return paths from each field to your own hive slot come next."
     },
     {
-      "title": "Reliability",
+      "title": "Gathering: proper convert, 12 patterns, 17 field settings",
+      "short": "Gathering",
+      "status": "todo",
+      "detail": "Convert at the hive with a Make Honey check, Natro's 12 gather patterns, and settings for all 17 fields."
+    },
+    {
+      "title": "Overnight reliability",
       "short": "Reliability",
-      "status": "todo",
-      "detail": "Recover when stuck or dead, rejoin after a disconnect, and stop reset loops."
+      "status": "doing",
+      "detail": "Recovery and a watchdog so it runs all night. First code is written (auto-rejoin, reset-loop guard, stall check) but not tested live yet."
     },
     {
-      "title": "Polar Bear quest",
-      "short": "Polar Bear",
+      "title": "Extras: hotbar timers and Discord webhook",
+      "short": "Extras",
       "status": "todo",
-      "detail": "Accept, finish, and turn in Polar Bear quests."
+      "detail": "Use hotbar items on timers, and send status updates to your Discord."
     },
     {
       "title": "Tester build v0.1",
       "short": "Tester v0.1",
       "status": "todo",
-      "detail": "The first build we hand to testers: a packaged app and short tester notes."
+      "detail": "The packaged app plus short tester notes. Estimate: about Nov 24 to Dec 1."
     }
   ],
-  "later": "Free Red AI, boosts, planters, Mondo and Vicious, then launch (Discord, and Reddit only in the Advertising Megathread).",
+  "later": "v0.2: Polar Bear quest. After that: free Red AI, boosts, planters, Mondo and Vicious, then launch (Discord, and Reddit only in the Advertising Megathread).",
   "tests": [
     {
       "name": "Red cannon",
       "status": "doing",
-      "result": "Earlier: 21 out of 21, all 6 hives, first try. Today: hive 3, 3 out of 3."
+      "result": "Hive 3: 5/5, hive 4: 4/4, hive 5: 2/2, hive 6: 2/2 today. Hives 1 and 2 not tested yet (always taken)."
     },
     {
       "name": "Pine Tree",
       "status": "done",
-      "result": "Earlier: 5 out of 5 full trips, about 51 to 56 seconds each. Not re-tested today."
+      "result": "5 out of 5 full trips today (hive 3)."
+    },
+    {
+      "name": "Reliability",
+      "status": "todo",
+      "result": "Code and unit tests done. Not tested in the live game yet."
     },
     {
       "name": "Other fields",
-      "status": "todo",
-      "result": "No live results yet."
+      "status": "doing",
+      "result": "Testing now. No results yet."
     }
   ],
   "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
   "needs_you": [
     {
-      "title": "Check the pollen counter on your main PC",
-      "detail": "Apex needs to read the pollen number in the right spot. The laptop fixed this for its own screen today, so a quick look on your main PC is still worth it."
+      "title": "Add an auto-rejoin toggle to the Settings tab",
+      "detail": "The new auto-rejoin setting (on by default) only lives in settings.json right now. Your UI, so your call when."
+    },
+    {
+      "title": "Re-pick the pollen bar fill colour on your PCs",
+      "detail": "On the laptop the bag colour isn't the default, so the bag percent can't be read. If the UI doesn't expose this, the laptop will make the bar find itself instead."
     }
   ],
   "prs": [
     {
       "number": 2,
       "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, testing",
-      "commits": 25,
-      "updated": "2026-11-11T11:22:53-08:00",
+      "status": "Open, still being tested",
+      "commits": 27,
+      "updated": "2026-11-11T11:37:01-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
       "number": 1,
       "title": "Apex foundation and the one-field gather loop",
-      "status": "Open, waiting on tests",
+      "status": "Merged",
       "commits": 3,
-      "updated": "2026-11-07T16:16:00-08:00",
+      "updated": "2026-11-11T11:37:00-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/1"
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T11:37:00-08:00",
+      "title": "Merged PR #1: Apex foundation and the one-field gather loop.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/74e69371e141752513044ef9232ee8875ffdeed7"
+    },
+    {
+      "when": "2026-11-11T11:36:17-08:00",
+      "title": "Progress notes for 2026-11-11.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/8bd529959d9e322febde821ad40e4398cdbc210a"
+    },
+    {
+      "when": "2026-11-11T11:34:59-08:00",
+      "title": "Reliability: auto-rejoin, disconnect check, reset-loop guard, gather stall.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/997722fa012a631b044fc2d6ac2ff99b113d1ce6"
+    },
     {
       "when": "2026-11-11T11:22:46-08:00",
       "title": "Find Natro's top-bar anchor with a partial match on the light panel.",
@@ -180,16 +205,6 @@
       "when": "2026-11-11T11:18:41-08:00",
       "title": "Self-test: --fields runs many fields in a row, fastest trip first.",
       "url": "https://github.com/levihgibbons/apex-macro/commit/71e69312acc2fd5554bf8bb9e5e1fe314d6f560d"
-    },
-    {
-      "when": "2026-11-11T11:10:39-08:00",
-      "title": "Find the pollen counter on screen; test any field's fastest route.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/da0d40fe862302d89d6aa2025811e1bf23e9be1a"
-    },
-    {
-      "when": "2026-11-11T11:03:42-08:00",
-      "title": "Scale patterns and recorded routes with movespeed; add task and progress files.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/1826365f37976184d651edf756d3d762bb5f272e"
     }
   ]
 }

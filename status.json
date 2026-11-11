@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T11:38:00-08:00",
+  "last_updated": "2026-11-11T12:52:00-08:00",
   "target": {
     "label": "Tester v0.1",
     "estimate": "About Nov 24 to Dec 1"
@@ -7,9 +7,9 @@
   "scope_url": "https://cursor.com/canvas/store-40ecd17f-4915-49fe-abf6-73b273cd7e0f/bc6a904b-d45a-4569-8b2e-aab5f8132013",
   "now": {
     "title": "Task 1: Natro paths and live tests",
-    "summary": "Testing the Natro routes in the live game on your alt, PenampungPett (movespeed 29). The laptop also wrote the first reliability code (auto-rejoin and reset-loop guard), which still needs a live test.",
+    "summary": "The laptop ran the all-fields test (42 out of 51 trips landed), then went offline around 12:30 PM. Its battery was at 4% and a Windows low-battery box stopped the test. It needs to be plugged in.",
     "worker": "apex-laptop",
-    "worker_status": "busy",
+    "worker_status": "offline",
     "started": "2026-11-11T10:56:00-08:00",
     "steps": [
       {
@@ -45,7 +45,7 @@
       {
         "title": "Test the other fields",
         "status": "doing",
-        "detail": "Running now. No results recorded yet."
+        "detail": "42 out of 51 trips landed (hive 4). 13 fields are 3/3 or 2/3. Stump 1/3 (Stump Snail blocks the gather check), Coconut 1/3 and Pepper 0/3 were cut short by the battery popup."
       }
     ]
   },
@@ -54,36 +54,36 @@
       "name": "apex-laptop",
       "role": "Worker: tests in the live game",
       "machine": "Laptop",
-      "status": "busy",
-      "doing": "Testing the Natro routes on other fields in the live game, checking screenshots from each run (Task 1).",
+      "status": "offline",
+      "doing": "Offline since about 12:30 PM. The laptop battery was at 4%, so it likely shut down. Plug it in to continue.",
       "branch": "routes/natro-port",
-      "status_since": "2026-11-11T10:56:52-08:00",
-      "last_finished": "Wrote the first reliability code: auto-rejoin, disconnect check, reset-loop guard, stall check.",
-      "last_finished_at": "2026-11-11T11:34:59-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/commit/997722fa012a631b044fc2d6ac2ff99b113d1ce6",
-      "last_seen": "2026-11-11T11:37:00-08:00"
+      "status_since": "2026-11-11T12:30:00-08:00",
+      "last_finished": "Ran the all-fields self-test and wrote up the results.",
+      "last_finished_at": "2026-11-11T12:26:39-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
+      "last_seen": "2026-11-11T12:26:39-08:00"
     },
     {
       "name": "BSS macro",
       "role": "Director: hands out tasks, checks results, merges once tests pass",
       "machine": "Main PC",
       "status": "online",
-      "doing": "Reviewing and merging pull requests once tests pass, watching apex-laptop, and keeping this dashboard updated.",
+      "doing": "Watching for the laptop to come back online, then sending it the next tasks.",
       "branch": "",
-      "status_since": "2026-11-11T11:37:08-08:00",
+      "status_since": "2026-11-11T12:52:00-08:00",
       "last_finished": "Reviewed and merged pull request #1 into the main copy.",
       "last_finished_at": "2026-11-11T11:37:00-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/1",
-      "last_seen": "2026-11-11T11:37:08-08:00"
+      "last_seen": "2026-11-11T12:52:00-08:00"
     },
     {
       "name": "Laptop setup chat",
       "role": "Helper: set up the laptop",
       "machine": "Laptop",
-      "status": "online",
-      "doing": "Nothing right now. Its job, setting up the laptop, is done.",
+      "status": "offline",
+      "doing": "Laptop is offline (battery).",
       "branch": "",
-      "status_since": "2026-11-11T10:43:35-08:00",
+      "status_since": "2026-11-11T12:30:00-08:00",
       "last_finished": "Set up the laptop as a worker.",
       "last_finished_at": "",
       "last_finished_url": "",
@@ -131,6 +131,11 @@
   "later": "v0.2: Polar Bear quest. After that: free Red AI, boosts, planters, Mondo and Vicious, then launch (Discord, and Reddit only in the Advertising Megathread).",
   "tests": [
     {
+      "name": "Haste buff",
+      "status": "done",
+      "result": "Read correctly in the live game (speed 31.9) during a cannon walk."
+    },
+    {
       "name": "Red cannon",
       "status": "doing",
       "result": "Hive 3: 5/5, hive 4: 4/4, hive 5: 2/2, hive 6: 2/2 today. Hives 1 and 2 not tested yet (always taken)."
@@ -148,11 +153,15 @@
     {
       "name": "Other fields",
       "status": "doing",
-      "result": "Testing now. No results yet."
+      "result": "42/51 trips (hive 4). Mountain Top, Spider, Strawberry, Sunflower, Cactus, Bamboo, Dandelion, Clover, Pumpkin, Mushroom, Pineapple, Pine Tree 3/3; Blue Flower and Rose 2/3; Stump 1/3; Coconut 1/3 and Pepper 0/3 cut short by the battery popup."
     }
   ],
   "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
   "needs_you": [
+    {
+      "title": "Plug in the test laptop (urgent)",
+      "detail": "It was at 4% battery at 12:25 PM and has gone offline. Keep it on the charger, and set Windows Power options so it never sleeps or shows battery popups while plugged in. Then make sure Reason and the worker are running again."
+    },
     {
       "title": "Add an auto-rejoin toggle to the Settings tab",
       "detail": "The new auto-rejoin setting (on by default) only lives in settings.json right now. Your UI, so your call when."
@@ -166,9 +175,9 @@
     {
       "number": 2,
       "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, still being tested",
+      "status": "Open, testing paused (laptop offline)",
       "commits": 27,
-      "updated": "2026-11-11T11:37:01-08:00",
+      "updated": "2026-11-11T12:26:39-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
@@ -181,6 +190,21 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T12:26:39-08:00",
+      "title": "Progress: all-fields self-test results; laptop battery needs Levi.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
+    {
+      "when": "2026-11-11T11:41:09-08:00",
+      "title": "Add a soak tool to run the real gather loop unattended (and test auto-rejoin).",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
+    {
+      "when": "2026-11-11T11:38:27-08:00",
+      "title": "Read the bag percent from the Pollen panel found on screen.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
     {
       "when": "2026-11-11T11:37:00-08:00",
       "title": "Merged PR #1: Apex foundation and the one-field gather loop.",

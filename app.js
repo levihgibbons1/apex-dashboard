@@ -43,6 +43,22 @@ function render(s) {
         ${pill(st.status, WORDS[st.status] || st.status)}
       </li>`).join("")}</ol>`;
 
+  const AG = { busy: "Busy", online: "Online, idle", offline: "Offline" };
+  $("agents").innerHTML = (s.agents || []).map(a => {
+    const fin = a.last_finished ? (a.last_finished_url
+      ? `<a class="inl" href="${esc(a.last_finished_url)}" target="_blank" rel="noopener">${esc(a.last_finished)} ↗</a>`
+      : esc(a.last_finished)) + (a.last_finished_at ? ` <span class="dimtxt">· ${esc(pt(a.last_finished_at))}</span>` : "") : "Nothing yet";
+    return `<div class="agent ${esc(a.status)}">
+      <div class="row"><div><b class="aname">${esc(a.name)}</b><div class="role">${esc(a.role)}</div></div>${pill(a.status, AG[a.status] || a.status)}</div>
+      <dl>
+        <dt>Doing right now</dt><dd class="doing-now">${esc(a.doing)}</dd>
+        <dt>Computer</dt><dd>${esc(a.machine)}</dd>
+        ${a.branch ? `<dt>Branch</dt><dd><code>${esc(a.branch)}</code></dd>` : ""}
+        <dt>Last finished</dt><dd>${fin}</dd>
+        <dt>Last seen</dt><dd>${esc(a.last_seen ? pt(a.last_seen) + " · " + ago(a.last_seen) : "Unknown")}</dd>
+      </dl></div>`;
+  }).join("");
+
   const stages = s.stages || [];
   const done = stages.filter(x => x.status === "done").length;
   const doing = stages.filter(x => x.status === "doing").length;

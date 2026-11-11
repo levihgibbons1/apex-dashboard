@@ -19,6 +19,7 @@ Every `status` is one of `done`, `doing`, or `todo`. Tests can also use `failed`
 | `now.worker_status` | `busy`, `online` (idle), or `offline`. |
 | `now.started` | When the current task started. |
 | `now.steps[]` | The checklist: `title`, `status`, `detail`. |
+| `agents[]` | One card per agent. `name`, `role` (one plain line), `machine` (`Laptop` or `Main PC`), `status` (`busy`, `online` = idle, or `offline`), `doing` (plain words: what it's doing now), `branch` (`""` if none), `status_since` (when it entered that status), `last_finished` (latest finished work in plain words), `last_finished_at`, `last_finished_url` (`""` if none), `last_seen` (when it was last seen on Reason). |
 | `stages[]` | The 5 stages to Tester v0.1: `title`, `short` (bar label), `status`, `detail`. |
 | `later` | One line about what comes after the tester build. |
 | `tests[]` | Latest test results: `name`, `status`, `result`. |

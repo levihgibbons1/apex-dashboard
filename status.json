@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T11:25:00-08:00",
+  "last_updated": "2026-11-11T11:26:00-08:00",
   "now": {
     "title": "Task 1: Natro paths and live tests",
     "summary": "Testing the Natro routes in the live game on your alt, PenampungPett (movespeed 29). Right now the laptop is checking speed buffs.",
@@ -54,6 +54,47 @@
       }
     ]
   },
+  "agents": [
+    {
+      "name": "apex-laptop",
+      "role": "Worker: tests in the live game",
+      "machine": "Laptop",
+      "status": "busy",
+      "doing": "Checking speed buffs while it tests the Natro routes on PenampungPett (Task 1).",
+      "branch": "routes/natro-port",
+      "status_since": "2026-11-11T10:56:52-08:00",
+      "last_finished": "Fixed how Apex finds Natro's top bar on screen.",
+      "last_finished_at": "2026-11-11T11:22:46-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/commit/61fa1fa8c07f8911c0f8571c9af32efdacdb9582",
+      "last_seen": "2026-11-11T11:24:00-08:00"
+    },
+    {
+      "name": "BSS macro",
+      "role": "Director: hands out tasks, checks results, merges once tests pass",
+      "machine": "Main PC",
+      "status": "online",
+      "doing": "Watching apex-laptop and keeping this dashboard up to date. Checks in every hour.",
+      "branch": "",
+      "status_since": "2026-11-11T11:24:22-08:00",
+      "last_finished": "Sent Task 1 (Natro paths and live tests) to apex-laptop.",
+      "last_finished_at": "2026-11-11T10:56:52-08:00",
+      "last_finished_url": "",
+      "last_seen": "2026-11-11T11:24:22-08:00"
+    },
+    {
+      "name": "Laptop setup chat",
+      "role": "Helper: set up the laptop",
+      "machine": "Laptop",
+      "status": "online",
+      "doing": "Nothing right now. Its job, setting up the laptop, is done.",
+      "branch": "",
+      "status_since": "2026-11-11T10:43:35-08:00",
+      "last_finished": "Set up the laptop as a worker.",
+      "last_finished_at": "",
+      "last_finished_url": "",
+      "last_seen": "2026-11-11T11:24:00-08:00"
+    }
+  ],
   "stages": [
     {
       "title": "Foundation and gather loop",

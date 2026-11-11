@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T12:52:00-08:00",
+  "last_updated": "2026-11-11T13:49:00-08:00",
   "target": {
     "label": "Tester v0.1",
     "estimate": "About Nov 24 to Dec 1"
@@ -7,9 +7,9 @@
   "scope_url": "https://cursor.com/canvas/store-40ecd17f-4915-49fe-abf6-73b273cd7e0f/bc6a904b-d45a-4569-8b2e-aab5f8132013",
   "now": {
     "title": "Task 1: Natro paths and live tests",
-    "summary": "The laptop ran the all-fields test (42 out of 51 trips landed), then went offline around 12:30 PM. Its battery was at 4% and a Windows low-battery box stopped the test. It needs to be plugged in.",
+    "summary": "The laptop is back online and working again. It added walking back to the hive from every field (17 return paths from Natro), plus a safety rule so Apex never presses reset keys or clicks unless the Bee Swarm screen is showing.",
     "worker": "apex-laptop",
-    "worker_status": "offline",
+    "worker_status": "busy",
     "started": "2026-11-11T10:56:00-08:00",
     "steps": [
       {
@@ -46,6 +46,16 @@
         "title": "Test the other fields",
         "status": "doing",
         "detail": "42 out of 51 trips landed (hive 4). 13 fields are 3/3 or 2/3. Stump 1/3 (Stump Snail blocks the gather check), Coconut 1/3 and Pepper 0/3 were cut short by the battery popup."
+      },
+      {
+        "title": "Return paths from each field back to the hive",
+        "status": "doing",
+        "detail": "17 walk-back routes from Natro added at 1:02 PM, simplified at 1:37 PM. Being tested live now."
+      },
+      {
+        "title": "Safety: only press keys when the game screen shows",
+        "status": "done",
+        "detail": "Added at 1:19 PM after a test started on a non-game screen and blind key presses opened a Roblox settings page."
       }
     ]
   },
@@ -54,36 +64,36 @@
       "name": "apex-laptop",
       "role": "Worker: tests in the live game",
       "machine": "Laptop",
-      "status": "offline",
-      "doing": "Offline since about 12:30 PM. The laptop battery was at 4%, so it likely shut down. Plug it in to continue.",
+      "status": "busy",
+      "doing": "Testing the new walk-back-to-hive paths in the live game.",
       "branch": "routes/natro-port",
-      "status_since": "2026-11-11T12:30:00-08:00",
-      "last_finished": "Ran the all-fields self-test and wrote up the results.",
-      "last_finished_at": "2026-11-11T12:26:39-08:00",
+      "status_since": "2026-11-11T12:52:55-08:00",
+      "last_finished": "Added walking back to the hive without a camera turn or reset, like Natro.",
+      "last_finished_at": "2026-11-11T13:37:17-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T12:26:39-08:00"
+      "last_seen": "2026-11-11T13:49:00-08:00"
     },
     {
       "name": "BSS macro",
       "role": "Director: hands out tasks, checks results, merges once tests pass",
       "machine": "Main PC",
       "status": "online",
-      "doing": "Watching for the laptop to come back online, then sending it the next tasks.",
+      "doing": "Checking on the laptop and reviewing its work.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Reviewed and merged pull request #1 into the main copy.",
-      "last_finished_at": "2026-11-11T11:37:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/1",
-      "last_seen": "2026-11-11T12:52:00-08:00"
+      "last_finished": "Merged pull request #3 (your menu design).",
+      "last_finished_at": "2026-11-11T13:10:57-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/3",
+      "last_seen": "2026-11-11T13:49:00-08:00"
     },
     {
       "name": "Laptop setup chat",
       "role": "Helper: set up the laptop",
       "machine": "Laptop",
-      "status": "offline",
-      "doing": "Laptop is offline (battery).",
+      "status": "idle",
+      "doing": "Standing by.",
       "branch": "",
-      "status_since": "2026-11-11T12:30:00-08:00",
+      "status_since": "2026-11-11T12:52:55-08:00",
       "last_finished": "Set up the laptop as a worker.",
       "last_finished_at": "",
       "last_finished_url": "",
@@ -101,7 +111,7 @@
       "title": "Paths: Natro routes, return paths, your own hive slot",
       "short": "Paths",
       "status": "doing",
-      "detail": "46 Natro routes are in pull request #2 and being tested live. Return paths from each field to your own hive slot come next."
+      "detail": "46 Natro routes plus 17 walk-back-to-hive routes are in pull request #2 and being tested live."
     },
     {
       "title": "Gathering: proper convert, 12 patterns, 17 field settings",
@@ -159,8 +169,8 @@
   "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
   "needs_you": [
     {
-      "title": "Plug in the test laptop (urgent)",
-      "detail": "It was at 4% battery at 12:25 PM and has gone offline. Keep it on the charger, and set Windows Power options so it never sleeps or shows battery popups while plugged in. Then make sure Reason and the worker are running again."
+      "title": "Keep the test laptop on the charger",
+      "detail": "It's back online. Set Windows Power options so it never sleeps or shows battery popups while plugged in."
     },
     {
       "title": "Add an auto-rejoin toggle to the Settings tab",
@@ -175,10 +185,18 @@
     {
       "number": 2,
       "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, testing paused (laptop offline)",
-      "commits": 27,
-      "updated": "2026-11-11T12:26:39-08:00",
+      "status": "Open, testing live",
+      "commits": 33,
+      "updated": "2026-11-11T13:37:17-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/2"
+    },
+    {
+      "number": 3,
+      "title": "Add menu UI v0.5.0 (Levi's design)",
+      "status": "Merged",
+      "commits": 2,
+      "updated": "2026-11-11T13:10:57-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/3"
     },
     {
       "number": 1,
@@ -190,6 +208,21 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T13:37:17-08:00",
+      "title": "Walking home needs no camera turn or reset (as in Natro).",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
+    {
+      "when": "2026-11-11T13:19:52-08:00",
+      "title": "Safety: never press reset keys or click unless the Bee Swarm screen shows.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
+    {
+      "when": "2026-11-11T13:02:37-08:00",
+      "title": "Walk back to the hive from every field (Natro's wf- paths).",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
     {
       "when": "2026-11-11T12:26:39-08:00",
       "title": "Progress: all-fields self-test results; laptop battery needs Levi.",

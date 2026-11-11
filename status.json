@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T14:47:00-08:00",
+  "last_updated": "2026-11-11T15:52:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -272,13 +272,13 @@
       "id": "hive-convert",
       "title": "Find your own hive slot and convert properly (Make Honey)",
       "status": "doing",
-      "detail": "The code is written: Apex lines up on your hive and checks for the Make Honey prompt. Still being tested in the game."
+      "detail": "Make Honey convert ported from Natro on the main PC (waits for the bag, resets if not at the hive). Waiting for its in-game test on the laptop."
     },
     {
       "id": "patterns",
       "title": "Natro's 12 gather patterns plus field defaults",
-      "status": "todo",
-      "detail": "Not started. Your menu currently has 5 patterns; Natro's 12 will be added after the paths."
+      "status": "doing",
+      "detail": "Main PC ported all 12 Natro patterns plus each field's default. Passed in the game on 4 fields; being reviewed now."
     },
     {
       "id": "speed-buffs",
@@ -295,8 +295,8 @@
     {
       "id": "hook-ui",
       "title": "Hook your menu to the macro",
-      "status": "todo",
-      "detail": "Not started. Your menu is in the project, but the Start button is not connected to the macro yet."
+      "status": "doing",
+      "detail": "Done on the main PC: Start, Pause and Stop in your menu now run the real macro, and the app builds. Waiting for an in-game test. Still to add: switching between several fields."
     },
     {
       "id": "overnight-test",

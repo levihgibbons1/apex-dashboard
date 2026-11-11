@@ -1,12 +1,17 @@
 {
-  "last_updated": "2026-11-11T11:20:00-08:00",
+  "last_updated": "2026-11-11T11:25:00-08:00",
   "now": {
     "title": "Task 1: Natro paths and live tests",
-    "summary": "Testing the Natro routes in the live game on your alt, PenampungPett (movespeed 29), on the laptop.",
+    "summary": "Testing the Natro routes in the live game on your alt, PenampungPett (movespeed 29). Right now the laptop is checking speed buffs.",
     "worker": "apex-laptop",
     "worker_status": "busy",
     "started": "2026-11-11T10:56:00-08:00",
     "steps": [
+      {
+        "title": "Laptop set up and running Opus at medium effort",
+        "status": "done",
+        "detail": "Confirmed by you today. The laptop is online and taking tasks."
+      },
       {
         "title": "Set up the shared task files",
         "status": "done",
@@ -21,6 +26,16 @@
         "title": "Fix where Apex reads the pollen counter",
         "status": "done",
         "detail": "The pollen panel sat 20 px lower on the laptop, so the gather check never saw it change. Fixed at 11:10 AM."
+      },
+      {
+        "title": "Let the self-test run many fields in a row",
+        "status": "done",
+        "detail": "Added at 11:18 AM. Fastest trip runs first."
+      },
+      {
+        "title": "Fix how Apex finds Natro's top bar on screen",
+        "status": "done",
+        "detail": "Fixed at 11:22 AM with a looser match on the light panel."
       },
       {
         "title": "Test hive to the red cannon",
@@ -44,7 +59,7 @@
       "title": "Foundation and gather loop",
       "short": "Foundation",
       "status": "done",
-      "detail": "Apex can gather one field and convert, on repeat. Waiting for your review in pull request #1."
+      "detail": "Apex can gather one field and convert, on repeat. In pull request #1. I'll merge it once tests pass."
     },
     {
       "title": "Natro paths and self-tests",
@@ -92,35 +107,23 @@
   "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
   "needs_you": [
     {
-      "title": "Review the two proposed changes",
-      "detail": "Look at #1 first, then #2. Nothing goes into the main copy until you approve it."
-    },
-    {
       "title": "Check the pollen counter on your main PC",
-      "detail": "Pull request #1 asked you to confirm Apex reads the pollen number in the right spot. The laptop just fixed this for its own screen, so a quick look on yours is still worth it."
-    },
-    {
-      "title": "Set Opus at medium on the laptop, if you haven't",
-      "detail": "In Claude Code, type /model, pick Opus, and set effort to medium."
-    },
-    {
-      "title": "Keep the laptop awake and in the game",
-      "detail": "Leave the Reason window open and stay in Bee Swarm on PenampungPett."
+      "detail": "Apex needs to read the pollen number in the right spot. The laptop fixed this for its own screen today, so a quick look on your main PC is still worth it."
     }
   ],
   "prs": [
     {
       "number": 2,
       "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, not merged",
-      "commits": 23,
-      "updated": "2026-11-11T11:10:00-08:00",
+      "status": "Open, testing",
+      "commits": 25,
+      "updated": "2026-11-11T11:22:53-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
       "number": 1,
       "title": "Apex foundation and the one-field gather loop",
-      "status": "Open, not merged",
+      "status": "Open, waiting on tests",
       "commits": 3,
       "updated": "2026-11-07T16:16:00-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/1"
@@ -128,24 +131,24 @@
   ],
   "commits": [
     {
-      "when": "2026-11-11T11:10:00-08:00",
+      "when": "2026-11-11T11:22:46-08:00",
+      "title": "Find Natro's top-bar anchor with a partial match on the light panel.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/61fa1fa8c07f8911c0f8571c9af32efdacdb9582"
+    },
+    {
+      "when": "2026-11-11T11:18:41-08:00",
+      "title": "Self-test: --fields runs many fields in a row, fastest trip first.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/71e69312acc2fd5554bf8bb9e5e1fe314d6f560d"
+    },
+    {
+      "when": "2026-11-11T11:10:39-08:00",
       "title": "Find the pollen counter on screen; test any field's fastest route.",
       "url": "https://github.com/levihgibbons/apex-macro/commit/da0d40fe862302d89d6aa2025811e1bf23e9be1a"
     },
     {
-      "when": "2026-11-11T11:03:00-08:00",
+      "when": "2026-11-11T11:03:42-08:00",
       "title": "Scale patterns and recorded routes with movespeed; add task and progress files.",
       "url": "https://github.com/levihgibbons/apex-macro/commit/1826365f37976184d651edf756d3d762bb5f272e"
-    },
-    {
-      "when": "2026-11-10T19:26:00-08:00",
-      "title": "Reach the red cannon first try from every hive, with an unattended test runner.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/8b2706f8d1debfbccd5f1569f6a1a1b6fac6d821"
-    },
-    {
-      "when": "2026-11-10T19:26:00-08:00",
-      "title": "Make window screenshots about 12x faster.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/3b19cfbadd7e9e9e7557d7ac6507b3697c66bbfb"
     }
   ]
 }

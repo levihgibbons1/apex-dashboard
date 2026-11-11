@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apex Macro · Progress</title>
+<meta name="description" content="What Apex Macro is working on right now and how close it is to the tester build.">
+<meta name="theme-color" content="#0b0708">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><path d='M16 2 29 28H3z' fill='%23ef4444'/></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="glow" aria-hidden="true"></div>
+<header class="top">
+  <div class="brand"><span class="logo" aria-hidden="true"></span><span>Apex Macro</span><span class="tag">Progress</span></div>
+  <div class="updated" id="updated">Loading…</div>
+</header>
+
+<main id="app">
+  <section class="hero card" id="hero"></section>
+
+  <section class="card" id="progress">
+    <div class="section-head"><h2>Road to the tester build</h2><span class="muted" id="stage-count"></span></div>
+    <div class="bar" id="bar"></div>
+    <ol class="timeline" id="timeline"></ol>
+    <p class="later" id="later"></p>
+  </section>
+
+  <div class="grid">
+    <section class="card" id="tests-card">
+      <div class="section-head"><h2>Latest test results</h2></div>
+      <p class="muted small" id="tests-note"></p>
+      <ul class="list" id="tests"></ul>
+    </section>
+    <section class="card needs" id="needs-card">
+      <div class="section-head"><h2>Needs you</h2><span class="count" id="needs-count"></span></div>
+      <ol class="list numbered" id="needs"></ol>
+    </section>
+  </div>
+
+  <div class="grid">
+    <section class="card">
+      <div class="section-head"><h2>Proposed changes</h2></div>
+      <p class="muted small">Waiting for your review. Nothing goes into the main copy until you approve it.</p>
+      <ul class="list" id="prs"></ul>
+    </section>
+    <section class="card">
+      <div class="section-head"><h2>Latest saved changes</h2></div>
+      <ul class="list" id="commits"></ul>
+    </section>
+  </div>
+</main>
+
+<footer class="foot">Apex Macro · free and open source · this page refreshes itself every minute</footer>
+<script src="app.js"></script>
+</body>
+</html>

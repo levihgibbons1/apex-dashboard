@@ -1,0 +1,151 @@
+{
+  "last_updated": "2026-11-11T11:20:00-08:00",
+  "now": {
+    "title": "Task 1: Natro paths and live tests",
+    "summary": "Testing the Natro routes in the live game on your alt, PenampungPett (movespeed 29), on the laptop.",
+    "worker": "apex-laptop",
+    "worker_status": "busy",
+    "started": "2026-11-11T10:56:00-08:00",
+    "steps": [
+      {
+        "title": "Set up the shared task files",
+        "status": "done",
+        "detail": "Saved at 11:03 AM today."
+      },
+      {
+        "title": "Make path timing follow your movespeed",
+        "status": "done",
+        "detail": "Patterns and recorded routes now scale with your speed (reference 28)."
+      },
+      {
+        "title": "Fix where Apex reads the pollen counter",
+        "status": "done",
+        "detail": "The pollen panel sat 20 px lower on the laptop, so the gather check never saw it change. Fixed at 11:10 AM."
+      },
+      {
+        "title": "Test hive to the red cannon",
+        "status": "doing",
+        "detail": "Today: hive 3, 3 out of 3. Earlier: all 6 hives, 21 out of 21."
+      },
+      {
+        "title": "Test full trips to Pine Tree",
+        "status": "todo",
+        "detail": "Earlier: 5 out of 5, about 51 to 56 seconds each. Not re-tested today yet."
+      },
+      {
+        "title": "Test the other fields",
+        "status": "todo",
+        "detail": "No results yet."
+      }
+    ]
+  },
+  "stages": [
+    {
+      "title": "Foundation and gather loop",
+      "short": "Foundation",
+      "status": "done",
+      "detail": "Apex can gather one field and convert, on repeat. Waiting for your review in pull request #1."
+    },
+    {
+      "title": "Natro paths and self-tests",
+      "short": "Natro paths",
+      "status": "doing",
+      "detail": "46 built-in routes are in pull request #2. Task 1 is testing them in the live game."
+    },
+    {
+      "title": "Reliability",
+      "short": "Reliability",
+      "status": "todo",
+      "detail": "Recover when stuck or dead, rejoin after a disconnect, and stop reset loops."
+    },
+    {
+      "title": "Polar Bear quest",
+      "short": "Polar Bear",
+      "status": "todo",
+      "detail": "Accept, finish, and turn in Polar Bear quests."
+    },
+    {
+      "title": "Tester build v0.1",
+      "short": "Tester v0.1",
+      "status": "todo",
+      "detail": "The first build we hand to testers: a packaged app and short tester notes."
+    }
+  ],
+  "later": "Free Red AI, boosts, planters, Mondo and Vicious, then launch (Discord, and Reddit only in the Advertising Megathread).",
+  "tests": [
+    {
+      "name": "Red cannon",
+      "status": "doing",
+      "result": "Earlier: 21 out of 21, all 6 hives, first try. Today: hive 3, 3 out of 3."
+    },
+    {
+      "name": "Pine Tree",
+      "status": "done",
+      "result": "Earlier: 5 out of 5 full trips, about 51 to 56 seconds each. Not re-tested today."
+    },
+    {
+      "name": "Other fields",
+      "status": "todo",
+      "result": "No live results yet."
+    }
+  ],
+  "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
+  "needs_you": [
+    {
+      "title": "Review the two proposed changes",
+      "detail": "Look at #1 first, then #2. Nothing goes into the main copy until you approve it."
+    },
+    {
+      "title": "Check the pollen counter on your main PC",
+      "detail": "Pull request #1 asked you to confirm Apex reads the pollen number in the right spot. The laptop just fixed this for its own screen, so a quick look on yours is still worth it."
+    },
+    {
+      "title": "Set Opus at medium on the laptop, if you haven't",
+      "detail": "In Claude Code, type /model, pick Opus, and set effort to medium."
+    },
+    {
+      "title": "Keep the laptop awake and in the game",
+      "detail": "Leave the Reason window open and stay in Bee Swarm on PenampungPett."
+    }
+  ],
+  "prs": [
+    {
+      "number": 2,
+      "title": "Built-in routes ported from Natro Macro, fastest first",
+      "status": "Open, not merged",
+      "commits": 23,
+      "updated": "2026-11-11T11:10:00-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
+    },
+    {
+      "number": 1,
+      "title": "Apex foundation and the one-field gather loop",
+      "status": "Open, not merged",
+      "commits": 3,
+      "updated": "2026-11-07T16:16:00-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/1"
+    }
+  ],
+  "commits": [
+    {
+      "when": "2026-11-11T11:10:00-08:00",
+      "title": "Find the pollen counter on screen; test any field's fastest route.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/da0d40fe862302d89d6aa2025811e1bf23e9be1a"
+    },
+    {
+      "when": "2026-11-11T11:03:00-08:00",
+      "title": "Scale patterns and recorded routes with movespeed; add task and progress files.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/1826365f37976184d651edf756d3d762bb5f272e"
+    },
+    {
+      "when": "2026-11-10T19:26:00-08:00",
+      "title": "Reach the red cannon first try from every hive, with an unattended test runner.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/8b2706f8d1debfbccd5f1569f6a1a1b6fac6d821"
+    },
+    {
+      "when": "2026-11-10T19:26:00-08:00",
+      "title": "Make window screenshots about 12x faster.",
+      "url": "https://github.com/levihgibbons/apex-macro/commit/3b19cfbadd7e9e9e7557d7ac6507b3697c66bbfb"
+    }
+  ]
+}

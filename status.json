@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T14:15:00-08:00",
+  "last_updated": "2026-11-11T14:47:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -60,7 +60,7 @@
       {
         "title": "Reset lands on your hive (Make Honey check)",
         "status": "doing",
-        "detail": "Slower reset keys so the respawn menu can be answered, then confirm with the Make Honey prompt and retry once if needed. Added at 2:10 PM."
+        "detail": "Slower reset keys, confirmed by the Make Honey prompt with one retry (2:10 PM). Mouse is parked first and the hive search looks both ways (2:16 PM). Still being tested."
       }
     ]
   },
@@ -73,23 +73,23 @@
       "doing": "Testing walk-back paths and the Make Honey reset check in the live game.",
       "branch": "routes/natro-port",
       "status_since": "2026-11-11T12:52:55-08:00",
-      "last_finished": "Reset is slower so the respawn menu can be answered, then confirmed with Make Honey.",
-      "last_finished_at": "2026-11-11T14:10:11-08:00",
+      "last_finished": "A trip now counts as missed only if pollen stops rising.",
+      "last_finished_at": "2026-11-11T14:29:46-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T14:15:00-08:00"
+      "last_seen": "2026-11-11T14:47:00-08:00"
     },
     {
       "name": "BSS macro",
       "role": "Director: hands out tasks, checks results, merges once tests pass",
       "machine": "Main PC",
       "status": "online",
-      "doing": "Making the progress page easier to read.",
+      "doing": "Checking on the laptop's work every hour.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
       "last_finished": "Merged pull request #3 (your menu design).",
       "last_finished_at": "2026-11-11T13:10:57-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/3",
-      "last_seen": "2026-11-11T14:15:00-08:00"
+      "last_seen": "2026-11-11T14:47:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -157,8 +157,8 @@
       "number": 2,
       "title": "Built-in routes ported from Natro Macro, fastest first",
       "status": "Open, testing live",
-      "commits": 35,
-      "updated": "2026-11-11T14:10:20-08:00",
+      "commits": 38,
+      "updated": "2026-11-11T14:29:50-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
@@ -179,6 +179,21 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T14:29:46-08:00",
+      "title": "Arrival check: a trip counts as missed only if pollen stops rising.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
+    {
+      "when": "2026-11-11T14:25:09-08:00",
+      "title": "Fix: input comes back on after a missed trip, and the cannon step trusts the cannon prompt.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
+    {
+      "when": "2026-11-11T14:16:23-08:00",
+      "title": "Park the mouse before a reset (as in Natro), and the hive search also looks right.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
     {
       "when": "2026-11-11T14:10:11-08:00",
       "title": "Reset: slower keys for the respawn menu, confirmed by Make Honey, one retry.",

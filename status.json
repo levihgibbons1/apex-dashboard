@@ -1,26 +1,26 @@
 {
-  "last_updated": "2026-11-12T04:45:00-08:00",
+  "last_updated": "2026-11-12T04:55:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
     "tester": "Tester build Sun Nov 15",
-    "summary": "All 17 path-out routes pass 3/3. The full loop (walk out, gather, walk home, convert) passes 3/3 on 14 of 17 fields, and a 1-loop regression at 1:32 AM walked home on 15 of 16 tested fields. Dandelion and Sunflower still miss some walks home: Dandelion snags on the north fence by the gumball machine, and Sunflower slips through a gap behind the hives. An investigator is comparing them side by side with Natro now. Coconut can't be tested because the Coconut Crab kills the alt."
+    "summary": "All 17 path-out routes pass 3/3. The full loop (walk out, gather, walk home, convert) now passes 3/3 on 16 of 17 fields. Dandelion and Sunflower were fixed at 4:15 AM: the misses came from our test tool gathering for only 20 seconds (one pattern cycle), not from the walk-home code, and both walked home 3/3 with 60-second gathers. Coconut can't be tested because the Coconut Crab kills the alt; the laptop will try other servers. A full 17-field regression on the newest code is next."
   },
-  "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest run 3:13 AM PT). “Full loop” means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented.",
+  "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 4:02 and 4:15 AM PT for Dandelion and Sunflower). “Full loop” means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented.",
   "routes": [
     {
       "field": "Sunflower",
       "path_out": "3/3",
-      "walk_home": "2/3",
-      "loop": "2/3",
-      "note": "Latest run (3:13 AM, with #46, #56, #59): 2/3. The miss reaches the hive row, then slips through a gap behind the hives. Being compared with Natro now."
+      "walk_home": "3/3",
+      "loop": "3/3",
+      "note": "Fixed (4:15 AM run, 60-second gathers): 3/3. Trips out after a walk home take about 12.5 s instead of 9 s; being checked."
     },
     {
       "field": "Dandelion",
       "path_out": "3/3",
-      "walk_home": "0/3",
-      "loop": "0/3",
-      "note": "Latest run (3:13 AM, with #46, #56, #59): 0/3; earlier runs 1/3 to 2/3. The walk home snags on the north fence and the gumball machine at the same spot, then goes under the wooden deck. Being compared with Natro now."
+      "walk_home": "3/3",
+      "loop": "3/3",
+      "note": "Fixed (4:02 AM run, 60-second gathers): 3/3. The fence snag came from 20-second test gathers, not the walk-home code; unmodified Natro behaved the same way."
     },
     {
       "field": "Mushroom",
@@ -132,12 +132,6 @@
   ],
   "building": [
     {
-      "pr": 59,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/59",
-      "title": "Walk home 1:1 with Natro's hive search",
-      "detail": "Draft."
-    },
-    {
       "pr": 62,
       "url": "https://github.com/levihgibbons/apex-macro/pull/62",
       "title": "Movespeed: detect Hasty Guards / Gifted Hasty from in-game speed, like Natro",
@@ -168,16 +162,10 @@
       "detail": "Draft. Warns at start if hive size was never set."
     },
     {
-      "pr": 47,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/47",
-      "title": "Convert 1:1 with Natro",
-      "detail": "Draft. Natro's honey-making timing."
-    },
-    {
       "pr": 46,
       "url": "https://github.com/levihgibbons/apex-macro/pull/46",
       "title": "Gather patterns 1:1 with Natro v1.1.2",
-      "detail": "Draft. Includes Haste handling during patterns."
+      "detail": "Draft. Passed in-game with Dandelion and Sunflower 3/3; two unit tests need fixing before merge."
     },
     {
       "pr": 44,
@@ -209,6 +197,21 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T04:52:00-08:00",
+      "title": "Walk home 1:1 with Natro's hive search (#59)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/59"
+    },
+    {
+      "when": "2026-11-12T04:52:00-08:00",
+      "title": "Convert 1:1 with Natro, passed in-game on Pine Tree, Strawberry and Clover (#47)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/47"
+    },
+    {
+      "when": "2026-11-12T04:52:00-08:00",
+      "title": "Test tool gathers 60 seconds per loop, which fixed the Dandelion and Sunflower misses (#78)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/78"
+    },
     {
       "when": "2026-11-12T04:44:00-08:00",
       "title": "Plain-English error messages, Roblox-ready check in the footer, settings backup and per-section Reset, tooltips and full keyboard use (#75, #76, #77, #79)",

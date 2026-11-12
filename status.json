@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T04:55:00-08:00",
+  "last_updated": "2026-11-12T07:30:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -197,6 +197,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T07:28:00-08:00",
+      "title": "Roblox settings check in the footer, Report-a-problem zip with build and screen details, run history tab, About shows build and Natro credit, hive-claim wording plus a missing Rejoining Reset button (#80–#84)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/82"
+    },
     {
       "when": "2026-11-12T04:52:00-08:00",
       "title": "Walk home 1:1 with Natro's hive search (#59)",

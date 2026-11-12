@@ -145,3 +145,4 @@ table.routes td.note{font-size:13px;color:var(--muted);font-weight:400}
   table.routes{font-size:13px;min-width:560px}
   table.routes th,table.routes td{padding:8px 8px}
 }
+.pill.wip{color:#b8860b;background:rgba(184,134,11,.15)}

@@ -4,7 +4,7 @@
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
     "tester": "Tester build Sun Nov 15",
-    "summary": "All 17 path-out routes pass 3/3. The full loop (walk out, gather, walk home, convert) now passes 3/3 on 16 of 17 fields. Dandelion and Sunflower were fixed at 4:15 AM: the misses came from our test tool gathering for only 20 seconds (one pattern cycle), not from the walk-home code, and both walked home 3/3 with 60-second gathers. Coconut can't be tested because the Coconut Crab kills the alt; the laptop will try other servers. A full 17-field regression on the newest code is next."
+    "summary": "All 17 path-out routes pass 3/3. The full loop (walk out, gather, walk home, convert) now passes 3/3 on 16 of 17 fields. Dandelion and Sunflower were fixed at 4:15 AM: the misses came from our test tool gathering for only 20 seconds (one pattern cycle), not from the walk-home code, and both walked home 3/3 with 60-second gathers. Coconut is marked WIP (the crab always spawns there), so the other 16 fields are the target. A full 17-field regression on the newest code is next."
   },
   "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 4:02 and 4:15 AM PT for Dandelion and Sunflower). “Full loop” means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented.",
   "routes": [
@@ -109,11 +109,11 @@
     {
       "field": "Coconut",
       "path_out": "3/3",
-      "walk_home": "blocked",
-      "loop": "blocked",
-      "note": "Route works. The Coconut Crab kills the test alt in the field every loop, so walk-home can't be tested; Apex detects the death and skips the field, like Natro.",
-      "loop_status": "failed",
-      "walk_home_status": "failed"
+      "walk_home": "WIP",
+      "loop": "WIP",
+      "note": "WIP, set aside on Levi's call: the Coconut Crab always spawns there and kills the test alt. Route out works; Apex detects the death and skips the field, like Natro.",
+      "loop_status": "wip",
+      "walk_home_status": "wip"
     },
     {
       "field": "Mountain Top",

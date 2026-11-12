@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T20:18:00-08:00",
+  "last_updated": "2026-11-11T20:47:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -70,39 +70,39 @@
       "role": "Worker: tests in the live game",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Running its all-fields test on the merged build (3 runs per field).",
+      "doing": "Re-testing Coconut and Pepper in the game, then porting Natro's drift fix.",
       "branch": "routes/natro-port",
       "status_since": "2026-11-11T12:52:55-08:00",
       "last_finished": "A trip now counts as missed only if pollen stops rising.",
       "last_finished_at": "2026-11-11T14:29:46-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T19:50:00-08:00"
+      "last_seen": "2026-11-11T20:47:00-08:00"
     },
     {
       "name": "apex-code-laptop",
       "role": "Worker: code only, runs on the laptop overnight",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Watchdog (PR #22) merged. Now updating PR #16 to fit with it (still waiting on a laptop soak), then hotbar item timers, Discord status and soak tooling.",
-      "branch": "code/recovery-port",
+      "doing": "Working on hotbar item timers.",
+      "branch": "code/hotbar",
       "status_since": "2026-11-11T19:58:00-08:00",
       "last_finished": "Watchdog: restarts Apex and Roblox if it freezes, ported from Natro (PR #22).",
       "last_finished_at": "2026-11-11T19:55:00-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/22",
-      "last_seen": "2026-11-11T19:58:00-08:00"
+      "last_seen": "2026-11-11T20:47:00-08:00"
     },
     {
       "name": "apex-app",
       "role": "Worker: app and menu screens, runs on the laptop",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Updating start checks (PR #25) to fit the latest changes, finishing the tester guide (PR #24), then the watchdog toggle in Settings.",
-      "branch": "code/ui-polish-2",
+      "doing": "Building the hotbar item timer and Discord status settings screens (waiting on the matching engine work), then an About/Credits screen with Natro credit.",
+      "branch": "code/hotbar-discord-ui",
       "status_since": "2026-11-11T19:59:00-08:00",
-      "last_finished": "Menu defaults (PR #23) and live Status tab (PR #26).",
-      "last_finished_at": "2026-11-11T20:18:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/26",
-      "last_seen": "2026-11-11T20:18:00-08:00"
+      "last_finished": "Tester guide and log buttons (PR #24), start checks (PR #25), watchdog toggle in Settings (PR #30).",
+      "last_finished_at": "2026-11-11T20:37:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/30",
+      "last_seen": "2026-11-11T20:47:00-08:00"
     },
     {
       "name": "questions",
@@ -128,7 +128,7 @@
       "last_finished": "Live movespeed: paths follow speed buffs (draft PR #11), plus a handoff note for the laptop.",
       "last_finished_at": "2026-11-11T17:27:27-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
-      "last_seen": "2026-11-11T17:58:00-08:00"
+      "last_seen": "2026-11-11T20:47:00-08:00"
     },
     {
       "name": "BSS macro",
@@ -138,10 +138,10 @@
       "doing": "Checking on the workers every hour and when they report.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Merged PR #23 and PR #26 into the laptop's branch.",
-      "last_finished_at": "2026-11-11T20:18:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/26",
-      "last_seen": "2026-11-11T20:18:00-08:00"
+      "last_finished": "Merged PRs #24, #25 and #30 into the laptop's branch.",
+      "last_finished_at": "2026-11-11T20:37:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/30",
+      "last_seen": "2026-11-11T20:47:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -188,6 +188,10 @@
   "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
   "needs_you": [
     {
+      "title": "Fix GitHub billing so automatic tests run again",
+      "detail": "Since about 8:38 PM GitHub stopped running Apex's automatic tests because a payment failed or the spending limit is too low. Open GitHub Settings, then Billing and plans, and fix the payment or limit."
+    },
+    {
       "title": "Check the test account's Roblox security settings",
       "detail": "A 2-Step Verification email was sent after a glitch (Apex was pressing keys when the game wasn't on screen). That is fixed. Ignore or delete that code, and make sure the security settings look unchanged."
     },
@@ -202,6 +206,20 @@
   ],
   "prs": [
     {
+      "number": 32,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/32",
+      "title": "Tester guide polish (docs only)",
+      "status": "Draft",
+      "updated": "2026-11-11T20:45:00-08:00"
+    },
+    {
+      "number": 30,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/30",
+      "title": "Watchdog on/off toggle in Settings, plus auto-start option",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T20:37:00-08:00"
+    },
+    {
       "number": 26,
       "url": "https://github.com/levihgibbons/apex-macro/pull/26",
       "title": "Status tab: live field, trips and runtime; macro never waits on the window",
@@ -212,15 +230,15 @@
       "number": 25,
       "url": "https://github.com/levihgibbons/apex-macro/pull/25",
       "title": "Start checks: clear message when Roblox isn't ready",
-      "status": "Being updated to fit the latest changes",
-      "updated": "2026-11-11T20:18:00-08:00"
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T20:37:00-08:00"
     },
     {
       "number": 24,
       "url": "https://github.com/levihgibbons/apex-macro/pull/24",
       "title": "Tester guide, plus Open logs folder and Copy logs buttons",
-      "status": "Tests running",
-      "updated": "2026-11-11T20:18:00-08:00"
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T20:37:00-08:00"
     },
     {
       "number": 23,
@@ -352,6 +370,16 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T20:37:00-08:00",
+      "title": "Merged PRs #24, #25 and #30: tester guide and log buttons, start checks, watchdog toggle.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/30"
+    },
+    {
+      "when": "2026-11-11T20:15:00-08:00",
+      "title": "Merged PRs #23 and #26: menu defaults and live Status tab.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/26"
+    },
     {
       "when": "2026-11-11T19:30:00-08:00",
       "title": "Merged PRs #15 and #17: popup guard (redo interrupted trips) and live jump timing.",

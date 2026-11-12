@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-11T22:32:00-08:00",
+  "last_updated": "2026-11-11T23:08:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
     "tester": "Tester build Sun Nov 15",
-    "summary": "All 17 path-out routes pass 3/3. The movement engine now copies Natro's cannon and hive-finding code exactly, and the hardest five fields (Pepper, Stump, Coconut, Blue Flower, Rose) re-passed 15/15 on it at 10 PM. The laptop is now running the full loop (walk out, gather, walk home, convert) on every field. Walk-home scores below are from earlier today and will be replaced as the new run finishes."
+    "summary": "All 17 path-out routes pass 3/3. The movement engine copies Natro's cannon and hive-finding code exactly. The laptop is running the full loop (walk out, gather, walk home, convert) field by field on that engine: Mountain Top and Spider are done 3/3 so far. Other walk-home scores are from earlier today and get replaced as the run reaches each field."
   },
-  "routes_note": "Latest numbers are from live tests on the laptop today, written up at 9:25 PM PT. “Full loop” means walk to the field, gather, walk home, and convert. Unknown scores would be marked testing — none were invented.",
+  "routes_note": "Live tests on the laptop, latest update 11:08 PM PT. “Full loop” means walk to the field, gather, walk home, and convert. None of these numbers are invented.",
   "routes": [
     {
       "field": "Sunflower",
@@ -46,9 +46,9 @@
     {
       "field": "Spider",
       "path_out": "3/3",
-      "walk_home": "5/5",
-      "loop": "5/5",
-      "note": ""
+      "walk_home": "3/3",
+      "loop": "3/3",
+      "note": "Re-passed on the Natro 1:1 engine (10 PM run)"
     },
     {
       "field": "Strawberry",
@@ -118,9 +118,9 @@
     {
       "field": "Mountain Top",
       "path_out": "3/3",
-      "walk_home": "5/5",
-      "loop": "5/5",
-      "note": "Was 3/5; passed 5/5 on a later run."
+      "walk_home": "3/3",
+      "loop": "3/3",
+      "note": "Re-passed on the Natro 1:1 engine (10 PM run)"
     },
     {
       "field": "Pepper",
@@ -174,22 +174,10 @@
       "detail": "Menu screens for the timers and Discord status."
     },
     {
-      "pr": 34,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/34",
-      "title": "Save logs button",
-      "detail": "One zip with secrets removed. Tests pass; fixing a merge conflict, then merging."
-    },
-    {
       "pr": 38,
       "url": "https://github.com/levihgibbons/apex-macro/pull/38",
       "title": "Settings for drift, private servers, and Died status",
       "detail": "Tests pass; fixing a merge conflict, then merging."
-    },
-    {
-      "pr": 39,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/39",
-      "title": "Start-up checks and tips",
-      "detail": "Warns about small window, camera, Do Not Disturb. Tests pass; fixing a merge conflict."
     },
     {
       "pr": 40,
@@ -209,6 +197,16 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-11T23:06:00-08:00",
+      "title": "Start checks: Start anyway button, camera and Do Not Disturb tips (#39)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/39"
+    },
+    {
+      "when": "2026-11-11T23:06:00-08:00",
+      "title": "Tools: Save logs for the team, one zip with webhook and server links removed (#34)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/34"
+    },
     {
       "when": "2026-11-11T22:28:00-08:00",
       "title": "First run: welcome steps, movespeed and hive size, sensible defaults (#36)",

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T19:40:00-08:00",
+  "last_updated": "2026-11-11T19:50:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -76,20 +76,33 @@
       "last_finished": "A trip now counts as missed only if pollen stops rising.",
       "last_finished_at": "2026-11-11T14:29:46-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T18:48:00-08:00"
+      "last_seen": "2026-11-11T19:50:00-08:00"
     },
     {
       "name": "apex-code-laptop",
       "role": "Worker: code only, runs on the laptop overnight",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Fixing PR #16's conflict, then watchdog, hotbar item timers, Discord status and soak tooling.",
-      "branch": "code/popup-guard",
-      "status_since": "2026-11-11T19:30:00-08:00",
-      "last_finished": "Popup guard, recovery port and live jump PRs (#15-#17).",
-      "last_finished_at": "2026-11-11T19:30:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
-      "last_seen": "2026-11-11T18:48:00-08:00"
+      "doing": "PR #16's conflict is fixed (now waiting on a laptop soak). Working on the watchdog next, then hotbar item timers, Discord status and soak tooling.",
+      "branch": "code/watchdog",
+      "status_since": "2026-11-11T19:42:00-08:00",
+      "last_finished": "Fixed PR #16's conflict, tests passing.",
+      "last_finished_at": "2026-11-11T19:42:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/16",
+      "last_seen": "2026-11-11T19:50:00-08:00"
+    },
+    {
+      "name": "apex-app",
+      "role": "Worker: app and menu screens, runs on the laptop",
+      "machine": "Laptop",
+      "status": "busy",
+      "doing": "Sidebar shovel and box icons plus app icon follow-ups (draft PR #21, tests running).",
+      "branch": "code/ui-polish-2",
+      "status_since": "2026-11-11T19:43:07-08:00",
+      "last_finished": "Tester readiness: settings save and reload, first-run fix, hotkey hints (PR #20).",
+      "last_finished_at": "2026-11-11T19:40:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/20",
+      "last_seen": "2026-11-11T19:50:00-08:00"
     },
     {
       "name": "questions",
@@ -122,13 +135,13 @@
       "role": "Director: hands out tasks, checks results, merges once tests pass",
       "machine": "Main PC",
       "status": "online",
-      "doing": "Checking on the workers every hour.",
+      "doing": "Checking on the workers every hour and when they report.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
       "last_finished": "Merged PR #11 (live movespeed) into the laptop's branch.",
       "last_finished_at": "2026-11-11T18:47:47-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
-      "last_seen": "2026-11-11T18:48:00-08:00"
+      "last_seen": "2026-11-11T19:50:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -188,6 +201,13 @@
     }
   ],
   "prs": [
+    {
+      "number": 21,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/21",
+      "title": "Sidebar: shovel and box icons; app icon follow-ups",
+      "status": "Draft, tests running",
+      "updated": "2026-11-11T19:43:07-08:00"
+    },
     {
       "number": 20,
       "url": "https://github.com/levihgibbons/apex-macro/pull/20",

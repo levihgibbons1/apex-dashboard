@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T19:50:00-08:00",
+  "last_updated": "2026-11-11T19:58:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -83,13 +83,13 @@
       "role": "Worker: code only, runs on the laptop overnight",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "PR #16's conflict is fixed (now waiting on a laptop soak). Working on the watchdog next, then hotbar item timers, Discord status and soak tooling.",
-      "branch": "code/watchdog",
-      "status_since": "2026-11-11T19:42:00-08:00",
-      "last_finished": "Fixed PR #16's conflict, tests passing.",
-      "last_finished_at": "2026-11-11T19:42:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/16",
-      "last_seen": "2026-11-11T19:50:00-08:00"
+      "doing": "Watchdog (PR #22) merged. Now updating PR #16 to fit with it (still waiting on a laptop soak), then hotbar item timers, Discord status and soak tooling.",
+      "branch": "code/recovery-port",
+      "status_since": "2026-11-11T19:58:00-08:00",
+      "last_finished": "Watchdog: restarts Apex and Roblox if it freezes, ported from Natro (PR #22).",
+      "last_finished_at": "2026-11-11T19:55:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/22",
+      "last_seen": "2026-11-11T19:58:00-08:00"
     },
     {
       "name": "apex-app",
@@ -138,10 +138,10 @@
       "doing": "Checking on the workers every hour and when they report.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Merged PR #11 (live movespeed) into the laptop's branch.",
-      "last_finished_at": "2026-11-11T18:47:47-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
-      "last_seen": "2026-11-11T19:50:00-08:00"
+      "last_finished": "Merged PR #22 (watchdog) into the laptop's branch.",
+      "last_finished_at": "2026-11-11T19:58:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/22",
+      "last_seen": "2026-11-11T19:58:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -201,6 +201,13 @@
     }
   ],
   "prs": [
+    {
+      "number": 22,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/22",
+      "title": "Watchdog: restart Apex and Roblox if it freezes (Natro's Heartbeat)",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T19:58:00-08:00"
+    },
     {
       "number": 21,
       "url": "https://github.com/levihgibbons/apex-macro/pull/21",

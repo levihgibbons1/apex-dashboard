@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-11-12T13:20:00-08:00",
+  "last_updated": "2026-11-12T15:50:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
     "tester": "Tester build Sun Nov 15",
-    "summary": "All 17 path-out routes pass 3/3. The full loop (walk out, gather, walk home, convert) now passes 3/3 on 16 of 17 fields. Dandelion and Sunflower were fixed at 4:15 AM: the misses came from our test tool gathering for only 20 seconds (one pattern cycle), not from the walk-home code, and both walked home 3/3 with 60-second gathers. Coconut is marked WIP (the crab always spawns there), so the other 16 fields are the target. A full 17-field regression on the newest code is next."
+    "summary": "All 17 path-out routes pass. At 3:04 PM PT, a regression on the newest fixes (#100 and #101, hive 1, 60-second gathers, one loop per field) walked home on all 16 target fields, up from 13 of 16 this morning. The Pine Tree drift is fixed: a slow screen check near the end of a pattern leg kept the key held too long, so the pattern crept out of the field. With 3-minute gathers, Pine Tree walked home 2 of 2. Coconut stays WIP (the crab always spawns there). Next: re-run the regression on the merged branch, and retest Sunflower and Mountain Top full loops from hive 1."
   },
   "now": [
     {
       "who": "Game tests (laptop)",
-      "task": "Paused in game so the AI video has the game",
-      "detail": "All resources are on the AI video until Friday morning; Pine Tree and walk-home fixes resume after it."
+      "task": "Testing walk-home fixes between AI video blocks",
+      "detail": "16 of 16 fields walked home on the newest fixes. The AI video still gets the game first until Friday morning."
     },
     {
       "who": "AI video (laptop)",
@@ -29,30 +29,33 @@
     }
   ],
   "todo": [
-    "Fix Pine Tree gathers ending outside the field (breaks walk home and trips Inactive Honey)",
-    "Fix walk home on Dandelion and Spider (fails today even on the 4:02 AM code)",
+    "Re-run the 16-field regression on the merged branch (#100 + #101)",
+    "Retest Sunflower and Mountain Top full loops from hive 1",
+    "Coconut walk home",
     "Bamboo walk home after long gathers",
-    "Test hive slots 1 to 3 (need a private server)",
+    "Test hive 2 (hives 1 and 3 work)",
     "Pattern, convert and rotation checks in game",
     "Tester zip: rebuild and launch check",
     "8-hour overnight test",
     "Tester build (Sun Nov 15)"
   ],
-  "routes_note": "Live tests on the laptop on the Natro 1:1 engine. “Full loop” means walk to the field, gather, walk home, and convert. Newest runs on Nov 12 morning (hive 5, 60-second gathers): 20261112-090549-base-b8db-dsp and 20261112-094054-bisect-good-dand. None of these numbers are invented.",
+  "routes_note": "Live tests on the laptop on the Natro 1:1 engine. “Full loop” means walk to the field, gather, walk home, and convert. Newest run: 20261112-150430-reg16-101-100 (Nov 12, 3:04 PM PT, hive 1, 60-second gathers, one loop per field). None of these numbers are invented.",
   "routes": [
     {
       "field": "Sunflower",
       "path_out": "3/3",
       "walk_home": "3/3",
       "loop": "3/3",
-      "note": "Fixed (4:15 AM run, 60-second gathers): 3/3. Trips out after a walk home take about 12.5 s instead of 9 s; being checked."
+      "note": "Fixed (4:15 AM run, 60-second gathers): 3/3. Trips out after a walk home take about 12.5 s instead of 9 s; being checked. From hive 1, a full loop missed once just before the regression (hive 1 loops went 3/5); being retested."
     },
     {
       "field": "Dandelion",
       "path_out": "3/3",
-      "walk_home": "0/2",
-      "loop": "fails",
-      "note": "Today (hive 5, 60-s gathers): walk home 0/2, and the 4:02 AM code that went 3/3 also fails today, so it's not a code change. Being investigated."
+      "walk_home": "1/1",
+      "loop": "testing",
+      "note": "Walked home in the 3:04 PM regression with the #101 drift fix (1 loop). Re-testing for 3/3.",
+      "loop_status": "testing",
+      "walk_home_status": "done"
     },
     {
       "field": "Mushroom",
@@ -78,9 +81,11 @@
     {
       "field": "Spider",
       "path_out": "3/3",
-      "walk_home": "1/2",
-      "loop": "fails",
-      "note": "Today (hive 5, 60-s gathers): walk home 1/2 on current code. Being investigated."
+      "walk_home": "1/1",
+      "loop": "testing",
+      "note": "Walked home in the 3:04 PM regression with the #101 drift fix (1 loop). Re-testing for 3/3.",
+      "loop_status": "testing",
+      "walk_home_status": "done"
     },
     {
       "field": "Strawberry",
@@ -127,9 +132,11 @@
     {
       "field": "Pine Tree",
       "path_out": "3/3",
-      "walk_home": "missed",
-      "loop": "fails",
-      "note": "Today: walk home missed on every hive. Gathers end on the grass outside the field, so the walk home starts from the wrong spot and drifts into Rose; this also trips the Inactive Honey stop. Top blocker, Natro side-by-side approved."
+      "walk_home": "2/2",
+      "loop": "testing",
+      "note": "Fixed by #101: the gather pattern no longer drifts out of the field. 3-minute gathers walked home 2/2, and it walked home in the 3:04 PM regression.",
+      "loop_status": "testing",
+      "walk_home_status": "done"
     },
     {
       "field": "Stump",
@@ -152,7 +159,7 @@
       "path_out": "3/3",
       "walk_home": "3/3",
       "loop": "3/3",
-      "note": ""
+      "note": "From hive 1, a full loop missed once just before the regression (hive 1 loops went 3/5); being retested."
     },
     {
       "field": "Pepper",
@@ -211,6 +218,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T15:48:00-08:00",
+      "title": "Pine Tree drift fixed (#101): screen checks no longer hold a key past a pattern leg's end. Fresh servers claim a hive again instead of rejoining forever (#100). Regression on both: 16 of 16 fields walked home.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/101"
+    },
     {
       "when": "2026-11-12T11:22:00-08:00",
       "title": "Recovery merged into the paths branch: Natro's death check, Inactive Honey stop during gathers, reconnect stages, private and fallback servers (#16), plus its clean-up (#50). The 60-minute soak showed no false Inactive Honey stops while in a field.",
@@ -437,5 +449,5 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
   ],
-  "summary": "All 17 path-out routes pass. Earlier tonight the full loop (walk out, gather, walk home, convert) passed 3/3 on 16 of 17 fields. A fresh regression on the newest code plus PR #46 (2 loops per field, 60-second gathers, run from 4:55 AM PT) went 13 of 16: Dandelion (0/2) and Spider (1/2) ended pressed into the hedge by the white fence near the hives, and Pine Tree (0/2) drifted into the Rose field on the way home. PR #46 is now merged. Those three are being re-tested on the new code, and a fresh investigator is comparing their walk home against Natro side by side. A 60-minute soak rotating Sunflower, Clover and Rose walked home 14 of 14 times with no deaths or stuck states. Coconut stays WIP (the crab always spawns there)."
+  "summary": "All 17 path-out routes pass. At 3:04 PM PT, a regression on the newest fixes (#100 and #101, hive 1, 60-second gathers, one loop per field) walked home on all 16 target fields, up from 13 of 16 this morning. The Pine Tree drift is fixed: a slow screen check near the end of a pattern leg kept the key held too long, so the pattern crept out of the field. With 3-minute gathers, Pine Tree walked home 2 of 2. Coconut stays WIP (the crab always spawns there). Next: re-run the regression on the merged branch, and retest Sunflower and Mountain Top full loops from hive 1."
 }

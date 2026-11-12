@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T19:59:00-08:00",
+  "last_updated": "2026-11-11T20:18:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -201,6 +201,34 @@
     }
   ],
   "prs": [
+    {
+      "number": 26,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/26",
+      "title": "Status tab: live field, trips and runtime; macro never waits on the window",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T20:18:00-08:00"
+    },
+    {
+      "number": 25,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/25",
+      "title": "Start checks: clear message when Roblox isn't ready",
+      "status": "Being updated to fit the latest changes",
+      "updated": "2026-11-11T20:18:00-08:00"
+    },
+    {
+      "number": 24,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/24",
+      "title": "Tester guide, plus Open logs folder and Copy logs buttons",
+      "status": "Tests running",
+      "updated": "2026-11-11T20:18:00-08:00"
+    },
+    {
+      "number": 23,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/23",
+      "title": "Menu defaults match the engine (Supreme sprinkler, like Natro)",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T20:18:00-08:00"
+    },
     {
       "number": 22,
       "url": "https://github.com/levihgibbons/apex-macro/pull/22",

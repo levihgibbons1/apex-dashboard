@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T15:52:00-08:00",
+  "last_updated": "2026-11-11T16:55:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -76,7 +76,33 @@
       "last_finished": "A trip now counts as missed only if pollen stops rising.",
       "last_finished_at": "2026-11-11T14:29:46-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T14:47:00-08:00"
+      "last_seen": "2026-11-11T16:55:00-08:00"
+    },
+    {
+      "name": "questions",
+      "role": "Worker: code only (retiring after this task)",
+      "machine": "Main PC",
+      "status": "busy",
+      "doing": "Packaging the tester build (task 7).",
+      "branch": "",
+      "status_since": "2026-11-11T16:50:00-08:00",
+      "last_finished": "Popups: Natro's pre-reset checks (draft PR #9).",
+      "last_finished_at": "2026-11-11T16:36:35-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/9",
+      "last_seen": "2026-11-11T16:55:00-08:00"
+    },
+    {
+      "name": "apex-code",
+      "role": "Worker: code only (fresh session)",
+      "machine": "Main PC",
+      "status": "busy",
+      "doing": "Live movespeed: paths follow speed changes from buffs while moving.",
+      "branch": "routes/natro-port",
+      "status_since": "2026-11-11T16:50:00-08:00",
+      "last_finished": "Built a test version of the tester package, then handed that job to the questions worker.",
+      "last_finished_at": "2026-11-11T16:50:27-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/10",
+      "last_seen": "2026-11-11T16:55:00-08:00"
     },
     {
       "name": "BSS macro",
@@ -89,7 +115,7 @@
       "last_finished": "Merged pull request #3 (your menu design).",
       "last_finished_at": "2026-11-11T13:10:57-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/3",
-      "last_seen": "2026-11-11T14:47:00-08:00"
+      "last_seen": "2026-11-11T16:55:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -154,12 +180,46 @@
   ],
   "prs": [
     {
-      "number": 2,
-      "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, testing live",
-      "commits": 38,
-      "updated": "2026-11-11T14:29:50-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
+      "number": 9,
+      "title": "Popups: Natro's pre-reset checks and frozen strikes",
+      "status": "Draft, waiting on PR #2",
+      "updated": "2026-11-11T16:36:35-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/9"
+    },
+    {
+      "number": 8,
+      "title": "Rotation: Natro's 3-field rotation with per-field limits",
+      "status": "Draft, waiting on PR #2",
+      "updated": "2026-11-11T16:10:26-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/8"
+    },
+    {
+      "number": 7,
+      "title": "Wire Levi's menu UI to the engine",
+      "status": "Draft, waiting on PR #2",
+      "updated": "2026-11-11T15:55:50-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/7"
+    },
+    {
+      "number": 6,
+      "title": "Claim: don't remember a hive Apex never claimed",
+      "status": "Draft, waiting on PR #2",
+      "updated": "2026-11-11T15:27:56-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/6"
+    },
+    {
+      "number": 5,
+      "title": "Convert: port Natro's nm_convert",
+      "status": "Draft, waiting on PR #2",
+      "updated": "2026-11-11T15:55:23-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/5"
+    },
+    {
+      "number": 4,
+      "title": "Gather patterns: Natro v1.1.2's 12 patterns and field defaults",
+      "status": "Draft, waiting on PR #2",
+      "updated": "2026-11-11T15:53:45-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     },
     {
       "number": 3,
@@ -168,6 +228,14 @@
       "commits": 2,
       "updated": "2026-11-11T13:10:57-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/3"
+    },
+    {
+      "number": 2,
+      "title": "Built-in routes ported from Natro Macro, fastest first",
+      "status": "Open, testing live",
+      "commits": 38,
+      "updated": "2026-11-11T16:23:35-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
       "number": 1,

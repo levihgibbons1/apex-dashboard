@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T17:58:00-08:00",
+  "last_updated": "2026-11-11T18:28:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -70,26 +70,26 @@
       "role": "Worker: tests in the live game",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Testing walk-back paths and the Make Honey reset check in the live game.",
+      "doing": "Pulling the newly merged changes for its next all-fields test (3 runs per field).",
       "branch": "routes/natro-port",
       "status_since": "2026-11-11T12:52:55-08:00",
       "last_finished": "A trip now counts as missed only if pollen stops rising.",
       "last_finished_at": "2026-11-11T14:29:46-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T17:58:00-08:00"
+      "last_seen": "2026-11-11T18:28:00-08:00"
     },
     {
       "name": "apex-code-laptop",
       "role": "Worker: code only, runs on the laptop overnight",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Finishing the tester package (PR #10) and live movespeed (PR #11), then menu settings wiring.",
-      "branch": "",
-      "status_since": "2026-11-11T17:55:00-08:00",
-      "last_finished": "Just started.",
-      "last_finished_at": "",
-      "last_finished_url": "",
-      "last_seen": "2026-11-11T17:58:00-08:00"
+      "doing": "Fixing PR #11 (live movespeed) conflicts, then the popup guard, recovery port and jump buffs.",
+      "branch": "routes/natro-port",
+      "status_since": "2026-11-11T18:28:00-08:00",
+      "last_finished": "Finished 5 PRs: tester build, menu settings, rotation display, cannon re-approach (merged) and live movespeed.",
+      "last_finished_at": "2026-11-11T18:20:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/14",
+      "last_seen": "2026-11-11T18:28:00-08:00"
     },
     {
       "name": "questions",
@@ -125,10 +125,10 @@
       "doing": "Checking on the workers every hour.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Merged PR #4 (patterns, convert, menu wiring, rotation, popups) into the laptop's branch, and started a code worker on the laptop.",
-      "last_finished_at": "2026-11-11T17:47:01-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/4",
-      "last_seen": "2026-11-11T17:58:00-08:00"
+      "last_finished": "Merged PRs #10, #12, #13 and #14 into the laptop's branch.",
+      "last_finished_at": "2026-11-11T18:28:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/10",
+      "last_seen": "2026-11-11T18:28:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -189,17 +189,38 @@
   ],
   "prs": [
     {
+      "number": 14,
+      "title": "Cannon: reset and re-approach instead of firing after a long search",
+      "status": "Merged into the laptop's branch, waiting for its in-game test",
+      "updated": "2026-11-11T18:28:00-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/14"
+    },
+    {
+      "number": 13,
+      "title": "Menu: show the gather list as Natro's Field 1-3 rotation",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T18:28:00-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/13"
+    },
+    {
+      "number": 12,
+      "title": "Menu: wire Return by and Convert balloon to the engine",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T18:28:00-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/12"
+    },
+    {
       "number": 11,
       "title": "Live movespeed: port Natro's Walk hasteCap, flag Bear Morph",
-      "status": "Draft, being finished on the laptop",
-      "updated": "2026-11-11T17:27:27-08:00",
+      "status": "Ready, fixing merge conflicts on the laptop",
+      "updated": "2026-11-11T18:28:00-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/11"
     },
     {
       "number": 10,
       "title": "Tester build: first-run check, rotating log, copy logs, crash message, tester zip",
-      "status": "Draft, being finished on the laptop",
-      "updated": "2026-11-11T17:24:11-08:00",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T18:28:00-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/10"
     },
     {
@@ -241,6 +262,11 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T18:28:00-08:00",
+      "title": "Merged PRs #10, #12, #13, #14: tester build, menu settings, Field 1-3 rotation, cannon re-approach.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/10"
+    },
     {
       "when": "2026-11-11T17:47:01-08:00",
       "title": "Merged PR #4: Natro patterns, convert, menu wiring, rotation and popups join the laptop's paths.",
@@ -358,7 +384,7 @@
       "id": "hook-ui",
       "title": "Hook your menu to the macro",
       "status": "doing",
-      "detail": "Start, Pause and Stop run the real macro, now in the laptop's build. Still to wire: Return by, Conversion, Balloon, and the field rotation list."
+      "detail": "Start, Pause, Stop, Return by, Convert balloon and the Field 1-3 rotation list are wired (merged 6:28 PM). The other Conversion settings stay marked Soon since Natro has no match."
     },
     {
       "id": "overnight-test",

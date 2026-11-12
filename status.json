@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T18:28:00-08:00",
+  "last_updated": "2026-11-11T18:48:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -70,26 +70,26 @@
       "role": "Worker: tests in the live game",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Pulling the newly merged changes for its next all-fields test (3 runs per field).",
+      "doing": "Running its all-fields test on the merged build (3 runs per field).",
       "branch": "routes/natro-port",
       "status_since": "2026-11-11T12:52:55-08:00",
       "last_finished": "A trip now counts as missed only if pollen stops rising.",
       "last_finished_at": "2026-11-11T14:29:46-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T18:28:00-08:00"
+      "last_seen": "2026-11-11T18:48:00-08:00"
     },
     {
       "name": "apex-code-laptop",
       "role": "Worker: code only, runs on the laptop overnight",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Fixing PR #11 (live movespeed) conflicts, then the popup guard, recovery port and jump buffs.",
-      "branch": "routes/natro-port",
-      "status_since": "2026-11-11T18:28:00-08:00",
-      "last_finished": "Finished 5 PRs: tester build, menu settings, rotation display, cannon re-approach (merged) and live movespeed.",
-      "last_finished_at": "2026-11-11T18:20:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/14",
-      "last_seen": "2026-11-11T18:28:00-08:00"
+      "doing": "Building the popup guard (draft PR #15), then the recovery port and jump buffs.",
+      "branch": "code/popup-guard",
+      "status_since": "2026-11-11T18:48:00-08:00",
+      "last_finished": "Fixed PR #11's merge conflicts (live movespeed), now merged.",
+      "last_finished_at": "2026-11-11T18:27:13-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
+      "last_seen": "2026-11-11T18:48:00-08:00"
     },
     {
       "name": "questions",
@@ -125,10 +125,10 @@
       "doing": "Checking on the workers every hour.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Merged PRs #10, #12, #13 and #14 into the laptop's branch.",
-      "last_finished_at": "2026-11-11T18:28:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/10",
-      "last_seen": "2026-11-11T18:28:00-08:00"
+      "last_finished": "Merged PR #11 (live movespeed) into the laptop's branch.",
+      "last_finished_at": "2026-11-11T18:47:47-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
+      "last_seen": "2026-11-11T18:48:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -189,6 +189,13 @@
   ],
   "prs": [
     {
+      "number": 15,
+      "title": "Popup guard: refocus Roblox and redo the trip; stop on Roblox account pages",
+      "status": "Draft, being built on the laptop",
+      "updated": "2026-11-11T18:33:01-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/15"
+    },
+    {
       "number": 14,
       "title": "Cannon: reset and re-approach instead of firing after a long search",
       "status": "Merged into the laptop's branch, waiting for its in-game test",
@@ -212,8 +219,8 @@
     {
       "number": 11,
       "title": "Live movespeed: port Natro's Walk hasteCap, flag Bear Morph",
-      "status": "Ready, fixing merge conflicts on the laptop",
-      "updated": "2026-11-11T18:28:00-08:00",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T18:47:47-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/11"
     },
     {
@@ -262,6 +269,11 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T18:47:47-08:00",
+      "title": "Merged PR #11: walk timing follows Natro's haste cap for jump steps.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/11"
+    },
     {
       "when": "2026-11-11T18:28:00-08:00",
       "title": "Merged PRs #10, #12, #13, #14: tester build, menu settings, Field 1-3 rotation, cannon re-approach.",
@@ -372,7 +384,7 @@
       "id": "speed-buffs",
       "title": "Speed and jump buffs (Haste, Bear Morph, and others)",
       "status": "doing",
-      "detail": "Can already read Haste in the game. Still working out jump effects and testing paths with buffs on."
+      "detail": "Reads Haste in the game. Natro's haste cap for jump steps merged 6:47 PM. Bear Morph speed and jump cap values still need measuring on the laptop."
     },
     {
       "id": "recovery",

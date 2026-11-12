@@ -1,26 +1,26 @@
 {
- "last_updated": "2026-11-12T00:05:00-08:00",
+ "last_updated": "2026-11-12T01:15:00-08:00",
  "goal": {
   "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
   "target": "By morning Nov 12",
   "tester": "Tester build Sun Nov 15",
-  "summary": "All 17 path-out routes pass 3/3. On the Natro 1:1 engine, the full loop (walk out, gather, walk home, convert) passes 3/3 on 11 of 17 fields. Strawberry, Sunflower and Clover are at 2/3, Bamboo and Dandelion at 1/3, and Coconut can't be tested because the Coconut Crab kills the alt."
+  "summary": "All 17 path-out routes pass 3/3. With Natro's drift check on, the full loop (walk out, gather, walk home, convert) passes 3/3 on 14 of 17 fields. Sunflower is at 2/3 and Dandelion at 1/3 and are being re-tested on the new walk code (#53). Coconut can't be tested because the Coconut Crab kills the alt."
  },
- "routes_note": "Live tests on the laptop, full-loop run on the Natro 1:1 engine (latest 10:31 PM PT run). \u201cFull loop\u201d means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented.",
+ "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 11:41 PM and 12:01 AM PT). \u201cFull loop\u201d means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented.",
  "routes": [
   {
    "field": "Sunflower",
    "path_out": "3/3",
    "walk_home": "2/3",
    "loop": "2/3",
-   "note": "Missed some loops on the Natro 1:1 engine; being retried."
+   "note": "Misses end behind the hives near hive 1. Re-testing on the new walk code (#53); engine being checked against Natro's hive search."
   },
   {
    "field": "Dandelion",
    "path_out": "3/3",
    "walk_home": "1/3",
    "loop": "1/3",
-   "note": "Missed some loops on the Natro 1:1 engine; being retried."
+   "note": "A miss started at the field's east edge and ended in a wall. Re-testing on the new walk code (#53)."
   },
   {
    "field": "Mushroom",
@@ -39,9 +39,9 @@
   {
    "field": "Clover",
    "path_out": "3/3",
-   "walk_home": "2/3",
-   "loop": "2/3",
-   "note": "Missed some loops on the Natro 1:1 engine; being retried."
+   "walk_home": "3/3",
+   "loop": "3/3",
+   "note": "3/3 once Natro's drift check was turned on."
   },
   {
    "field": "Spider",
@@ -53,16 +53,16 @@
   {
    "field": "Strawberry",
    "path_out": "3/3",
-   "walk_home": "2/3",
-   "loop": "2/3",
-   "note": "Missed some loops on the Natro 1:1 engine; being retried."
+   "walk_home": "3/3",
+   "loop": "3/3",
+   "note": "3/3 once Natro's drift check was turned on."
   },
   {
    "field": "Bamboo",
    "path_out": "3/3",
-   "walk_home": "1/3",
-   "loop": "1/3",
-   "note": "Missed some loops on the Natro 1:1 engine; being retried."
+   "walk_home": "3/3",
+   "loop": "3/3",
+   "note": "3/3 once Natro's drift check was turned on."
   },
   {
    "field": "Pineapple",
@@ -131,6 +131,30 @@
   }
  ],
  "building": [
+  {
+   "pr": 51,
+   "url": "https://github.com/levihgibbons/apex-macro/pull/51",
+   "title": "Hive claim and hive camera 1:1 with Natro",
+   "detail": "Draft. Natro's exact hive-slot claim and hive camera check."
+  },
+  {
+   "pr": 52,
+   "url": "https://github.com/levihgibbons/apex-macro/pull/52",
+   "title": "Discord status switches",
+   "detail": "Draft. On/off, hourly and death screenshots."
+  },
+  {
+   "pr": 54,
+   "url": "https://github.com/levihgibbons/apex-macro/pull/54",
+   "title": "Died / skipping-field status for the menu",
+   "detail": "Draft. Shows when the alt died and a field was skipped."
+  },
+  {
+   "pr": 50,
+   "url": "https://github.com/levihgibbons/apex-macro/pull/50",
+   "title": "Clean-up after recovery (#16)",
+   "detail": "Draft. Waits for #16."
+  },
   {
    "pr": 41,
    "url": "https://github.com/levihgibbons/apex-macro/pull/41",
@@ -215,6 +239,21 @@
   }
  ],
  "done": [
+  {
+   "when": "2026-11-12T00:19:00-08:00",
+   "title": "Walk home, Natro 1:1: speed-averaged walking, quest log closed before walking home, no extra reset on an empty bag (#53)",
+   "url": "https://github.com/levihgibbons/apex-macro/pull/53"
+  },
+  {
+   "when": "2026-11-12T00:07:00-08:00",
+   "title": "Autostart fixes (#49)",
+   "url": "https://github.com/levihgibbons/apex-macro/pull/49"
+  },
+  {
+   "when": "2026-11-12T00:07:00-08:00",
+   "title": "Start: warning when Roblox settings differ from Natro's (#48)",
+   "url": "https://github.com/levihgibbons/apex-macro/pull/48"
+  },
   {
    "when": "2026-11-11T23:45:00-08:00",
    "title": "Tests no longer close real programs; watchdog menu test (#42, #43)",

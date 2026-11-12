@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T16:55:00-08:00",
+  "last_updated": "2026-11-11T17:58:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -76,46 +76,59 @@
       "last_finished": "A trip now counts as missed only if pollen stops rising.",
       "last_finished_at": "2026-11-11T14:29:46-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T16:55:00-08:00"
+      "last_seen": "2026-11-11T17:58:00-08:00"
+    },
+    {
+      "name": "apex-code-laptop",
+      "role": "Worker: code only, runs on the laptop overnight",
+      "machine": "Laptop",
+      "status": "busy",
+      "doing": "Finishing the tester package (PR #10) and live movespeed (PR #11), then menu settings wiring.",
+      "branch": "",
+      "status_since": "2026-11-11T17:55:00-08:00",
+      "last_finished": "Just started.",
+      "last_finished_at": "",
+      "last_finished_url": "",
+      "last_seen": "2026-11-11T17:58:00-08:00"
     },
     {
       "name": "questions",
-      "role": "Worker: code only (retiring after this task)",
+      "role": "Worker: code only (retired)",
       "machine": "Main PC",
-      "status": "busy",
-      "doing": "Packaging the tester build (task 7).",
+      "status": "offline",
+      "doing": "Retired to save memory. Its work moved to apex-code-laptop.",
       "branch": "",
-      "status_since": "2026-11-11T16:50:00-08:00",
+      "status_since": "2026-11-11T17:45:00-08:00",
       "last_finished": "Popups: Natro's pre-reset checks (draft PR #9).",
       "last_finished_at": "2026-11-11T16:36:35-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/9",
-      "last_seen": "2026-11-11T16:55:00-08:00"
+      "last_seen": "2026-11-11T17:45:00-08:00"
     },
     {
       "name": "apex-code",
-      "role": "Worker: code only (fresh session)",
+      "role": "Worker: code only (handing off before the main PC goes off)",
       "machine": "Main PC",
-      "status": "busy",
-      "doing": "Live movespeed: paths follow speed changes from buffs while moving.",
+      "status": "online",
+      "doing": "Handed its work to apex-code-laptop. Not starting anything new.",
       "branch": "routes/natro-port",
-      "status_since": "2026-11-11T16:50:00-08:00",
-      "last_finished": "Built a test version of the tester package, then handed that job to the questions worker.",
-      "last_finished_at": "2026-11-11T16:50:27-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/10",
-      "last_seen": "2026-11-11T16:55:00-08:00"
+      "status_since": "2026-11-11T17:30:00-08:00",
+      "last_finished": "Live movespeed: paths follow speed buffs (draft PR #11), plus a handoff note for the laptop.",
+      "last_finished_at": "2026-11-11T17:27:27-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
+      "last_seen": "2026-11-11T17:58:00-08:00"
     },
     {
       "name": "BSS macro",
       "role": "Director: hands out tasks, checks results, merges once tests pass",
       "machine": "Main PC",
       "status": "online",
-      "doing": "Checking on the laptop's work every hour.",
+      "doing": "Checking on the workers every hour.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Merged pull request #3 (your menu design).",
-      "last_finished_at": "2026-11-11T13:10:57-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/3",
-      "last_seen": "2026-11-11T16:55:00-08:00"
+      "last_finished": "Merged PR #4 (patterns, convert, menu wiring, rotation, popups) into the laptop's branch, and started a code worker on the laptop.",
+      "last_finished_at": "2026-11-11T17:47:01-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/4",
+      "last_seen": "2026-11-11T17:58:00-08:00"
     },
     {
       "name": "Laptop setup chat",
@@ -170,56 +183,45 @@
       "detail": "The HP Product Status box can cover the game and throw off a test. Turn off HP Support Assistant notifications."
     },
     {
-      "title": "Keep the test laptop on the charger",
-      "detail": "It's back online. Set Windows Power options so it never sleeps or shows battery popups while plugged in."
-    },
-    {
       "title": "Add an auto-rejoin toggle to the Settings tab",
       "detail": "The new auto-rejoin setting (on by default) only lives in the settings file right now. Your UI, so your call when."
     }
   ],
   "prs": [
     {
-      "number": 9,
-      "title": "Popups: Natro's pre-reset checks and frozen strikes",
-      "status": "Draft, waiting on PR #2",
-      "updated": "2026-11-11T16:36:35-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/9"
+      "number": 11,
+      "title": "Live movespeed: port Natro's Walk hasteCap, flag Bear Morph",
+      "status": "Draft, being finished on the laptop",
+      "updated": "2026-11-11T17:27:27-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/11"
     },
     {
-      "number": 8,
-      "title": "Rotation: Natro's 3-field rotation with per-field limits",
-      "status": "Draft, waiting on PR #2",
-      "updated": "2026-11-11T16:10:26-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/8"
+      "number": 10,
+      "title": "Tester build: first-run check, rotating log, copy logs, crash message, tester zip",
+      "status": "Draft, being finished on the laptop",
+      "updated": "2026-11-11T17:24:11-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/10"
     },
     {
-      "number": 7,
-      "title": "Wire Levi's menu UI to the engine",
-      "status": "Draft, waiting on PR #2",
-      "updated": "2026-11-11T15:55:50-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/7"
+      "number": 4,
+      "title": "Gather patterns, convert, menu wiring, rotation and popups (PRs #4, #5, #7, #8, #9 combined)",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T17:47:01-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     },
     {
       "number": 6,
       "title": "Claim: don't remember a hive Apex never claimed",
-      "status": "Draft, waiting on PR #2",
-      "updated": "2026-11-11T15:27:56-08:00",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T17:15:38-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/6"
     },
     {
-      "number": 5,
-      "title": "Convert: port Natro's nm_convert",
-      "status": "Draft, waiting on PR #2",
-      "updated": "2026-11-11T15:55:23-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/5"
-    },
-    {
-      "number": 4,
-      "title": "Gather patterns: Natro v1.1.2's 12 patterns and field defaults",
-      "status": "Draft, waiting on PR #2",
-      "updated": "2026-11-11T15:53:45-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/4"
+      "number": 2,
+      "title": "Built-in routes ported from Natro Macro, fastest first",
+      "status": "Open, testing live",
+      "updated": "2026-11-11T17:47:01-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
       "number": 3,
@@ -228,14 +230,6 @@
       "commits": 2,
       "updated": "2026-11-11T13:10:57-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/3"
-    },
-    {
-      "number": 2,
-      "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, testing live",
-      "commits": 38,
-      "updated": "2026-11-11T16:23:35-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
       "number": 1,
@@ -247,6 +241,21 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T17:47:01-08:00",
+      "title": "Merged PR #4: Natro patterns, convert, menu wiring, rotation and popups join the laptop's paths.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/4"
+    },
+    {
+      "when": "2026-11-11T17:15:38-08:00",
+      "title": "Merged PR #6: don't remember a hive Apex never claimed.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/6"
+    },
+    {
+      "when": "2026-11-11T16:23:31-08:00",
+      "title": "Before walking home, walk back to where the gather pattern started.",
+      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
+    },
     {
       "when": "2026-11-11T14:29:46-08:00",
       "title": "Arrival check: a trip counts as missed only if pollen stops rising.",
@@ -306,21 +315,6 @@
       "when": "2026-11-11T11:37:00-08:00",
       "title": "Merged PR #1: Apex foundation and the one-field gather loop.",
       "url": "https://github.com/levihgibbons/apex-macro/commit/74e69371e141752513044ef9232ee8875ffdeed7"
-    },
-    {
-      "when": "2026-11-11T11:36:17-08:00",
-      "title": "Progress notes for 2026-11-11.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/8bd529959d9e322febde821ad40e4398cdbc210a"
-    },
-    {
-      "when": "2026-11-11T11:34:59-08:00",
-      "title": "Reliability: auto-rejoin, disconnect check, reset-loop guard, gather stall.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/997722fa012a631b044fc2d6ac2ff99b113d1ce6"
-    },
-    {
-      "when": "2026-11-11T11:22:46-08:00",
-      "title": "Find Natro's top-bar anchor with a partial match on the light panel.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/61fa1fa8c07f8911c0f8571c9af32efdacdb9582"
     }
   ],
   "checklist": [
@@ -340,13 +334,13 @@
       "id": "hive-convert",
       "title": "Find your own hive slot and convert properly (Make Honey)",
       "status": "doing",
-      "detail": "Make Honey convert ported from Natro on the main PC (waits for the bag, resets if not at the hive). Waiting for its in-game test on the laptop."
+      "detail": "Make Honey convert from Natro is now in the laptop's build (merged 5:47 PM). Waiting for its in-game test."
     },
     {
       "id": "patterns",
       "title": "Natro's 12 gather patterns plus field defaults",
       "status": "doing",
-      "detail": "Main PC ported all 12 Natro patterns plus each field's default. Passed in the game on 4 fields; being reviewed now."
+      "detail": "All 12 Natro patterns plus field defaults are now in the laptop's build (merged 5:47 PM). Next: re-test in the game on the combined build."
     },
     {
       "id": "speed-buffs",
@@ -364,7 +358,7 @@
       "id": "hook-ui",
       "title": "Hook your menu to the macro",
       "status": "doing",
-      "detail": "Done on the main PC: Start, Pause and Stop in your menu now run the real macro, and the app builds. Waiting for an in-game test. Still to add: switching between several fields."
+      "detail": "Start, Pause and Stop run the real macro, now in the laptop's build. Still to wire: Return by, Conversion, Balloon, and the field rotation list."
     },
     {
       "id": "overnight-test",

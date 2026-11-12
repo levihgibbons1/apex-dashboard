@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T11:25:00-08:00",
+  "last_updated": "2026-11-12T13:20:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,13 +9,13 @@
   "now": [
     {
       "who": "Game tests (laptop)",
-      "task": "Waiting for the AI video block, then the Pine Tree problem",
-      "detail": "The AI video worker has the game until about noon. Next: check where Pine Tree gathers end, run Natro side by side on Pine Tree, then pattern, convert and rotation checks."
+      "task": "Paused in game so the AI video has the game",
+      "detail": "All resources are on the AI video until Friday morning; Pine Tree and walk-home fixes resume after it."
     },
     {
       "who": "AI video (laptop)",
-      "task": "Training a 6-token model and recording Pine Tree then Bamboo",
-      "detail": "Ahead of plan: about 1,100 labeled frames, a first 3-token model that boxes tokens live, and a recording tool; a 6-token model is training and it has the game from about 11:25 to 12:10 for Pine Tree and Bamboo clips."
+      "task": "Retraining the token model at higher detail and recording Pine Tree then Bamboo",
+      "detail": "First live Pine Tree run worked with token boxes and chasing; small tokens were missed at the showcase zoom, so a sharper model is training, with the video due by 8 AM Friday Nov 13 (backup cut by 7:30)."
     },
     {
       "who": "Code fixes (laptop)",

@@ -1,12 +1,12 @@
 {
-  "last_updated": "2026-11-11T23:08:00-08:00",
+  "last_updated": "2026-11-11T23:30:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
     "tester": "Tester build Sun Nov 15",
     "summary": "All 17 path-out routes pass 3/3. The movement engine copies Natro's cannon and hive-finding code exactly. The laptop is running the full loop (walk out, gather, walk home, convert) field by field on that engine: Mountain Top and Spider are done 3/3 so far. Other walk-home scores are from earlier today and get replaced as the run reaches each field."
   },
-  "routes_note": "Live tests on the laptop, latest update 11:08 PM PT. “Full loop” means walk to the field, gather, walk home, and convert. None of these numbers are invented.",
+  "routes_note": "Live tests on the laptop, latest update 11:08 PM PT. \u201cFull loop\u201d means walk to the field, gather, walk home, and convert. None of these numbers are invented.",
   "routes": [
     {
       "field": "Sunflower",
@@ -147,7 +147,7 @@
       "pr": 27,
       "url": "https://github.com/levihgibbons/apex-macro/pull/27",
       "title": "Hotbar item timers",
-      "detail": "Uses items in slots 2–7 on a schedule, like Natro."
+      "detail": "Uses items in slots 2\u20137 on a schedule, like Natro."
     },
     {
       "pr": 28,
@@ -172,18 +172,6 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/33",
       "title": "Hotbar and Discord settings screens",
       "detail": "Menu screens for the timers and Discord status."
-    },
-    {
-      "pr": 38,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/38",
-      "title": "Settings for drift, private servers, and Died status",
-      "detail": "Tests pass; fixing a merge conflict, then merging."
-    },
-    {
-      "pr": 40,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/40",
-      "title": "Field editor with Natro's per-field values",
-      "detail": "Tests pass; fixing a merge conflict."
     }
   ],
   "needs_you": [
@@ -197,6 +185,16 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-11T23:30:00-08:00",
+      "title": "Field editor: Natro's per-field options, with Natro's values shown (#40)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/40"
+    },
+    {
+      "when": "2026-11-11T23:30:00-08:00",
+      "title": "Menu: drift check, private server rejoining, and a Died status (#38)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/38"
+    },
     {
       "when": "2026-11-11T23:06:00-08:00",
       "title": "Start checks: Start anyway button, camera and Do Not Disturb tips (#39)",
@@ -294,12 +292,12 @@
     },
     {
       "when": "2026-11-11T18:24:23-08:00",
-      "title": "Cannon, Field 1–3 rotation, Return/Convert settings, and tester packaging (#10, #12, #13, #14)",
+      "title": "Cannon, Field 1\u20133 rotation, Return/Convert settings, and tester packaging (#10, #12, #13, #14)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/10"
     },
     {
       "when": "2026-11-11T17:47:01-08:00",
-      "title": "Natro gather patterns, convert, and menu wiring (#4–#9)",
+      "title": "Natro gather patterns, convert, and menu wiring (#4\u2013#9)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
   ]

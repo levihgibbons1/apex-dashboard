@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T09:15:00-08:00",
+  "last_updated": "2026-11-12T11:20:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,13 +9,13 @@
   "now": [
     {
       "who": "Game tests (laptop)",
-      "task": "Re-testing Dandelion, Spider and Pine Tree, then a 60-minute soak",
-      "detail": "Running those three fields on the newest code while an investigator compares their walk home with Natro, then a 60-minute Pine Tree and Bamboo soak around 10 AM that also collects frames for the AI video."
+      "task": "Pine Tree walk-home checks and the 60-minute soak",
+      "detail": "Working through the Pine Tree walk home on the newest code (it missed on every hive earlier) alongside the 60-minute Pine Tree and Bamboo soak of the death-recovery fix."
     },
     {
-      "who": "AI vision (laptop)",
-      "task": "First token-detection model (test training run)",
-      "detail": "The capture tool is done with 2,207 frames collected; it is labeling tokens and starting a first small training run, aiming for the first model Friday and the showcase video by Sunday."
+      "who": "AI video (laptop)",
+      "task": "Training a 6-token model and recording Pine Tree then Bamboo",
+      "detail": "Ahead of plan: about 1,100 labeled frames, a first 3-token model that boxes tokens live, and a recording tool; a 6-token model is training and it has the game from about 11:25 to 12:10 for Pine Tree and Bamboo clips."
     },
     {
       "who": "Code fixes (laptop)",

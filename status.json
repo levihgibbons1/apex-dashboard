@@ -1,12 +1,38 @@
 {
-  "last_updated": "2026-11-12T08:00:00-08:00",
+  "last_updated": "2026-11-12T16:04:01.523350+00:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
     "tester": "Tester build Sun Nov 15",
     "summary": "All 17 path-out routes pass 3/3. The full loop (walk out, gather, walk home, convert) now passes 3/3 on 16 of 17 fields. Dandelion and Sunflower were fixed at 4:15 AM: the misses came from our test tool gathering for only 20 seconds (one pattern cycle), not from the walk-home code, and both walked home 3/3 with 60-second gathers. Coconut is marked WIP (the crab always spawns there), so the other 16 fields are the target. A full 17-field regression on the newest code is next."
   },
-  "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 4:02 and 4:15 AM PT for Dandelion and Sunflower). “Full loop” means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented. Latest regression: 20261112-045501-reg17-df3-46 (Dandelion, Spider, Pine Tree missed walk-home).",
+  "now": [
+    {
+      "who": "Game tests (laptop)",
+      "task": "Testing all 6 hive slots",
+      "detail": "Checks each hive can reach the cannon and that the hardest fields walk home to it. Hives 1 and 6, at the ends of the row, matter most."
+    },
+    {
+      "who": "Code fixes (laptop)",
+      "task": "Recovery fix (#16)",
+      "detail": "Fixing #16's conflict with the newest code and re-running its tests so it can merge. It already passed its 60-minute game test."
+    },
+    {
+      "who": "App / menu (laptop)",
+      "task": "Field rotation editor",
+      "detail": "Wiring up the menu's field rotation editor. Then a live status line for popups, rejoins and resets, and polish for Sunday's tester build."
+    }
+  ],
+  "todo": [
+    "Test all 6 hive slots (in progress)",
+    "Fix walk home on Dandelion, Spider and Pine Tree (investigator comparing with Natro)",
+    "Merge recovery (#16) after its conflict fix",
+    "Tester zip: rebuild and launch check",
+    "Check the menu at real 125% and 150% Windows scaling",
+    "8-hour overnight test (tonight)",
+    "Tester build (Sun Nov 15)"
+  ],
+  "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 4:02 and 4:15 AM PT for Dandelion and Sunflower). \u201cFull loop\u201d means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented. Latest regression: 20261112-045501-reg17-df3-46 (Dandelion, Spider, Pine Tree missed walk-home).",
   "routes": [
     {
       "field": "Sunflower",
@@ -193,7 +219,7 @@
   "done": [
     {
       "when": "2026-11-12T08:00:00-08:00",
-      "title": "Watchdog only runs during a run and closes cleanly; closing Apex any way stops the run and lets go of every key; crashes let go of every key and offer the Report-a-problem zip; old settings files (v1 to v17) load safely and a damaged one no longer blocks saving; first-run fixes at 150% (#85–#89)",
+      "title": "Watchdog only runs during a run and closes cleanly; closing Apex any way stops the run and lets go of every key; crashes let go of every key and offer the Report-a-problem zip; old settings files (v1 to v17) load safely and a damaged one no longer blocks saving; first-run fixes at 150% (#85\u2013#89)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/86"
     },
     {
@@ -203,7 +229,7 @@
     },
     {
       "when": "2026-11-12T07:28:00-08:00",
-      "title": "Roblox settings check in the footer, Report-a-problem zip with build and screen details, run history tab, About shows build and Natro credit, hive-claim wording plus a missing Rejoining Reset button (#80–#84)",
+      "title": "Roblox settings check in the footer, Report-a-problem zip with build and screen details, run history tab, About shows build and Natro credit, hive-claim wording plus a missing Rejoining Reset button (#80\u2013#84)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/82"
     },
     {
@@ -228,22 +254,22 @@
     },
     {
       "when": "2026-11-12T04:15:00-08:00",
-      "title": "Gather: dropped the extra “pollen stopped changing” stop that Natro doesn't have (#67)",
+      "title": "Gather: dropped the extra \u201cpollen stopped changing\u201d stop that Natro doesn't have (#67)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/67"
     },
     {
       "when": "2026-11-12T04:10:00-08:00",
-      "title": "Priority tab fits narrow windows, end-of-run summary card, Start/Pause/Stop hotkeys as settings (#72–#74)",
+      "title": "Priority tab fits narrow windows, end-of-run summary card, Start/Pause/Stop hotkeys as settings (#72\u2013#74)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/73"
     },
     {
       "when": "2026-11-12T03:29:00-08:00",
-      "title": "Live status panel, settings audit (49 tests), window fits 125/150% scaling, tester guide note (#68–#71)",
+      "title": "Live status panel, settings audit (49 tests), window fits 125/150% scaling, tester guide note (#68\u2013#71)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/68"
     },
     {
       "when": "2026-11-12T03:04:00-08:00",
-      "title": "Report a problem button, first-run checklist, tester guide 0.1.0, popup re-runs not counted (#63–#66)",
+      "title": "Report a problem button, first-run checklist, tester guide 0.1.0, popup re-runs not counted (#63\u2013#66)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/64"
     },
     {
@@ -398,12 +424,12 @@
     },
     {
       "when": "2026-11-11T18:24:23-08:00",
-      "title": "Cannon, Field 1–3 rotation, Return/Convert settings, and tester packaging (#10, #12, #13, #14)",
+      "title": "Cannon, Field 1\u20133 rotation, Return/Convert settings, and tester packaging (#10, #12, #13, #14)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/10"
     },
     {
       "when": "2026-11-11T17:47:01-08:00",
-      "title": "Natro gather patterns, convert, and menu wiring (#4–#9)",
+      "title": "Natro gather patterns, convert, and menu wiring (#4\u2013#9)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
   ],

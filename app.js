@@ -49,6 +49,13 @@ function render(s) {
     </div>
     ${g.summary ? `<p class="summary">${esc(g.summary)}</p>` : ""}`;
 
+  $("now").innerHTML = (s.now || []).map(n => `<div class="now-item">
+      <div class="who">${esc(n.who)}</div>
+      <div class="task">${esc(n.task)}</div>
+      ${n.detail ? `<div class="sub">${esc(n.detail)}</div>` : ""}
+    </div>`).join("") || `<div class="sub">Nothing running.</div>`;
+  $("todo").innerHTML = (s.todo || []).map(x => `<li><b>${esc(x)}</b></li>`).join("") || `<li class="sub">Nothing queued.</li>`;
+
   const routes = s.routes || [];
   const passHome = routes.filter(r => scoreKind(r.walk_home, r.walk_home_status) === "done").length;
   const passOut = routes.filter(r => scoreKind(r.path_out, r.path_out_status) === "done").length;

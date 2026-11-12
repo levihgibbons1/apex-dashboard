@@ -146,3 +146,9 @@ table.routes td.note{font-size:13px;color:var(--muted);font-weight:400}
   table.routes th,table.routes td{padding:8px 8px}
 }
 .pill.wip{color:#b8860b;background:rgba(184,134,11,.15)}
+
+.now-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin-top:8px}
+.now-item{border:1px solid rgba(239,68,68,.35);border-radius:12px;padding:14px;background:rgba(239,68,68,.06)}
+.now-item .who{font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--dim)}
+.now-item .task{font-size:16px;font-weight:700;margin:4px 0 6px}
+#now-card h2 .pulse{display:inline-block;vertical-align:middle;margin-right:6px}

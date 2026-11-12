@@ -96,13 +96,13 @@
       "role": "Worker: app and menu screens, runs on the laptop",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Menu defaults (draft PR #23) and tester guide with open-logs button (draft PR #24).",
+      "doing": "Updating start checks (PR #25) to fit the latest changes, finishing the tester guide (PR #24), then the watchdog toggle in Settings.",
       "branch": "code/ui-polish-2",
       "status_since": "2026-11-11T19:59:00-08:00",
-      "last_finished": "Sidebar shovel and box icons, app icon on both exes (PR #21).",
-      "last_finished_at": "2026-11-11T19:59:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/21",
-      "last_seen": "2026-11-11T19:59:00-08:00"
+      "last_finished": "Menu defaults (PR #23) and live Status tab (PR #26).",
+      "last_finished_at": "2026-11-11T20:18:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/26",
+      "last_seen": "2026-11-11T20:18:00-08:00"
     },
     {
       "name": "questions",
@@ -138,10 +138,10 @@
       "doing": "Checking on the workers every hour and when they report.",
       "branch": "",
       "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Merged PR #21 (sidebar icons, app icon) into the laptop's branch.",
-      "last_finished_at": "2026-11-11T19:59:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/21",
-      "last_seen": "2026-11-11T19:59:00-08:00"
+      "last_finished": "Merged PR #23 and PR #26 into the laptop's branch.",
+      "last_finished_at": "2026-11-11T20:18:00-08:00",
+      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/26",
+      "last_seen": "2026-11-11T20:18:00-08:00"
     },
     {
       "name": "Laptop setup chat",

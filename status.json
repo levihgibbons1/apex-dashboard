@@ -6,7 +6,7 @@
     "tester": "Tester build Sun Nov 15",
     "summary": "All 17 path-out routes pass 3/3. The full loop (walk out, gather, walk home, convert) now passes 3/3 on 16 of 17 fields. Dandelion and Sunflower were fixed at 4:15 AM: the misses came from our test tool gathering for only 20 seconds (one pattern cycle), not from the walk-home code, and both walked home 3/3 with 60-second gathers. Coconut is marked WIP (the crab always spawns there), so the other 16 fields are the target. A full 17-field regression on the newest code is next."
   },
-  "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 4:02 and 4:15 AM PT for Dandelion and Sunflower). “Full loop” means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented.",
+  "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 4:02 and 4:15 AM PT for Dandelion and Sunflower). “Full loop” means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented. Latest regression: 20261112-045501-reg17-df3-46 (Dandelion, Spider, Pine Tree missed walk-home).",
   "routes": [
     {
       "field": "Sunflower",
@@ -397,5 +397,6 @@
       "title": "Natro gather patterns, convert, and menu wiring (#4–#9)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
-  ]
+  ],
+  "summary": "All 17 path-out routes pass. Earlier tonight the full loop (walk out, gather, walk home, convert) passed 3/3 on 16 of 17 fields. A fresh regression on the newest code plus PR #46 (2 loops per field, 60-second gathers, run from 4:55 AM PT) went 13 of 16: Dandelion (0/2) and Spider (1/2) ended pressed into the hedge by the white fence near the hives, and Pine Tree (0/2) drifted into the Rose field on the way home. Those three are being re-tested now. Coconut stays WIP (the crab always spawns there)."
 }

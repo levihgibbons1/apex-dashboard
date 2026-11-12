@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T07:30:00-08:00",
+  "last_updated": "2026-11-12T08:00:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -191,6 +191,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T08:00:00-08:00",
+      "title": "Watchdog only runs during a run and closes cleanly; closing Apex any way stops the run and lets go of every key; crashes let go of every key and offer the Report-a-problem zip; old settings files (v1 to v17) load safely and a damaged one no longer blocks saving; first-run fixes at 150% (#85–#89)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/86"
+    },
     {
       "when": "2026-11-12T07:30:00-08:00",
       "title": "Gather patterns 1:1 with Natro v1.1.2 (#46): 13/16 full loops in the regression and a 60-minute rotating soak that walked home 14 of 14 times",

@@ -162,12 +162,6 @@
       "detail": "Draft. Warns at start if hive size was never set."
     },
     {
-      "pr": 46,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/46",
-      "title": "Gather patterns 1:1 with Natro v1.1.2",
-      "detail": "Draft. Passed in-game with Dandelion and Sunflower 3/3; two unit tests need fixing before merge."
-    },
-    {
       "pr": 44,
       "url": "https://github.com/levihgibbons/apex-macro/pull/44",
       "title": "Walking and cannon moves 1:1 with Natro",
@@ -197,6 +191,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T07:30:00-08:00",
+      "title": "Gather patterns 1:1 with Natro v1.1.2 (#46): 13/16 full loops in the regression and a 60-minute rotating soak that walked home 14 of 14 times",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/46"
+    },
     {
       "when": "2026-11-12T07:28:00-08:00",
       "title": "Roblox settings check in the footer, Report-a-problem zip with build and screen details, run history tab, About shows build and Natro credit, hive-claim wording plus a missing Rejoining Reset button (#80–#84)",
@@ -403,5 +402,5 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
   ],
-  "summary": "All 17 path-out routes pass. Earlier tonight the full loop (walk out, gather, walk home, convert) passed 3/3 on 16 of 17 fields. A fresh regression on the newest code plus PR #46 (2 loops per field, 60-second gathers, run from 4:55 AM PT) went 13 of 16: Dandelion (0/2) and Spider (1/2) ended pressed into the hedge by the white fence near the hives, and Pine Tree (0/2) drifted into the Rose field on the way home. Those three are being re-tested now. Coconut stays WIP (the crab always spawns there)."
+  "summary": "All 17 path-out routes pass. Earlier tonight the full loop (walk out, gather, walk home, convert) passed 3/3 on 16 of 17 fields. A fresh regression on the newest code plus PR #46 (2 loops per field, 60-second gathers, run from 4:55 AM PT) went 13 of 16: Dandelion (0/2) and Spider (1/2) ended pressed into the hedge by the white fence near the hives, and Pine Tree (0/2) drifted into the Rose field on the way home. PR #46 is now merged. Those three are being re-tested on the new code, and a fresh investigator is comparing their walk home against Natro side by side. A 60-minute soak rotating Sunflower, Clover and Rose walked home 14 of 14 times with no deaths or stuck states. Coconut stays WIP (the crab always spawns there)."
 }

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T18:48:00-08:00",
+  "last_updated": "2026-11-11T19:30:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -83,11 +83,11 @@
       "role": "Worker: code only, runs on the laptop overnight",
       "machine": "Laptop",
       "status": "busy",
-      "doing": "Building the popup guard (draft PR #15), then the recovery port and jump buffs.",
+      "doing": "Fixing PR #16's conflict, then watchdog, hotbar item timers, Discord status and soak tooling.",
       "branch": "code/popup-guard",
-      "status_since": "2026-11-11T18:48:00-08:00",
-      "last_finished": "Fixed PR #11's merge conflicts (live movespeed), now merged.",
-      "last_finished_at": "2026-11-11T18:27:13-08:00",
+      "status_since": "2026-11-11T19:30:00-08:00",
+      "last_finished": "Popup guard, recovery port and live jump PRs (#15-#17).",
+      "last_finished_at": "2026-11-11T19:30:00-08:00",
       "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
       "last_seen": "2026-11-11T18:48:00-08:00"
     },
@@ -189,10 +189,24 @@
   ],
   "prs": [
     {
+      "number": 17,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/17",
+      "title": "Live jump: Natro 1:1 (fixed jump holds, live-speed walks), documented and tested",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T19:30:00-08:00"
+    },
+    {
+      "number": 16,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/16",
+      "title": "Recovery: Natro's death check, gather Inactive Honey, reconnect stages, private + fallback servers",
+      "status": "Draft, waiting for a recovery soak on the laptop",
+      "updated": "2026-11-11T19:30:00-08:00"
+    },
+    {
       "number": 15,
       "title": "Popup guard: refocus Roblox and redo the trip; stop on Roblox account pages",
-      "status": "Draft, being built on the laptop",
-      "updated": "2026-11-11T18:33:01-08:00",
+      "status": "Merged into the laptop's branch, waiting for its in-game test",
+      "updated": "2026-11-11T19:30:00-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/15"
     },
     {
@@ -231,13 +245,6 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/10"
     },
     {
-      "number": 4,
-      "title": "Gather patterns, convert, menu wiring, rotation and popups (PRs #4, #5, #7, #8, #9 combined)",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T17:47:01-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/4"
-    },
-    {
       "number": 6,
       "title": "Claim: don't remember a hive Apex never claimed",
       "status": "Merged into the laptop's branch",
@@ -245,11 +252,11 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/6"
     },
     {
-      "number": 2,
-      "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, testing live",
+      "number": 4,
+      "title": "Gather patterns, convert, menu wiring, rotation and popups (PRs #4, #5, #7, #8, #9 combined)",
+      "status": "Merged into the laptop's branch",
       "updated": "2026-11-11T17:47:01-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
+      "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     },
     {
       "number": 3,
@@ -258,6 +265,13 @@
       "commits": 2,
       "updated": "2026-11-11T13:10:57-08:00",
       "url": "https://github.com/levihgibbons/apex-macro/pull/3"
+    },
+    {
+      "number": 2,
+      "title": "Built-in routes ported from Natro Macro, fastest first",
+      "status": "Open, testing live",
+      "updated": "2026-11-11T17:47:01-08:00",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
     },
     {
       "number": 1,
@@ -269,6 +283,11 @@
     }
   ],
   "commits": [
+    {
+      "when": "2026-11-11T19:30:00-08:00",
+      "title": "Merged PRs #15 and #17: popup guard (redo interrupted trips) and live jump timing.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/15"
+    },
     {
       "when": "2026-11-11T18:47:47-08:00",
       "title": "Merged PR #11: walk timing follows Natro's haste cap for jump steps.",

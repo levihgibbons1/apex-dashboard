@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-11T19:30:00-08:00",
+  "last_updated": "2026-11-11T19:40:00-08:00",
   "target": {
     "label": "Tester build",
     "estimate": "Sun Nov 15"
@@ -188,6 +188,20 @@
     }
   ],
   "prs": [
+    {
+      "number": 20,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/20",
+      "title": "Tester readiness: settings save and reload, first-run fix, hotkey hints",
+      "status": "Merged into the laptop's branch",
+      "updated": "2026-11-11T19:40:00-08:00"
+    },
+    {
+      "number": 19,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/19",
+      "title": "App icon from the apexmacro.app logo",
+      "status": "Merged into the laptop's branch, icon to be checked in the tester build",
+      "updated": "2026-11-11T19:31:00-08:00"
+    },
     {
       "number": 17,
       "url": "https://github.com/levihgibbons/apex-macro/pull/17",

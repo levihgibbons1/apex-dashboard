@@ -132,3 +132,16 @@ a.link:hover b{color:var(--red)}
 .pct-sub{font-size:15px;color:var(--muted);font-weight:600}
 .meter{height:12px;border-radius:99px;background:#2a1d1e;overflow:hidden;margin-bottom:22px}
 .meter>i{display:block;height:100%;width:0;background:linear-gradient(90deg,var(--red3),var(--red));border-radius:99px}
+
+/* route table */
+.table-wrap{overflow-x:auto;margin:0 -4px}
+table.routes{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+table.routes th,table.routes td{text-align:left;padding:10px 10px;border-top:1px solid var(--line);vertical-align:middle}
+table.routes thead th{border-top:0;font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--dim);padding-top:0}
+table.routes tbody th{font-weight:650;color:var(--text);white-space:nowrap}
+table.routes td.note{font-size:13px;color:var(--muted);font-weight:400}
+.pill.failed{color:var(--red);background:var(--redsoft)}
+@media (max-width:760px){
+  table.routes{font-size:13px;min-width:560px}
+  table.routes th,table.routes td{padding:8px 8px}
+}

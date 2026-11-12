@@ -22,46 +22,46 @@
 <main id="app">
   <section class="hero card" id="hero"></section>
 
-  <section class="card agents-card">
-    <div class="section-head"><h2>Agents</h2><span class="muted small-inline">Who is doing what right now</span></div>
-    <div class="agents" id="agents"></div>
+  <section class="card" id="routes-card">
+    <div class="section-head">
+      <h2>Route tests</h2>
+      <span class="muted small-inline" id="routes-count"></span>
+    </div>
+    <p class="muted small" id="routes-note"></p>
+    <div class="table-wrap">
+      <table class="routes" id="routes">
+        <thead>
+          <tr>
+            <th>Field</th>
+            <th>Path out</th>
+            <th>Walk home</th>
+            <th>Full loop</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
   </section>
 
-  <section class="card" id="progress">
-    <div class="section-head"><h2>Tester build</h2><span class="muted" id="stage-count"></span></div>
-    <div class="target" id="target"></div>
-    <div class="pct" id="pct"></div>
-    <div class="meter" id="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-    <ol class="steps" id="timeline"></ol>
-    <p class="later" id="later"></p>
+  <section class="card" id="building-card">
+    <div class="section-head"><h2>Being built now</h2></div>
+    <ul class="list" id="building"></ul>
   </section>
 
   <div class="grid">
-    <section class="card" id="tests-card">
-      <div class="section-head"><h2>Latest test results</h2></div>
-      <p class="muted small" id="tests-note"></p>
-      <ul class="list" id="tests"></ul>
-    </section>
     <section class="card needs" id="needs-card">
-      <div class="section-head"><h2>Needs you</h2><span class="count" id="needs-count"></span></div>
+      <div class="section-head"><h2>Blocked / needs Levi</h2><span class="count" id="needs-count"></span></div>
       <ol class="list numbered" id="needs"></ol>
     </section>
-  </div>
-
-  <div class="grid">
-    <section class="card">
-      <div class="section-head"><h2>Proposed changes</h2></div>
-      <p class="muted small">BSS macro reviews and merges these once the live tests pass. You don't need to do anything on GitHub.</p>
-      <ul class="list" id="prs"></ul>
-    </section>
-    <section class="card">
-      <div class="section-head"><h2>Latest saved changes</h2></div>
-      <ul class="list" id="commits"></ul>
+    <section class="card" id="done-card">
+      <div class="section-head"><h2>Done recently</h2></div>
+      <ul class="list" id="done"></ul>
     </section>
   </div>
 </main>
 
-<footer class="foot">Apex Macro · free and open source · this page refreshes itself every minute</footer>
+<footer class="foot" id="foot">Apex Macro · free and open source · this page refreshes itself every minute</footer>
 <script src="app.js"></script>
 </body>
 </html>

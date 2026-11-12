@@ -1,524 +1,306 @@
 {
-  "last_updated": "2026-11-11T20:47:00-08:00",
-  "target": {
-    "label": "Tester build",
-    "estimate": "Sun Nov 15"
+  "last_updated": "2026-11-11T21:31:00-08:00",
+  "goal": {
+    "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
+    "target": "By morning Nov 12",
+    "tester": "Tester build Sun Nov 15",
+    "summary": "All 17 path-out routes now pass 3/3. 15 of 17 fields already walk home 5/5. Dandelion is 3/5 after the drift fix. Coconut's route is fine; the Coconut Crab keeps killing the alt, and Apex now skips that field after a death, like Natro. A fresh walk-home retest with the drift fix is next."
   },
-  "scope_url": "https://cursor.com/canvas/store-40ecd17f-4915-49fe-abf6-73b273cd7e0f/bc6a904b-d45a-4569-8b2e-aab5f8132013",
-  "now": {
-    "title": "Task 1: Natro paths and live tests",
-    "summary": "The laptop is testing the walk-back paths in the game, and checking that a reset lands on your hive (it looks for the Make Honey prompt).",
-    "worker": "apex-laptop",
-    "worker_status": "busy",
-    "started": "2026-11-11T10:56:00-08:00",
-    "steps": [
-      {
-        "title": "Laptop set up and running Opus at medium effort",
-        "status": "done",
-        "detail": "Confirmed by you today."
-      },
-      {
-        "title": "Shared task files, and path timing that follows your movespeed",
-        "status": "done",
-        "detail": "Done at 11:03 AM."
-      },
-      {
-        "title": "Fix where Apex reads the pollen counter",
-        "status": "done",
-        "detail": "The panel sat 20 px lower on the laptop, so Pine Tree looked like 0 out of 5 even though every trip landed. Fixed at 11:10 AM."
-      },
-      {
-        "title": "Fix how Apex finds Natro's top bar (for speed buffs)",
-        "status": "done",
-        "detail": "Found on 116 out of 116 saved screenshots. Fixed at 11:22 AM. Haste icons are still untested live."
-      },
-      {
-        "title": "Test hive to the red cannon",
-        "status": "doing",
-        "detail": "Hive 3: 5/5, hive 4: 4/4, hive 5: 2/2, hive 6: 2/2. Hives 1 and 2 were taken on all 9 servers, so they're not tested yet."
-      },
-      {
-        "title": "Test full trips to Pine Tree",
-        "status": "done",
-        "detail": "5 out of 5 today (hive 3): cannon, glide, sprinkler and gather check."
-      },
-      {
-        "title": "Test the other fields",
-        "status": "doing",
-        "detail": "42 out of 51 trips landed (hive 4). 13 fields are 3/3 or 2/3. Stump 1/3 (Stump Snail blocks the gather check), Coconut 1/3 and Pepper 0/3 were cut short by the battery popup."
-      },
-      {
-        "title": "Return paths from each field back to the hive",
-        "status": "doing",
-        "detail": "17 walk-back routes from Natro added at 1:02 PM, simplified at 1:37 PM. Being tested live now."
-      },
-      {
-        "title": "Safety: only press keys when the game screen shows",
-        "status": "done",
-        "detail": "Added at 1:19 PM after a test started on a non-game screen and blind key presses opened a Roblox settings page."
-      },
-      {
-        "title": "Reset lands on your hive (Make Honey check)",
-        "status": "doing",
-        "detail": "Slower reset keys, confirmed by the Make Honey prompt with one retry (2:10 PM). Mouse is parked first and the hive search looks both ways (2:16 PM). Still being tested."
-      }
-    ]
-  },
-  "agents": [
+  "routes_note": "Latest numbers are from live tests on the laptop today, written up at 9:25 PM PT. \u201cFull loop\u201d means walk to the field, gather, walk home, and convert. Unknown scores would be marked testing \u2014 none were invented.",
+  "routes": [
     {
-      "name": "apex-laptop",
-      "role": "Worker: tests in the live game",
-      "machine": "Laptop",
-      "status": "busy",
-      "doing": "Re-testing Coconut and Pepper in the game, then porting Natro's drift fix.",
-      "branch": "routes/natro-port",
-      "status_since": "2026-11-11T12:52:55-08:00",
-      "last_finished": "A trip now counts as missed only if pollen stops rising.",
-      "last_finished_at": "2026-11-11T14:29:46-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port",
-      "last_seen": "2026-11-11T20:47:00-08:00"
+      "field": "Sunflower",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
     },
     {
-      "name": "apex-code-laptop",
-      "role": "Worker: code only, runs on the laptop overnight",
-      "machine": "Laptop",
-      "status": "busy",
-      "doing": "Working on hotbar item timers.",
-      "branch": "code/hotbar",
-      "status_since": "2026-11-11T19:58:00-08:00",
-      "last_finished": "Watchdog: restarts Apex and Roblox if it freezes, ported from Natro (PR #22).",
-      "last_finished_at": "2026-11-11T19:55:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/22",
-      "last_seen": "2026-11-11T20:47:00-08:00"
+      "field": "Dandelion",
+      "path_out": "3/3",
+      "walk_home": "3/5",
+      "loop": "3/5",
+      "note": "After Natro's drift fix (was 0/5). Still short of 5/5."
     },
     {
-      "name": "apex-app",
-      "role": "Worker: app and menu screens, runs on the laptop",
-      "machine": "Laptop",
-      "status": "busy",
-      "doing": "Building the hotbar item timer and Discord status settings screens (waiting on the matching engine work), then an About/Credits screen with Natro credit.",
-      "branch": "code/hotbar-discord-ui",
-      "status_since": "2026-11-11T19:59:00-08:00",
-      "last_finished": "Tester guide and log buttons (PR #24), start checks (PR #25), watchdog toggle in Settings (PR #30).",
-      "last_finished_at": "2026-11-11T20:37:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/30",
-      "last_seen": "2026-11-11T20:47:00-08:00"
+      "field": "Mushroom",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
     },
     {
-      "name": "questions",
-      "role": "Worker: code only (retired)",
-      "machine": "Main PC",
-      "status": "offline",
-      "doing": "Retired to save memory. Its work moved to apex-code-laptop.",
-      "branch": "",
-      "status_since": "2026-11-11T17:45:00-08:00",
-      "last_finished": "Popups: Natro's pre-reset checks (draft PR #9).",
-      "last_finished_at": "2026-11-11T16:36:35-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/9",
-      "last_seen": "2026-11-11T17:45:00-08:00"
+      "field": "Blue Flower",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
     },
     {
-      "name": "apex-code",
-      "role": "Worker: code only (handing off before the main PC goes off)",
-      "machine": "Main PC",
-      "status": "online",
-      "doing": "Handed its work to apex-code-laptop. Not starting anything new.",
-      "branch": "routes/natro-port",
-      "status_since": "2026-11-11T17:30:00-08:00",
-      "last_finished": "Live movespeed: paths follow speed buffs (draft PR #11), plus a handoff note for the laptop.",
-      "last_finished_at": "2026-11-11T17:27:27-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/11",
-      "last_seen": "2026-11-11T20:47:00-08:00"
+      "field": "Clover",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": "Was 4/5; passed 5/5 on a later run."
     },
     {
-      "name": "BSS macro",
-      "role": "Director: hands out tasks, checks results, merges once tests pass",
-      "machine": "Main PC",
-      "status": "online",
-      "doing": "Checking on the workers every hour and when they report.",
-      "branch": "",
-      "status_since": "2026-11-11T12:52:00-08:00",
-      "last_finished": "Merged PRs #24, #25 and #30 into the laptop's branch.",
-      "last_finished_at": "2026-11-11T20:37:00-08:00",
-      "last_finished_url": "https://github.com/levihgibbons/apex-macro/pull/30",
-      "last_seen": "2026-11-11T20:47:00-08:00"
+      "field": "Spider",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
     },
     {
-      "name": "Laptop setup chat",
-      "role": "Helper: set up the laptop",
-      "machine": "Laptop",
-      "status": "idle",
-      "doing": "Standing by.",
-      "branch": "",
-      "status_since": "2026-11-11T12:52:55-08:00",
-      "last_finished": "Set up the laptop as a worker.",
-      "last_finished_at": "",
-      "last_finished_url": "",
-      "last_seen": "2026-11-11T11:37:00-08:00"
+      "field": "Strawberry",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
+    },
+    {
+      "field": "Bamboo",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
+    },
+    {
+      "field": "Pineapple",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
+    },
+    {
+      "field": "Pumpkin",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
+    },
+    {
+      "field": "Cactus",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
+    },
+    {
+      "field": "Rose",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
+    },
+    {
+      "field": "Pine Tree",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": "Also 5/5 on an earlier path-out run."
+    },
+    {
+      "field": "Stump",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": ""
+    },
+    {
+      "field": "Coconut",
+      "path_out": "3/3",
+      "walk_home": "0/5",
+      "loop": "0/5",
+      "loop_status": "failed",
+      "walk_home_status": "failed",
+      "note": "The route is fine. The Coconut Crab kills the alt each loop; Apex now detects the death and skips the field, like Natro."
+    },
+    {
+      "field": "Mountain Top",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": "Was 3/5; passed 5/5 on a later run."
+    },
+    {
+      "field": "Pepper",
+      "path_out": "3/3",
+      "walk_home": "5/5",
+      "loop": "5/5",
+      "note": "Passed 5/5 full loops tonight."
     }
   ],
-  "later": "v0.2: Polar Bear quest. After that: free Red AI, boosts, planters, Mondo and Vicious, then launch (Discord, and Reddit only in the Advertising Megathread).",
-  "tests": [
+  "building": [
     {
-      "name": "Haste buff",
-      "status": "done",
-      "result": "Read correctly in the live game (speed 31.9) during a cannon walk."
+      "pr": 16,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/16",
+      "title": "Recovery after disconnect, death, or crash",
+      "detail": "Draft. Waiting on an in-game recovery test."
     },
     {
-      "name": "Red cannon",
-      "status": "doing",
-      "result": "Hive 3: 5/5, hive 4: 4/4, hive 5: 2/2, hive 6: 2/2 today. Hives 1 and 2 not tested yet (always taken)."
+      "pr": 2,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/2",
+      "title": "Paths into the main build",
+      "detail": "Open. Merges once the live route tests pass."
     },
     {
-      "name": "Pine Tree",
-      "status": "done",
-      "result": "5 out of 5 full trips today (hive 3)."
+      "pr": 27,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/27",
+      "title": "Hotbar item timers",
+      "detail": "Uses items in slots 2\u20137 on a schedule, like Natro."
     },
     {
-      "name": "Reliability",
-      "status": "todo",
-      "result": "Code and unit tests done. Not tested in the live game yet."
+      "pr": 28,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/28",
+      "title": "Discord status messages",
+      "detail": "Start, stop, disconnects, deaths, and an hourly screenshot."
     },
     {
-      "name": "Other fields",
-      "status": "doing",
-      "result": "42/51 trips (hive 4). Mountain Top, Spider, Strawberry, Sunflower, Cactus, Bamboo, Dandelion, Clover, Pumpkin, Mushroom, Pineapple, Pine Tree 3/3; Blue Flower and Rose 2/3; Stump 1/3; Coconut 1/3 and Pepper 0/3 cut short by the battery popup."
+      "pr": 29,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/29",
+      "title": "Watchdog lets go of keys when Apex is stuck",
+      "detail": "So keys aren't left held down after a restart."
+    },
+    {
+      "pr": 31,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/31",
+      "title": "Hour-by-hour summary for the 8-hour overnight test",
+      "detail": "Makes the long reliability run easier to review."
+    },
+    {
+      "pr": 32,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/32",
+      "title": "Tester guide polish",
+      "detail": "Docs for the Sun Nov 15 tester build."
+    },
+    {
+      "pr": 33,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/33",
+      "title": "Hotbar and Discord settings screens",
+      "detail": "Menu screens for the timers and Discord status."
+    },
+    {
+      "pr": 34,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/34",
+      "title": "Save logs button",
+      "detail": "One zip of logs for the team, with secrets removed."
+    },
+    {
+      "pr": 35,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/35",
+      "title": "About / Credits screen",
+      "detail": "Natro credit, license, version, and apexmacro.app."
+    },
+    {
+      "pr": 36,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/36",
+      "title": "First-run setup and movespeed",
+      "detail": "Welcome steps and sensible defaults on first launch."
+    },
+    {
+      "pr": 37,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/37",
+      "title": "Use fewer GitHub build minutes",
+      "detail": "Don't build the Windows app on every update."
+    },
+    {
+      "pr": 38,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/38",
+      "title": "Settings for drift, private servers, and Died status",
+      "detail": "Menu switches for work already in the engine."
+    },
+    {
+      "pr": 39,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/39",
+      "title": "Start-up checks and tips",
+      "detail": "Start anyway, in-front check, camera and Do Not Disturb tips."
     }
   ],
-  "tests_note": "Live results come from the laptop, on your alt PenampungPett (movespeed 29).",
   "needs_you": [
     {
-      "title": "Fix GitHub billing so automatic tests run again",
-      "detail": "Since about 8:38 PM GitHub stopped running Apex's automatic tests because a payment failed or the spending limit is too low. Open GitHub Settings, then Billing and plans, and fix the payment or limit."
+      "title": "GitHub automatic checks are stopped",
+      "detail": "Since 8:38 PM PT, GitHub Actions is blocked by the spending limit (set to $0 so you aren't charged). Overnight, PRs are checked with the same tests on the laptop instead. Checks start again on Dec 1, or sooner if you raise the limit."
     },
     {
-      "title": "Check the test account's Roblox security settings",
-      "detail": "A 2-Step Verification email was sent after a glitch (Apex was pressing keys when the game wasn't on screen). That is fixed. Ignore or delete that code, and make sure the security settings look unchanged."
-    },
-    {
-      "title": "Turn off HP warranty popups on the test laptop",
-      "detail": "The HP Product Status box can cover the game and throw off a test. Turn off HP Support Assistant notifications."
-    },
-    {
-      "title": "Add an auto-rejoin toggle to the Settings tab",
-      "detail": "The new auto-rejoin setting (on by default) only lives in the settings file right now. Your UI, so your call when."
+      "title": "Optional: check the test account's Roblox logins",
+      "detail": "A login code was emailed to the alt earlier this evening. Nothing in Apex typed a password or opened a sign-in screen. If the account looks normal, no action is needed."
     }
   ],
-  "prs": [
+  "done": [
     {
-      "number": 32,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/32",
-      "title": "Tester guide polish (docs only)",
-      "status": "Draft",
-      "updated": "2026-11-11T20:45:00-08:00"
-    },
-    {
-      "number": 30,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/30",
-      "title": "Watchdog on/off toggle in Settings, plus auto-start option",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T20:37:00-08:00"
-    },
-    {
-      "number": 26,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/26",
-      "title": "Status tab: live field, trips and runtime; macro never waits on the window",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T20:18:00-08:00"
-    },
-    {
-      "number": 25,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/25",
-      "title": "Start checks: clear message when Roblox isn't ready",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T20:37:00-08:00"
-    },
-    {
-      "number": 24,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/24",
-      "title": "Tester guide, plus Open logs folder and Copy logs buttons",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T20:37:00-08:00"
-    },
-    {
-      "number": 23,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/23",
-      "title": "Menu defaults match the engine (Supreme sprinkler, like Natro)",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T20:18:00-08:00"
-    },
-    {
-      "number": 22,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/22",
-      "title": "Watchdog: restart Apex and Roblox if it freezes (Natro's Heartbeat)",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T19:58:00-08:00"
-    },
-    {
-      "number": 21,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/21",
-      "title": "Sidebar: shovel and box icons; app icon follow-ups",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T19:59:00-08:00"
-    },
-    {
-      "number": 20,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/20",
-      "title": "Tester readiness: settings save and reload, first-run fix, hotkey hints",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T19:40:00-08:00"
-    },
-    {
-      "number": 19,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/19",
-      "title": "App icon from the apexmacro.app logo",
-      "status": "Merged into the laptop's branch, icon to be checked in the tester build",
-      "updated": "2026-11-11T19:31:00-08:00"
-    },
-    {
-      "number": 17,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/17",
-      "title": "Live jump: Natro 1:1 (fixed jump holds, live-speed walks), documented and tested",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T19:30:00-08:00"
-    },
-    {
-      "number": 16,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/16",
-      "title": "Recovery: Natro's death check, gather Inactive Honey, reconnect stages, private + fallback servers",
-      "status": "Draft, waiting for a recovery soak on the laptop",
-      "updated": "2026-11-11T19:30:00-08:00"
-    },
-    {
-      "number": 15,
-      "title": "Popup guard: refocus Roblox and redo the trip; stop on Roblox account pages",
-      "status": "Merged into the laptop's branch, waiting for its in-game test",
-      "updated": "2026-11-11T19:30:00-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/15"
-    },
-    {
-      "number": 14,
-      "title": "Cannon: reset and re-approach instead of firing after a long search",
-      "status": "Merged into the laptop's branch, waiting for its in-game test",
-      "updated": "2026-11-11T18:28:00-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/14"
-    },
-    {
-      "number": 13,
-      "title": "Menu: show the gather list as Natro's Field 1-3 rotation",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T18:28:00-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/13"
-    },
-    {
-      "number": 12,
-      "title": "Menu: wire Return by and Convert balloon to the engine",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T18:28:00-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/12"
-    },
-    {
-      "number": 11,
-      "title": "Live movespeed: port Natro's Walk hasteCap, flag Bear Morph",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T18:47:47-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/11"
-    },
-    {
-      "number": 10,
-      "title": "Tester build: first-run check, rotating log, copy logs, crash message, tester zip",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T18:28:00-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/10"
-    },
-    {
-      "number": 6,
-      "title": "Claim: don't remember a hive Apex never claimed",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T17:15:38-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/6"
-    },
-    {
-      "number": 4,
-      "title": "Gather patterns, convert, menu wiring, rotation and popups (PRs #4, #5, #7, #8, #9 combined)",
-      "status": "Merged into the laptop's branch",
-      "updated": "2026-11-11T17:47:01-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/4"
-    },
-    {
-      "number": 3,
-      "title": "Add menu UI v0.5.0 (Levi's design)",
-      "status": "Merged",
-      "commits": 2,
-      "updated": "2026-11-11T13:10:57-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/3"
-    },
-    {
-      "number": 2,
-      "title": "Built-in routes ported from Natro Macro, fastest first",
-      "status": "Open, testing live",
-      "updated": "2026-11-11T17:47:01-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/2"
-    },
-    {
-      "number": 1,
-      "title": "Apex foundation and the one-field gather loop",
-      "status": "Merged",
-      "commits": 3,
-      "updated": "2026-11-11T11:37:00-08:00",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/1"
-    }
-  ],
-  "commits": [
-    {
-      "when": "2026-11-11T20:37:00-08:00",
-      "title": "Merged PRs #24, #25 and #30: tester guide and log buttons, start checks, watchdog toggle.",
+      "when": "2026-11-11T20:37:09-08:00",
+      "title": "Watchdog on/off toggle in Settings (#30)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/30"
     },
     {
-      "when": "2026-11-11T20:15:00-08:00",
-      "title": "Merged PRs #23 and #26: menu defaults and live Status tab.",
+      "when": "2026-11-11T20:36:38-08:00",
+      "title": "Clear message when Roblox isn't ready to start (#25)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/25"
+    },
+    {
+      "when": "2026-11-11T20:28:21-08:00",
+      "title": "Tester guide, plus Open logs and Copy logs (#24)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/24"
+    },
+    {
+      "when": "2026-11-11T20:15:37-08:00",
+      "title": "Live Status tab: field, trips, and runtime (#26)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/26"
     },
     {
-      "when": "2026-11-11T19:30:00-08:00",
-      "title": "Merged PRs #15 and #17: popup guard (redo interrupted trips) and live jump timing.",
+      "when": "2026-11-11T20:15:11-08:00",
+      "title": "Menu defaults match the engine (#23)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/23"
+    },
+    {
+      "when": "2026-11-11T19:58:35-08:00",
+      "title": "Shovel Gather icon and box Collect icon (#21)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/21"
+    },
+    {
+      "when": "2026-11-11T19:56:54-08:00",
+      "title": "Watchdog: restart Apex if it freezes (#22)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/22"
+    },
+    {
+      "when": "2026-11-11T19:39:32-08:00",
+      "title": "Settings now save and reload (#20)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/20"
+    },
+    {
+      "when": "2026-11-11T19:31:19-08:00",
+      "title": "Apex logo as the app icon (#19)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/19"
+    },
+    {
+      "when": "2026-11-11T19:27:15-08:00",
+      "title": "Live jump timing, like Natro (#17)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/17"
+    },
+    {
+      "when": "2026-11-11T19:27:11-08:00",
+      "title": "Popup guard: redo an interrupted trip; stop on account pages (#15)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/15"
     },
     {
+      "when": "2026-11-11T19:20:55-08:00",
+      "title": "Shorter sprinkler names and cleaner dropdowns (#18)",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/18"
+    },
+    {
       "when": "2026-11-11T18:47:47-08:00",
-      "title": "Merged PR #11: walk timing follows Natro's haste cap for jump steps.",
+      "title": "Walk timing follows live speed buffs (#11)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/11"
     },
     {
-      "when": "2026-11-11T18:28:00-08:00",
-      "title": "Merged PRs #10, #12, #13, #14: tester build, menu settings, Field 1-3 rotation, cannon re-approach.",
+      "when": "2026-11-11T18:24:23-08:00",
+      "title": "Cannon, Field 1\u20133 rotation, Return/Convert settings, and tester packaging (#10, #12, #13, #14)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/10"
     },
     {
       "when": "2026-11-11T17:47:01-08:00",
-      "title": "Merged PR #4: Natro patterns, convert, menu wiring, rotation and popups join the laptop's paths.",
+      "title": "Natro gather patterns, convert, and menu wiring (#4\u2013#9)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
-    },
-    {
-      "when": "2026-11-11T17:15:38-08:00",
-      "title": "Merged PR #6: don't remember a hive Apex never claimed.",
-      "url": "https://github.com/levihgibbons/apex-macro/pull/6"
-    },
-    {
-      "when": "2026-11-11T16:23:31-08:00",
-      "title": "Before walking home, walk back to where the gather pattern started.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T14:29:46-08:00",
-      "title": "Arrival check: a trip counts as missed only if pollen stops rising.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T14:25:09-08:00",
-      "title": "Fix: input comes back on after a missed trip, and the cannon step trusts the cannon prompt.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T14:16:23-08:00",
-      "title": "Park the mouse before a reset (as in Natro), and the hive search also looks right.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T14:10:11-08:00",
-      "title": "Reset: slower keys for the respawn menu, confirmed by Make Honey, one retry.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T13:49:17-08:00",
-      "title": "After a reset, a stricter hive check and steadier zoom.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T13:37:17-08:00",
-      "title": "Walking home needs no camera turn or reset (as in Natro).",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T13:19:52-08:00",
-      "title": "Safety: never press reset keys or click unless the Bee Swarm screen shows.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T13:02:37-08:00",
-      "title": "Walk back to the hive from every field (Natro's wf- paths).",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T12:26:39-08:00",
-      "title": "Progress: all-fields self-test results; laptop battery needs Levi.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T11:41:09-08:00",
-      "title": "Add a soak tool to run the real gather loop unattended (and test auto-rejoin).",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T11:38:27-08:00",
-      "title": "Read the bag percent from the Pollen panel found on screen.",
-      "url": "https://github.com/levihgibbons/apex-macro/commits/routes/natro-port"
-    },
-    {
-      "when": "2026-11-11T11:37:00-08:00",
-      "title": "Merged PR #1: Apex foundation and the one-field gather loop.",
-      "url": "https://github.com/levihgibbons/apex-macro/commit/74e69371e141752513044ef9232ee8875ffdeed7"
-    }
-  ],
-  "checklist": [
-    {
-      "id": "paths-out",
-      "title": "Paths out to fields",
-      "status": "doing",
-      "detail": "12 of 17 fields pass 3 for 3. Still left: Stump (the Stump Snail gets in the way), Coconut, and Pepper, plus a re-check of Blue Flower and Rose."
-    },
-    {
-      "id": "paths-back",
-      "title": "Paths back to the hive",
-      "status": "doing",
-      "detail": "All 17 were copied from Natro today and are being tested in the game now."
-    },
-    {
-      "id": "hive-convert",
-      "title": "Find your own hive slot and convert properly (Make Honey)",
-      "status": "doing",
-      "detail": "Make Honey convert from Natro is now in the laptop's build (merged 5:47 PM). Waiting for its in-game test."
-    },
-    {
-      "id": "patterns",
-      "title": "Natro's 12 gather patterns plus field defaults",
-      "status": "doing",
-      "detail": "All 12 Natro patterns plus field defaults are now in the laptop's build (merged 5:47 PM). Next: re-test in the game on the combined build."
-    },
-    {
-      "id": "speed-buffs",
-      "title": "Speed and jump buffs (Haste, Bear Morph, and others)",
-      "status": "doing",
-      "detail": "Reads Haste in the game. Natro's haste cap for jump steps merged 6:47 PM. Bear Morph speed and jump cap values still need measuring on the laptop."
-    },
-    {
-      "id": "recovery",
-      "title": "Auto-rejoin and recovery (deaths, disconnects, freezes)",
-      "status": "doing",
-      "detail": "The code is written, plus a safety fix so Apex presses nothing unless Bee Swarm is on screen. Not yet tested overnight."
-    },
-    {
-      "id": "hook-ui",
-      "title": "Hook your menu to the macro",
-      "status": "doing",
-      "detail": "Start, Pause, Stop, Return by, Convert balloon and the Field 1-3 rotation list are wired (merged 6:28 PM). The other Conversion settings stay marked Soon since Natro has no match."
-    },
-    {
-      "id": "overnight-test",
-      "title": "8-hour overnight test",
-      "status": "todo",
-      "detail": "Not started."
     }
   ]
 }

@@ -1,7 +1,4 @@
 const TZ = "America/Los_Angeles";
-const WORDS = { done: "Done", doing: "In progress", todo: "Not started" };
-const TEST_WORDS = { done: "Passed", doing: "In progress", todo: "Unknown", failed: "Failed" };
-const WORKER_WORDS = { busy: "Online, busy", online: "Online, idle", offline: "Offline" };
 const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
 const $ = id => document.getElementById(id);
 
@@ -23,85 +20,78 @@ function ago(iso) {
 }
 const pill = (kind, text) => `<span class="pill ${esc(kind)}">${esc(text)}</span>`;
 
+function scoreKind(value, status) {
+  if (status === "failed") return "failed";
+  if (status === "testing") return "doing";
+  if (status === "done") return "done";
+  const v = String(value || "").trim();
+  if (/^failed$/i.test(v) || /^0\/\d+$/.test(v)) return "failed";
+  if (/^testing$/i.test(v)) return "doing";
+  const m = v.match(/^(\d+)\/(\d+)$/);
+  if (m) {
+    const a = Number(m[1]), b = Number(m[2]);
+    if (b > 0 && a >= b) return "done";
+    if (a > 0) return "doing";
+    return "failed";
+  }
+  return "todo";
+}
+
 function render(s) {
   $("updated").innerHTML = `Last updated ${esc(pt(s.last_updated))} · ${esc(ago(s.last_updated))}`;
-  const n = s.now || {};
-  const ws = n.worker_status || "offline";
+  const g = s.goal || {};
   $("hero").innerHTML = `
-    <div class="eyebrow">${ws === "offline" ? "" : '<span class="pulse"></span>'}Now working on</div>
-    <h1>${esc(n.title)}</h1>
+    <div class="eyebrow"><span class="pulse"></span>Goal right now</div>
+    <h1>${esc(g.title)}</h1>
     <div class="meta">
-      ${pill(ws === "offline" ? "offline" : "online", n.worker)}
-      ${pill(ws, WORKER_WORDS[ws] || ws)}
-      ${n.started ? pill("plain", "Started " + pt(n.started)) : ""}
+      ${g.target ? pill("busy", g.target) : ""}
+      ${g.tester ? pill("plain", g.tester) : ""}
     </div>
-    <p class="summary">${esc(n.summary)}</p>
-    <ol class="steps">${(n.steps || []).map(st => `
-      <li class="step">
-        <span class="icon ${esc(st.status)}">${st.status === "done" ? "✓" : ""}</span>
-        <div><div class="t">${esc(st.title)}</div><div class="d">${esc(st.detail)}</div></div>
-        ${pill(st.status, WORDS[st.status] || st.status)}
-      </li>`).join("")}</ol>`;
+    ${g.summary ? `<p class="summary">${esc(g.summary)}</p>` : ""}`;
 
-  const AG = { busy: "Busy", online: "Online, idle", offline: "Offline" };
-  $("agents").innerHTML = (s.agents || []).map(a => {
-    const fin = a.last_finished ? (a.last_finished_url
-      ? `<a class="inl" href="${esc(a.last_finished_url)}" target="_blank" rel="noopener">${esc(a.last_finished)} ↗</a>`
-      : esc(a.last_finished)) + (a.last_finished_at ? ` <span class="dimtxt">· ${esc(pt(a.last_finished_at))}</span>` : "") : "Nothing yet";
-    return `<div class="agent ${esc(a.status)}">
-      <div class="row"><div><b class="aname">${esc(a.name)}</b><div class="role">${esc(a.role)}</div></div>${pill(a.status, AG[a.status] || a.status)}</div>
-      <dl>
-        <dt>Doing right now</dt><dd class="doing-now">${esc(a.doing)}</dd>
-        <dt>Computer</dt><dd>${esc(a.machine)}</dd>
-        ${a.branch ? `<dt>Branch</dt><dd><code>${esc(a.branch)}</code></dd>` : ""}
-        <dt>Last finished</dt><dd>${fin}</dd>
-        <dt>Last seen</dt><dd>${esc(a.last_seen ? pt(a.last_seen) + " · " + ago(a.last_seen) : "Unknown")}</dd>
-      </dl></div>`;
-  }).join("");
+  const routes = s.routes || [];
+  const passHome = routes.filter(r => scoreKind(r.walk_home, r.walk_home_status) === "done").length;
+  const passOut = routes.filter(r => scoreKind(r.path_out, r.path_out_status) === "done").length;
+  const passLoop = routes.filter(r => scoreKind(r.loop, r.loop_status) === "done").length;
+  $("routes-count").textContent = routes.length
+    ? `${passOut}/${routes.length} path out · ${passHome}/${routes.length} walk home · ${passLoop}/${routes.length} full loops`
+    : "";
+  $("routes-note").textContent = s.routes_note || "";
+  $("routes").querySelector("tbody").innerHTML = routes.map(r => {
+    const outK = scoreKind(r.path_out, r.path_out_status);
+    const homeK = scoreKind(r.walk_home, r.walk_home_status);
+    const loopK = scoreKind(r.loop, r.loop_status);
+    return `<tr>
+      <th>${esc(r.field)}</th>
+      <td>${pill(outK, r.path_out || "testing")}</td>
+      <td>${pill(homeK, r.walk_home || "testing")}</td>
+      <td>${pill(loopK, r.loop || "testing")}</td>
+      <td class="note">${esc(r.note || "")}</td>
+    </tr>`;
+  }).join("") || `<tr><td colspan="5" class="sub">No results yet.</td></tr>`;
 
-  const items = s.checklist || [];
-  const score = items.reduce((n, x) => n + (x.status === "done" ? 1 : x.status === "doing" ? 0.5 : 0), 0);
-  const pct = items.length ? Math.round((score / items.length) * 100) : 0;
-  const doneN = items.filter(x => x.status === "done").length;
-  const doingN = items.filter(x => x.status === "doing").length;
-  $("stage-count").textContent = `${pct}% done` + (doingN ? ` · ${doingN} in progress` : "");
-  const tg = s.target || {};
-  $("target").innerHTML = (tg.label || tg.estimate
-    ? `<span class="pill busy">${esc(tg.label || "Tester build")}${tg.estimate ? ": " + esc(tg.estimate) : ""}</span>`
-    : "") +
-    (s.scope_url ? ` <a class="inl" href="${esc(s.scope_url)}" target="_blank" rel="noopener">See the full v0.1 scope ↗</a>` : "");
-  $("pct").innerHTML = `<div class="pct-num">${pct}% <span>done</span></div><div class="pct-sub">Target ${esc(tg.estimate || "not set")}</div>`;
-  const bar = $("bar");
-  bar.innerHTML = `<i style="width:${pct}%"></i>`;
-  bar.setAttribute("aria-valuenow", String(pct));
-  bar.setAttribute("aria-label", `Tester build ${pct}% done`);
-  $("timeline").innerHTML = items.map(st => `
-    <li class="step">
-      <span class="icon ${esc(st.status)}">${st.status === "done" ? "✓" : ""}</span>
-      <div><div class="t">${esc(st.title)}</div><div class="d">${esc(st.detail)}</div></div>
-      ${pill(st.status, WORDS[st.status] || st.status)}
-    </li>`).join("") || `<li class="sub">No checklist yet.</li>`;
-  $("later").innerHTML = s.later ? `<b>After that:</b> ${esc(s.later)}` : "";
-
-  $("tests-note").textContent = s.tests_note || "";
-  $("tests").innerHTML = (s.tests || []).map(t => `
-    <li><div class="row"><b>${esc(t.name)}</b>${pill(t.status === "failed" ? "doing" : t.status, TEST_WORDS[t.status] || t.status)}</div>
-    <div class="sub">${esc(t.result)}</div></li>`).join("");
+  $("building").innerHTML = (s.building || []).map(b => {
+    const label = b.pr ? `#${esc(b.pr)} ${esc(b.title)}` : esc(b.title);
+    const inner = `<div class="row"><b>${label}</b></div>${b.detail ? `<div class="sub">${esc(b.detail)}</div>` : ""}`;
+    return b.url
+      ? `<li><a class="link" href="${esc(b.url)}" target="_blank" rel="noopener">${inner} <span class="arrow">↗</span></a></li>`
+      : `<li>${inner}</li>`;
+  }).join("") || `<li class="sub">Nothing in progress.</li>`;
 
   const needs = s.needs_you || [];
   $("needs-count").textContent = needs.length || "";
+  $("needs-count").style.display = needs.length ? "" : "none";
   $("needs").innerHTML = needs.length
     ? needs.map(x => `<li><div><div class="row"><b>${esc(x.title)}</b></div><div class="sub">${esc(x.detail)}</div></div></li>`).join("")
     : `<li class="sub">Nothing right now.</li>`;
 
-  $("prs").innerHTML = (s.prs || []).map(p => `
-    <li><a class="link" href="${esc(p.url)}" target="_blank" rel="noopener">
-      <div class="row"><b>#${esc(p.number)} ${esc(p.title)}</b>${pill(/merged/i.test(p.status) && !/not/i.test(p.status) ? "done" : "doing", p.status)}</div>
-      <div class="sub">${esc(p.commits)} saved changes · updated ${esc(pt(p.updated))} <span class="arrow">↗</span></div></a></li>`).join("") || `<li class="sub">None open.</li>`;
-
-  $("commits").innerHTML = (s.commits || []).map(c => `
-    <li><a class="link" href="${esc(c.url)}" target="_blank" rel="noopener">
-      <div class="when">${esc(pt(c.when))}</div><b>${esc(c.title)}</b> <span class="arrow">↗</span></a></li>`).join("");
+  $("done").innerHTML = (s.done || []).map(d => {
+    const when = d.when ? `<div class="when">${esc(pt(d.when))}</div>` : "";
+    const inner = `${when}<b>${esc(d.title)}</b>`;
+    return d.url
+      ? `<li><a class="link" href="${esc(d.url)}" target="_blank" rel="noopener">${inner} <span class="arrow">↗</span></a></li>`
+      : `<li>${inner}</li>`;
+  }).join("") || `<li class="sub">Nothing listed yet.</li>`;
 }
 
 async function load() {

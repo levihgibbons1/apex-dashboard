@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T11:20:00-08:00",
+  "last_updated": "2026-11-12T11:25:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,8 +9,8 @@
   "now": [
     {
       "who": "Game tests (laptop)",
-      "task": "Pine Tree walk-home checks and the 60-minute soak",
-      "detail": "Working through the Pine Tree walk home on the newest code (it missed on every hive earlier) alongside the 60-minute Pine Tree and Bamboo soak of the death-recovery fix."
+      "task": "Waiting for the AI video block, then the Pine Tree problem",
+      "detail": "The AI video worker has the game until about noon. Next: check where Pine Tree gathers end, run Natro side by side on Pine Tree, then pattern, convert and rotation checks."
     },
     {
       "who": "AI video (laptop)",
@@ -29,16 +29,16 @@
     }
   ],
   "todo": [
-    "Fix walk home on Dandelion, Spider and Pine Tree (in progress, investigator comparing with Natro)",
-    "60-minute Pine Tree and Bamboo soak (about 10 AM)",
-    "Test hive slots 1 to 3 (4 to 6 partly done)",
-    "Merge recovery (#16) after its conflict fix",
+    "Fix Pine Tree gathers ending outside the field (breaks walk home and trips Inactive Honey)",
+    "Fix walk home on Dandelion and Spider (fails today even on the 4:02 AM code)",
+    "Bamboo walk home after long gathers",
+    "Test hive slots 1 to 3 (need a private server)",
+    "Pattern, convert and rotation checks in game",
     "Tester zip: rebuild and launch check",
-    "Check the menu at real 125% and 150% Windows scaling",
-    "8-hour overnight test (tonight)",
+    "8-hour overnight test",
     "Tester build (Sun Nov 15)"
   ],
-  "routes_note": "Live tests on the laptop on the Natro 1:1 engine with Natro's drift check on (latest runs 4:02 and 4:15 AM PT for Dandelion and Sunflower). “Full loop” means walk to the field, gather, walk home, and convert, 3 loops per field. None of these numbers are invented. Latest regression: 20261112-045501-reg17-df3-46 (Dandelion, Spider, Pine Tree missed walk-home).",
+  "routes_note": "Live tests on the laptop on the Natro 1:1 engine. “Full loop” means walk to the field, gather, walk home, and convert. Newest runs on Nov 12 morning (hive 5, 60-second gathers): 20261112-090549-base-b8db-dsp and 20261112-094054-bisect-good-dand. None of these numbers are invented.",
   "routes": [
     {
       "field": "Sunflower",
@@ -50,9 +50,9 @@
     {
       "field": "Dandelion",
       "path_out": "3/3",
-      "walk_home": "3/3",
-      "loop": "3/3",
-      "note": "Fixed (4:02 AM run, 60-second gathers): 3/3. The fence snag came from 20-second test gathers, not the walk-home code; unmodified Natro behaved the same way."
+      "walk_home": "0/2",
+      "loop": "fails",
+      "note": "Today (hive 5, 60-s gathers): walk home 0/2, and the 4:02 AM code that went 3/3 also fails today, so it's not a code change. Being investigated."
     },
     {
       "field": "Mushroom",
@@ -78,9 +78,9 @@
     {
       "field": "Spider",
       "path_out": "3/3",
-      "walk_home": "3/3",
-      "loop": "3/3",
-      "note": ""
+      "walk_home": "1/2",
+      "loop": "fails",
+      "note": "Today (hive 5, 60-s gathers): walk home 1/2 on current code. Being investigated."
     },
     {
       "field": "Strawberry",
@@ -94,7 +94,7 @@
       "path_out": "3/3",
       "walk_home": "3/3",
       "loop": "3/3",
-      "note": "3/3 once Natro's drift check was turned on."
+      "note": "Soak: two 10-minute gathers fine, but both walks home after long gathers fell back to a reset. Being checked."
     },
     {
       "field": "Pineapple",
@@ -127,9 +127,9 @@
     {
       "field": "Pine Tree",
       "path_out": "3/3",
-      "walk_home": "3/3",
-      "loop": "3/3",
-      "note": ""
+      "walk_home": "missed",
+      "loop": "fails",
+      "note": "Today: walk home missed on every hive. Gathers end on the grass outside the field, so the walk home starts from the wrong spot and drifts into Rose; this also trips the Inactive Honey stop. Top blocker, Natro side-by-side approved."
     },
     {
       "field": "Stump",
@@ -182,12 +182,6 @@
       "detail": "Draft. Shows when the alt died and a field was skipped."
     },
     {
-      "pr": 50,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/50",
-      "title": "Clean-up after recovery (#16)",
-      "detail": "Draft. Waits for #16."
-    },
-    {
       "pr": 41,
       "url": "https://github.com/levihgibbons/apex-macro/pull/41",
       "title": "Small-hive warning",
@@ -198,12 +192,6 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/44",
       "title": "Walking and cannon moves 1:1 with Natro",
       "detail": "Draft. Code worker matching Natro's walk and cannon code exactly."
-    },
-    {
-      "pr": 16,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/16",
-      "title": "Recovery after disconnect, death, or crash",
-      "detail": "Draft. 60-minute in-game soak passed (no misfires, deaths, or rejoins); being merged with the newest code."
     },
     {
       "pr": 2,
@@ -223,6 +211,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T11:22:00-08:00",
+      "title": "Recovery merged into the paths branch: Natro's death check, Inactive Honey stop during gathers, reconnect stages, private and fallback servers (#16), plus its clean-up (#50). The 60-minute soak showed no false Inactive Honey stops while in a field.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/16"
+    },
     {
       "when": "2026-11-12T08:30:00-08:00",
       "title": "Field rotation screen (up to 3 fields, drag to reorder, plain-words order note), recovery status lines and a Recovery column in History, build stamp + Check for updates + How to test card, and a 125%/150% scaling checklist (#90–#93)",

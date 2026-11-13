@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T11:55:00-08:00",
+  "last_updated": "2026-11-13T12:55:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -34,7 +34,7 @@
     }
   ],
   "todo": [
-    "Find why Pine Tree walk home fails on the routes branch (0/2) but passes on main (3/3)",
+    "Routes branch: convert loops (Clover, Sunflower, Pine Tree), 30-minute rotation soak, and default patterns on all 16 fields (running on the laptop)",
     "Retest Sunflower and Mountain Top full loops from hive 1",
     "Coconut walk home (needs crab avoidance, beyond Natro)",
     "Bamboo walk home after long gathers",
@@ -505,6 +505,11 @@
       "when": "2026-11-13T11:50:00-08:00",
       "title": "Main walked home on 16/16 fields in daytime, Pine Tree 3/3; 1-hour soak with Roblox killed every 30 min passed (#114, #130). Convert bug found (hive never marked confirmed after walking home) and fixed in #141, merged into the routes branch.",
       "url": "https://github.com/levihgibbons/apex-macro/pull/141"
+    },
+    {
+      "when": "2026-11-13T12:52:00-08:00",
+      "title": "Pine Tree walk-home fix merged into the routes branch (#143): the death check no longer runs between path steps, which had pushed the cannon glide past the hives. Live test: Pine Tree walked home 3/3 with the fix vs 2/3 without.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/143"
     }
   ],
   "summary": "All 17 path-out routes pass. Tonight (9:35 PM PT, hive 3, 60-second gathers, one loop per field) the routes branch with the Pine Tree fix (#103) walked home on all 16 target fields, and Pine Tree walked home 3 of 3 with 3-minute gathers. The routes are now merged into main (PR #2). Coconut stays WIP (the crab kills the alt every time; Natro has no crab avoidance either). Next: pattern, convert and rotation checks in game, after the AI video ships if the game isn't free sooner."

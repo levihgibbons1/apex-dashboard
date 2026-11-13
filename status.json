@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T15:50:00-08:00",
+  "last_updated": "2026-11-12T19:15:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,13 +9,13 @@
   "now": [
     {
       "who": "Game tests (laptop)",
-      "task": "Testing walk-home fixes between AI video blocks",
-      "detail": "16 of 16 fields walked home on the newest fixes. The AI video still gets the game first until Friday morning."
+      "task": "Waiting while the AI video uses the game overnight",
+      "detail": "The newest check walked home on 15 of 16 fields (Pine Tree missed); a Pine Tree fix is ready and gets tested once the AI video is done with the game."
     },
     {
       "who": "AI video (laptop)",
-      "task": "Editing the first cut of the AI Gathering video from Pine Tree and Bamboo footage",
-      "detail": "The sharper model now boxes six token types live, about 100 seconds of Pine Tree and 6 minutes of Bamboo are recorded, and a first cut is due tonight as the backup for the 8 AM Friday deadline."
+      "task": "Training a new model that also spots Token Link and the sprinkler",
+      "detail": "Training finishes around 12:30 AM; then it records more Pine Tree and Bamboo on the test alt, with a backup cut by 7:30 AM and the final video due 8 AM Friday."
     },
     {
       "who": "Code fixes (laptop)",
@@ -449,5 +449,5 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
   ],
-  "summary": "All 17 path-out routes pass. At 3:04 PM PT, a regression on the newest fixes (#100 and #101, hive 1, 60-second gathers, one loop per field) walked home on all 16 target fields, up from 13 of 16 this morning. The Pine Tree drift is fixed: a slow screen check near the end of a pattern leg kept the key held too long, so the pattern crept out of the field. With 3-minute gathers, Pine Tree walked home 2 of 2. Coconut stays WIP (the crab always spawns there). Next: re-run the regression on the merged branch, and retest Sunflower and Mountain Top full loops from hive 1."
+  "summary": "At 6:40 PM PT, a regression on the newest code walked home on 15 of 16 target fields (Pine Tree missed), with Sunflower 3 of 3 and Mountain Top 2 of 3 full loops. A Pine Tree fix (screen checks were running in the middle of a walk) is ready and waits for a live test after the AI video finishes with the game overnight. Coconut stays WIP."
 }

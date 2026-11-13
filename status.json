@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T01:10:00-08:00",
+  "last_updated": "2026-11-13T06:00:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -8,24 +8,24 @@
   },
   "now": [
     {
-      "who": "Game tests (laptop)",
-      "task": "16-field check passed; next: pattern, convert and rotation checks",
-      "detail": "Runs only if the AI video doesn't need the game before 5:15 AM; otherwise after the video ships at 8 AM."
-    },
-    {
       "who": "AI video (laptop)",
-      "task": "Training the newer model offline while the game tests run",
-      "detail": "A backup video is already saved; the newer model now spots Token Link, and it gets the game back at 5:30 AM to record the final video, due 8 AM Friday."
+      "task": "Final video saved; optional longer Pine Tree take to catch Token Link",
+      "detail": "apex_ai_gathering_final_v3.mp4 (1:53, Pine Tree then Bamboo on the alt) is the delivery cut. One optional retake runs until 7:15 AM at the latest to try to show Token Link; if it isn't clean, v3 stays."
     },
     {
-      "who": "Code fixes (laptop)",
-      "task": "Fixing the menu-file conflict that blocks merging the routes into main",
-      "detail": "The menu UI v0.5 files differ between main and the routes branch (PR #2)."
+      "who": "Game tests (laptop)",
+      "task": "After 7:15 AM: 16-field check with the hive-claim and sprinkler fixes, then Pine Tree with 3-minute gathers",
+      "detail": "Last night: a 113-minute rotation run (Sunflower, Clover, Pine Tree) walked home 20 of 21 times with no deaths or rejoins, and the hive-claim fix (#51) had zero hive-camera misses at night."
     },
     {
-      "who": "App / menu (laptop)",
-      "task": "Paused to save usage",
-      "detail": "Paused with handoff notes; its last two menu changes wait on the death-recovery and speed fixes."
+      "who": "Code (laptop)",
+      "task": "Fixing merge conflicts on the rotation, speed and recovery checks (#117, #123, #124), then #51 with #98",
+      "detail": "#51 and #98 each pass the tests alone but clash on one test together."
+    },
+    {
+      "who": "App (laptop)",
+      "task": "Fixing a conflict on the disk-space check (#133), then more menu work",
+      "detail": ""
     }
   ],
   "todo": [
@@ -179,7 +179,7 @@
       "pr": 51,
       "url": "https://github.com/levihgibbons/apex-macro/pull/51",
       "title": "Hive claim and hive camera 1:1 with Natro",
-      "detail": "Draft. Natro's exact hive-slot claim and hive camera check."
+      "detail": "Draft. Live test at night: claimed hive 1, 5/5 hard fields walked home, 0 hive-camera misses in 6 resets. Clashes with #98 on one test; being fixed."
     },
     {
       "pr": 54,
@@ -217,6 +217,21 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-13T05:24:00-08:00",
+      "title": "AI Gathering video saved: apex_ai_gathering_final_v3.mp4 (1:53, alt, Pine Tree then Bamboo, click held, no jumping, closer camera, bold labels). Boxes Focus, Blue Boost, Honey, Melody, Surprise Party, Treat, Bubble, Balloon and Sprinkler; Token Link, bombs, Haste, Inspire and Gumdrops didn't show up in these takes.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/136"
+    },
+    {
+      "when": "2026-11-13T05:57:00-08:00",
+      "title": "Tester app PRs merged into main: keeps the PC awake during a run (#131), crash-safe settings saving (#132), Status History can be saved as a spreadsheet file (#134), and a tester-zip checker (#135).",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/135"
+    },
+    {
+      "when": "2026-11-13T05:07:00-08:00",
+      "title": "113-minute rotation run on main (Sunflower, Clover, Pine Tree, hive 1): 23 gathers, honey made every hour, walked home 20 of 21, no deaths, no rejoins.",
+      "url": ""
+    },
     {
       "when": "2026-11-13T02:12:00-08:00",
       "title": "Overnight soak prep merged into main: log files now have size caps so an 8-hour run can't fill the disk (#125), the Report a problem zip now includes why it stopped and the watchdog log (#126), a plain Roblox setup reminder in the setup check (#127), Reset all settings now asks first and has an Undo button (#128), and new tester guide sections (#129).",

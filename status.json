@@ -1,16 +1,16 @@
 {
-  "last_updated": "2026-11-12T21:15:00-08:00",
+  "last_updated": "2026-11-12T21:30:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
     "tester": "Tester build Sun Nov 15",
-    "summary": "All 17 path-out routes pass. At 3:04 PM PT, a regression on the newest fixes (#100 and #101, hive 1, 60-second gathers, one loop per field) walked home on all 16 target fields, up from 13 of 16 this morning. The Pine Tree drift is fixed: a slow screen check near the end of a pattern leg kept the key held too long, so the pattern crept out of the field. With 3-minute gathers, Pine Tree walked home 2 of 2. Coconut stays WIP (the crab always spawns there). Next: re-run the regression on the merged branch, and retest Sunflower and Mountain Top full loops from hive 1."
+    "summary": "All 17 path-out routes pass. Tonight (8:28 PM PT, hive 3, 60-second gathers, one loop per field) the merged branch walked home on all 16 target fields, Pine Tree included. The last Pine Tree drift fix (#103: screen checks now run only between pattern legs, never while a key is held) walked home 2 of 2 with 3-minute gathers and is merged. Coconut stays WIP (the crab kills the alt every time; Natro has no crab avoidance either). Next: merge the routes into main once a menu-file conflict is fixed, and re-run the all-fields check with #103."
   },
   "now": [
     {
       "who": "Game tests (laptop)",
-      "task": "Running the overnight game checks: Pine Tree fix (3 tries), the all-fields check, then Coconut",
-      "detail": "The AI video handed it the game until 5:30 AM, so it is testing the Pine Tree walk-home fix and re-checking every field."
+      "task": "Queue finished; next: all-fields check with #103, then pattern, convert and rotation checks",
+      "detail": "Runs only when the AI video doesn't need the game; otherwise after the video ships at 8 AM."
     },
     {
       "who": "AI video (laptop)",
@@ -19,8 +19,8 @@
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Paused to save usage",
-      "detail": "Paused with handoff notes so the shared usage limit goes to game tests and the AI video."
+      "task": "Fixing the menu-file conflict that blocks merging the routes into main",
+      "detail": "The menu UI v0.5 files differ between main and the routes branch (PR #2)."
     },
     {
       "who": "App / menu (laptop)",
@@ -29,9 +29,10 @@
     }
   ],
   "todo": [
-    "Re-run the 16-field regression on the merged branch (#100 + #101)",
+    "Fix the menu-file conflict, then merge the routes into main (PR #2)",
+    "Re-run the 16-field regression with #103",
     "Retest Sunflower and Mountain Top full loops from hive 1",
-    "Coconut walk home",
+    "Coconut walk home (needs crab avoidance, beyond Natro)",
     "Bamboo walk home after long gathers",
     "Test hive 2 (hives 1 and 3 work)",
     "Pattern, convert and rotation checks in game",
@@ -39,7 +40,7 @@
     "8-hour overnight test",
     "Tester build (Sun Nov 15)"
   ],
-  "routes_note": "Live tests on the laptop on the Natro 1:1 engine. “Full loop” means walk to the field, gather, walk home, and convert. Newest run: 20261112-150430-reg16-101-100 (Nov 12, 3:04 PM PT, hive 1, 60-second gathers, one loop per field). None of these numbers are invented.",
+  "routes_note": "Live tests on the laptop on the Natro 1:1 engine. “Full loop” means walk to the field, gather, walk home, and convert. Newest run: 20261112-202827-reg16-tip-night (Nov 12, 8:28 PM PT, hive 3, 60-second gathers, one loop per field, merged #100 + #101): 16 of 16 walked home. None of these numbers are invented.",
   "routes": [
     {
       "field": "Sunflower",
@@ -218,6 +219,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T21:30:00-08:00",
+      "title": "Merged branch walked home on 16 of 16 fields overnight. Pine Tree drift fully fixed (#103, 2 of 2 walk home with 3-minute gathers) and merged.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/103"
+    },
     {
       "when": "2026-11-12T15:48:00-08:00",
       "title": "Pine Tree drift fixed (#101): screen checks no longer hold a key past a pattern leg's end. Fresh servers claim a hive again instead of rejoining forever (#100). Regression on both: 16 of 16 fields walked home.",
@@ -449,5 +455,5 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
   ],
-  "summary": "At 6:40 PM PT, a regression on the newest code walked home on 15 of 16 target fields (Pine Tree missed), with Sunflower 3 of 3 and Mountain Top 2 of 3 full loops. A Pine Tree fix (screen checks were running in the middle of a walk) is ready and is being tested live now (Pine Tree 3 times, then all fields and Coconut) while the AI video trains offline until 5:30 AM. Coconut stays WIP."
+  "summary": "All 17 path-out routes pass. Tonight (8:28 PM PT, hive 3, 60-second gathers, one loop per field) the merged branch walked home on all 16 target fields, Pine Tree included. The last Pine Tree drift fix (#103: screen checks now run only between pattern legs, never while a key is held) walked home 2 of 2 with 3-minute gathers and is merged. Coconut stays WIP (the crab kills the alt every time; Natro has no crab avoidance either). Next: merge the routes into main once a menu-file conflict is fixed, and re-run the all-fields check with #103."
 }

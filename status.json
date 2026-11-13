@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T22:35:00-08:00",
+  "last_updated": "2026-11-12T23:50:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -217,6 +217,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-12T23:50:00-08:00",
+      "title": "Tester app work merged into main: tester build script (#104), first-run checklist (#106), field status page (#107), tester guide (#108), field status from test runs (#109), safer settings and Natro import (#110), cleaner problem-report zip (#111).",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/111"
+    },
     {
       "when": "2026-11-12T22:35:00-08:00",
       "title": "Routes merged into main (PR #2) after the branch with #103 walked home on 16 of 16 fields; Pine Tree now 3 of 3 with 3-minute gathers.",

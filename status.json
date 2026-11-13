@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T08:05:00-08:00",
+  "last_updated": "2026-11-13T11:55:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -19,8 +19,8 @@
     },
     {
       "who": "Game tests (laptop)",
-      "task": "Pine Tree x3 and a short multi-field check on the new main, then convert (#116), popups (#130) and a 1-hour soak",
-      "detail": "This morning on main with #51 and #98: 15/16 fields walked home; Stump's miss didn't repeat (2/2 on re-run)."
+      "task": "Waiting for the main-to-routes sync; then Pine Tree x3 on the routes branch (its Pine walk home went 0/2 while main went 3/3) and live convert/rotation checks",
+      "detail": "Today on main (2d1ec09, daytime, hive 3/4): 16/16 fields walked home, Pine Tree 3/3 with 3-minute gathers, 1-hour crash-and-rejoin soak passed."
     },
     {
       "who": "Code fixes (laptop)",
@@ -34,16 +34,16 @@
     }
   ],
   "todo": [
+    "Find why Pine Tree walk home fails on the routes branch (0/2) but passes on main (3/3)",
     "Retest Sunflower and Mountain Top full loops from hive 1",
     "Coconut walk home (needs crab avoidance, beyond Natro)",
     "Bamboo walk home after long gathers",
     "Test hive 2 (hives 1 and 3 work)",
-    "Pattern, convert and rotation checks in game",
     "Tester zip: rebuild and launch check",
     "8-hour overnight test",
     "Tester build (Sun Nov 15)"
   ],
-  "routes_note": "Live tests on the laptop on the Natro 1:1 engine. “Full loop” means walk to the field, gather, walk home, and convert. Newest run: 20261112-213514-reg16-9a9f924 (Nov 12, 9:35 PM PT, hive 3, 60-second gathers, one loop per field, routes branch with #100, #101 and #103, now merged into main): 16 of 16 walked home. None of these numbers are invented.",
+  "routes_note": "Live tests on the laptop on the Natro 1:1 engine. “Full loop” means walk to the field, gather, walk home, and convert. Newest run: 20261113-081241-reg16-main-2d1ec09 (Nov 13 morning, daytime, hive 3/4, 60-second gathers, one loop per field, main with hive claim #51 and sprinklers #98): 16 of 16 walked home; Pine Tree 3/3 with 3-minute gathers. None of these numbers are invented.",
   "routes": [
     {
       "field": "Sunflower",
@@ -500,6 +500,11 @@
       "when": "2026-11-13T08:04:00-08:00",
       "title": "Hive claim and hive camera 1:1 with Natro (#51) and Natro 1:1 sprinklers (#98) merged into main. Live test on main with both: 15 of 16 fields walked home (the one miss, Stump, then went 2/2), and Pine Tree walked home 2/2 with 3-minute gathers.",
       "url": "https://github.com/levihgibbons/apex-macro/pull/51"
+    },
+    {
+      "when": "2026-11-13T11:50:00-08:00",
+      "title": "Main walked home on 16/16 fields in daytime, Pine Tree 3/3; 1-hour soak with Roblox killed every 30 min passed (#114, #130). Convert bug found (hive never marked confirmed after walking home) and fixed in #141, merged into the routes branch.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/141"
     }
   ],
   "summary": "All 17 path-out routes pass. Tonight (9:35 PM PT, hive 3, 60-second gathers, one loop per field) the routes branch with the Pine Tree fix (#103) walked home on all 16 target fields, and Pine Tree walked home 3 of 3 with 3-minute gathers. The routes are now merged into main (PR #2). Coconut stays WIP (the crab kills the alt every time; Natro has no crab avoidance either). Next: pattern, convert and rotation checks in game, after the AI video ships if the game isn't free sooner."

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-12T19:15:00-08:00",
+  "last_updated": "2026-11-12T21:15:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,13 +9,13 @@
   "now": [
     {
       "who": "Game tests (laptop)",
-      "task": "Waiting while the AI video uses the game overnight",
-      "detail": "The newest check walked home on 15 of 16 fields (Pine Tree missed); a Pine Tree fix is ready and gets tested once the AI video is done with the game."
+      "task": "Running the overnight game checks: Pine Tree fix (3 tries), the all-fields check, then Coconut",
+      "detail": "The AI video handed it the game until 5:30 AM, so it is testing the Pine Tree walk-home fix and re-checking every field."
     },
     {
       "who": "AI video (laptop)",
-      "task": "Training a new model that also spots Token Link and the sprinkler",
-      "detail": "Training finishes around 12:30 AM; then it records more Pine Tree and Bamboo on the test alt, with a backup cut by 7:30 AM and the final video due 8 AM Friday."
+      "task": "Training the newer model offline while the game tests run",
+      "detail": "A backup video is already saved; the newer model now spots Token Link, and it gets the game back at 5:30 AM to record the final video, due 8 AM Friday."
     },
     {
       "who": "Code fixes (laptop)",
@@ -449,5 +449,5 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
     }
   ],
-  "summary": "At 6:40 PM PT, a regression on the newest code walked home on 15 of 16 target fields (Pine Tree missed), with Sunflower 3 of 3 and Mountain Top 2 of 3 full loops. A Pine Tree fix (screen checks were running in the middle of a walk) is ready and waits for a live test after the AI video finishes with the game overnight. Coconut stays WIP."
+  "summary": "At 6:40 PM PT, a regression on the newest code walked home on 15 of 16 target fields (Pine Tree missed), with Sunflower 3 of 3 and Mountain Top 2 of 3 full loops. A Pine Tree fix (screen checks were running in the middle of a walk) is ready and is being tested live now (Pine Tree 3 times, then all fields and Coconut) while the AI video trains offline until 5:30 AM. Coconut stays WIP."
 }

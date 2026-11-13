@@ -218,6 +218,11 @@
   ],
   "done": [
     {
+      "when": "2026-11-13T01:45:00-08:00",
+      "title": "More tester app polish merged into main: the menu now refuses hotkeys that clash and warns about Roblox's own keys (#120), a plain 'why did it stop' line on Status > Live (#121), and a one-time What's new card after updates (#122).",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/122"
+    },
+    {
       "when": "2026-11-13T01:10:00-08:00",
       "title": "Tester app v0.1.2 merged into main: release notes and a full test of the Report a problem zip (#115), last soak run summary in Status > History (#118), and settings import now asks first and keeps an undo backup (#119).",
       "url": "https://github.com/levihgibbons/apex-macro/pull/119"

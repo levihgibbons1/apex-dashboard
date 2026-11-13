@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T06:00:00-08:00",
+  "last_updated": "2026-11-13T08:05:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,23 +9,13 @@
   "now": [
     {
       "who": "AI video (laptop)",
-      "task": "Final video saved; optional longer Pine Tree take to catch Token Link",
-      "detail": "apex_ai_gathering_final_v3.mp4 (1:53, Pine Tree then Bamboo on the alt) is the delivery cut. One optional retake runs until 7:15 AM at the latest to try to show Token Link; if it isn't clean, v3 stays."
+      "task": "Collecting token frames so every token type is detected before any new video",
+      "detail": "No AI Gathering video gets recorded until every token type is detected properly in live tests. The game is with the vision worker for a 60 to 90 minute token session from 7:59 AM."
     },
     {
       "who": "Game tests (laptop)",
-      "task": "After 7:15 AM: 16-field check with the hive-claim and sprinkler fixes, then Pine Tree with 3-minute gathers",
-      "detail": "Last night: a 113-minute rotation run (Sunflower, Clover, Pine Tree) walked home 20 of 21 times with no deaths or rejoins, and the hive-claim fix (#51) had zero hive-camera misses at night."
-    },
-    {
-      "who": "Code (laptop)",
-      "task": "Fixing merge conflicts on the rotation, speed and recovery checks (#117, #123, #124), then #51 with #98",
-      "detail": "#51 and #98 each pass the tests alone but clash on one test together."
-    },
-    {
-      "who": "App (laptop)",
-      "task": "Fixing a conflict on the disk-space check (#133), then more menu work",
-      "detail": ""
+      "task": "After the token session: Pine Tree x3 and a short multi-field check on the new main, then convert (#116), popups (#130) and a 1-hour soak",
+      "detail": "This morning on main with #51 and #98: 15/16 fields walked home; Stump's miss didn't repeat (2/2 on re-run)."
     }
   ],
   "todo": [
@@ -174,12 +164,6 @@
       "url": "https://github.com/levihgibbons/apex-macro/pull/62",
       "title": "Movespeed: detect Hasty Guards / Gifted Hasty from in-game speed, like Natro",
       "detail": "Draft."
-    },
-    {
-      "pr": 51,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/51",
-      "title": "Hive claim and hive camera 1:1 with Natro",
-      "detail": "Draft. Live test at night: claimed hive 1, 5/5 hard fields walked home, 0 hive-camera misses in 6 resets. Clashes with #98 on one test; being fixed."
     },
     {
       "pr": 54,
@@ -496,6 +480,11 @@
       "when": "2026-11-11T17:47:01-08:00",
       "title": "Natro gather patterns, convert, and menu wiring (#4–#9)",
       "url": "https://github.com/levihgibbons/apex-macro/pull/4"
+    },
+    {
+      "when": "2026-11-13T08:04:00-08:00",
+      "title": "Hive claim and hive camera 1:1 with Natro (#51) and Natro 1:1 sprinklers (#98) merged into main. Live test on main with both: 15 of 16 fields walked home (the one miss, Stump, then went 2/2), and Pine Tree walked home 2/2 with 3-minute gathers.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/51"
     }
   ],
   "summary": "All 17 path-out routes pass. Tonight (9:35 PM PT, hive 3, 60-second gathers, one loop per field) the routes branch with the Pine Tree fix (#103) walked home on all 16 target fields, and Pine Tree walked home 3 of 3 with 3-minute gathers. The routes are now merged into main (PR #2). Coconut stays WIP (the crab kills the alt every time; Natro has no crab avoidance either). Next: pattern, convert and rotation checks in game, after the AI video ships if the game isn't free sooner."

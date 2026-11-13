@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T13:16:00-08:00",
+  "last_updated": "2026-11-13T15:13:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,23 +9,23 @@
   "now": [
     {
       "who": "AI video (laptop)",
-      "task": "Naming the missing token types from the new main-account footage to build training set v7",
-      "detail": "Model v9 still misses several token types; no AI Gathering video gets recorded until every token type is detected in live tests."
+      "task": "Building training set v9 with Token Link labelled (named from the coin sheet), then checking each token type when a new model lands",
+      "detail": "Token Link was found in new main-account footage (5 confirmed pickups); bombs, Inspire and Gumdrops still have no labels. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
     },
     {
       "who": "AI video (main PC)",
-      "task": "Waiting for training set v7, then retraining the token detector on the main PC GPU",
-      "detail": "The four new Pine Tree and Bamboo training takes from the main account are done and uploaded."
+      "task": "Finishing model v10 training on the GPU, then recording new Pine Tree and Bamboo footage (take set v4) for the missing token types",
+      "detail": "Model v10 was on round 21 of 25 (score about 0.61) but was trained before Token Link had labels; Roblox is idling in Bamboo. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
     },
     {
       "who": "Game tests (laptop)",
-      "task": "Proof runs of the Pine Tree fix (#143) on the routes branch: Pine Tree, Sunflower and Dandelion 5 times each, then the new movement core leg test",
-      "detail": "The Pine Tree fix walked home 3 of 3 in its first A/B test and is merged into the routes branch."
+      "task": "Re-running the new movement core leg test before draft PR #145 can be marked ready",
+      "detail": "The Pine Tree fix (#143) proof runs are done: Pine 4/5, Sunflower 5/5, Dandelion 5/5; the Pine misses came from laptop lag. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Running the full test suite on paths rebuild phase 1 (draft PR #145, new movement core)",
-      "detail": "61 movement tests pass; one menu test hung and is being rerun before the draft is marked ready."
+      "task": "Fixing speed checks during route steps (no checks near the end of a step) plus a Pine Tree x5 proof under load",
+      "detail": "This targets the lag-caused Pine Tree misses found in the #143 proof runs. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
     },
     {
       "who": "App / menu (laptop)",

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T12:55:00-08:00",
+  "last_updated": "2026-11-13T13:16:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,23 +9,23 @@
   "now": [
     {
       "who": "AI video (laptop)",
-      "task": "Training the token detector on new main-account footage so it spots every token type",
-      "detail": "Model v9 still misses Token Link, bombs, Haste, Inspire, Gumdrops and Bubble; no AI Gathering video gets recorded until every token type is detected in live tests."
+      "task": "Naming the missing token types from the new main-account footage to build training set v7",
+      "detail": "Model v9 still misses several token types; no AI Gathering video gets recorded until every token type is detected in live tests."
     },
     {
       "who": "AI video (main PC)",
-      "task": "Recording about 4 raw 6-8 minute Pine Tree and Bamboo takes on the main account for training",
-      "detail": "These are training clips only, not the showcase video."
+      "task": "Waiting for training set v7, then retraining the token detector on the main PC GPU",
+      "detail": "The four new Pine Tree and Bamboo training takes from the main account are done and uploaded."
     },
     {
       "who": "Game tests (laptop)",
-      "task": "Waiting for the main-to-routes sync; then Pine Tree x3 on the routes branch (its Pine walk home went 0/2 while main went 3/3) and live convert/rotation checks",
-      "detail": "Today on main (2d1ec09, daytime, hive 3/4): 16/16 fields walked home, Pine Tree 3/3 with 3-minute gathers, 1-hour crash-and-rejoin soak passed."
+      "task": "Proof runs of the Pine Tree fix (#143) on the routes branch: Pine Tree, Sunflower and Dandelion 5 times each, then the new movement core leg test",
+      "detail": "The Pine Tree fix walked home 3 of 3 in its first A/B test and is merged into the routes branch."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Updating the main-to-paths-rebuild sync change onto the new main",
-      "detail": "Brings the hive claim and sprinkler fixes into the paths rebuild branch."
+      "task": "Running the full test suite on paths rebuild phase 1 (draft PR #145, new movement core)",
+      "detail": "61 movement tests pass; one menu test hung and is being rerun before the draft is marked ready."
     },
     {
       "who": "App / menu (laptop)",

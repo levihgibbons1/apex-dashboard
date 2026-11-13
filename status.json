@@ -14,8 +14,8 @@
     },
     {
       "who": "AI video (laptop)",
-      "task": "Retraining the token model at higher detail and recording Pine Tree then Bamboo",
-      "detail": "First live Pine Tree run worked with token boxes and chasing; small tokens were missed at the showcase zoom, so a sharper model is training, with the video due by 8 AM Friday Nov 13 (backup cut by 7:30)."
+      "task": "Editing the first cut of the AI Gathering video from Pine Tree and Bamboo footage",
+      "detail": "The sharper model now boxes six token types live, about 100 seconds of Pine Tree and 6 minutes of Bamboo are recorded, and a first cut is due tonight as the backup for the 8 AM Friday deadline."
     },
     {
       "who": "Code fixes (laptop)",

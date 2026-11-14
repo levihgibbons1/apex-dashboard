@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-14T02:08:00-08:00",
+  "last_updated": "2026-11-14T03:55:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -19,12 +19,12 @@
     },
     {
       "who": "Game tests (laptop)",
-      "task": "Gather-pattern soaks for PR #157 (Pine Tree, Sunflower, Fork, SuperCat; about 80 minutes), then Blue Flower and Bamboo walk-home retest once the blue-cannon home fix is pushed",
-      "detail": "Rebuild movement in game tonight (hive 2, 60-second gathers): Pine Tree, Sunflower and Rose full loops 9/9; one loop on 14 fields 14/14. Blue Flower and Bamboo reach their fields but can't walk home yet (their only way home is the blue cannon, which the gather loop skipped; fix on rebuild/home-cannon-fallback). Coconut: the crab killed the alt (WIP)."
+      "task": "30-minute field rotation on the rebuild branch now, then a STOP/F3 hotkey re-test and 30-minute convert soaks on Sunflower and Pine Tree (PR #159)",
+      "detail": "Rebuild branch (hive 2): Blue Flower and Bamboo now walk home 3/3 each with the blue-cannon fix (#158), so every testable field walks home on the rebuild engine. Convert + hive return on Pine Tree passed 2/2 (balloon convert 52 s). Coconut still blocked by the crab."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Next: any walk-home fixes from tonight's in-game test, then gather patterns, convert and rotation (rebuild branch)",
+      "task": "Convert/hive return (PR #159), then rotation; checking a bug where the STOP signal was ignored mid-pattern on the rebuild engine",
       "detail": "Merged into the rebuild branch tonight: walk-home speed fix (PR #153, re-checks speed during long walks so a buff running out no longer leaves Pine Tree short), legs for the other 13 fields (PR #152) and the owned-hive claim fix (PR #156). Unknown settings keys no longer reset settings to defaults (PR #154 rebuild, PR #155 tester build)."
     },
     {
@@ -73,7 +73,7 @@
       "path_out": "3/3",
       "walk_home": "3/3",
       "loop": "3/3",
-      "note": ""
+      "note": "Rebuild branch (Nov 14, 2:55 AM): 3/3 full loops with the blue-cannon route home (#158); walks home 28-39 s."
     },
     {
       "field": "Clover",
@@ -103,7 +103,7 @@
       "path_out": "3/3",
       "walk_home": "3/3",
       "loop": "3/3",
-      "note": "Soak: two 10-minute gathers fine, but both walks home after long gathers fell back to a reset. Being checked."
+      "note": "Rebuild branch (Nov 14, 2:55 AM): 3/3 full loops with the blue-cannon route home (#158). Walks home after long gathers still to re-check."
     },
     {
       "field": "Pineapple",
@@ -175,12 +175,6 @@
   ],
   "building": [
     {
-      "pr": 158,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/158",
-      "title": "Blue Flower and Bamboo walk home: use the blue-cannon route home like Natro",
-      "detail": "Draft. Tests pass. Being rebased on #157, then 3 in-game loops each on the laptop."
-    },
-    {
       "pr": 62,
       "url": "https://github.com/levihgibbons/apex-macro/pull/62",
       "title": "Movespeed: detect Hasty Guards / Gifted Hasty from in-game speed, like Natro",
@@ -222,6 +216,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-14T03:00:00-08:00",
+      "title": "Blue Flower and Bamboo walk home fixed (PR #158, merged into rebuild): 3/3 full loops each in game. Convert + hive return on Pine Tree passed 2/2.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/158"
+    },
     {
       "when": "2026-11-14T02:05:00-08:00",
       "title": "Natro gather patterns 1:1 merged into rebuild (PR #157): every pattern's key timing checked against Natro's own files. In-game soaks on Pine Tree, Sunflower, Fork and SuperCat are running on the laptop now.",

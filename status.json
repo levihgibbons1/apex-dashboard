@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-14T06:00:00-08:00",
+  "last_updated": "2026-11-14T06:10:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -19,12 +19,12 @@
     },
     {
       "who": "Game tests (laptop)",
-      "task": "30-minute field rotation on the rebuild branch now, then a STOP/F3 hotkey re-test and 30-minute convert soaks on Sunflower and Pine Tree (PR #159)",
-      "detail": "Rebuild branch (hive 2): Blue Flower and Bamboo now walk home 3/3 each with the blue-cannon fix (#158), so every testable field walks home on the rebuild engine. Convert + hive return on Pine Tree passed 2/2 (balloon convert 52 s). Coconut still blocked by the crab."
+      "task": "30-minute rotation soak on the rebuild branch with PR #160 (Pine Tree, Rose, Sunflower at 120 s each, then stop and restart to check it resumes on Rose)",
+      "detail": "Rebuild branch (hive 2): Blue Flower and Bamboo now walk home 3/3 each with the blue-cannon fix (#158), so every testable field walks home on the rebuild engine. Convert + hive return on Pine Tree passed 2/2 (balloon convert 52 s). Coconut still blocked by the crab. STOP-file and F3 hotkey re-test passed: both stopped the soak in about 2 minutes with every key released."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Field rotation on the rebuild branch (PR #160, Natro 1:1): updating it to the latest rebuild and getting tests green, then handing it to the game tests for a 30-minute soak",
+      "task": "Next on the rebuild branch: in-game popup handling, then recovery after death or getting stuck, then live speed and jump buffs, then tester build packaging",
       "detail": "Merged into the rebuild branch tonight: walk-home speed fix (PR #153, re-checks speed during long walks so a buff running out no longer leaves Pine Tree short), legs for the other 13 fields (PR #152) and the owned-hive claim fix (PR #156). Unknown settings keys no longer reset settings to defaults (PR #154 rebuild, PR #155 tester build)."
     },
     {
@@ -216,6 +216,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-14T06:08:00-08:00",
+      "title": "Field rotation merged into rebuild (PR #160, Natro 1:1): rotates fields on a timer and resumes on the right field after a stop. Tests passed (4828); 30-minute in-game soak running on the laptop.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/160"
+    },
     {
       "when": "2026-11-14T05:55:00-08:00",
       "title": "Settings fix merged (PR #161 rebuild, PR #162 tester build): a settings file missing a section (like rotation) now keeps every other value instead of resetting to classic movement, movespeed 28 and hive 1. This had voided one rebuild test.",

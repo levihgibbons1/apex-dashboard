@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-14T00:58:00-08:00",
+  "last_updated": "2026-11-14T01:58:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -19,8 +19,8 @@
     },
     {
       "who": "Game tests (laptop)",
-      "task": "In-game test on the merged rebuild: Pine Tree, Sunflower and Rose 3 loops, then all 17 fields",
-      "detail": "Rebuild movement (PR #149) in game, 3 loops per field: every trip out reached its field; walked home Dandelion 3/3, Sunflower 2/3, Rose 2/3, Pine Tree 1/3 (the reset fallback worked each time)."
+      "task": "Gather-pattern soaks for PR #157 (Pine Tree, Sunflower, Fork, SuperCat; about 80 minutes), then Blue Flower and Bamboo walk-home retest once the blue-cannon home fix is pushed",
+      "detail": "Rebuild movement in game tonight (hive 2, 60-second gathers): Pine Tree, Sunflower and Rose full loops 9/9; one loop on 14 fields 14/14. Blue Flower and Bamboo reach their fields but can't walk home yet (their only way home is the blue cannon, which the gather loop skipped; fix on rebuild/home-cannon-fallback). Coconut: the crab killed the alt (WIP)."
     },
     {
       "who": "Code fixes (laptop)",
@@ -175,30 +175,6 @@
   ],
   "building": [
     {
-      "pr": 152,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/152",
-      "title": "Walk legs for the other 13 fields (all 17 on the rebuild movement)",
-      "detail": "Draft. In-game test of all 17 fields queued tonight."
-    },
-    {
-      "pr": 153,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/153",
-      "title": "Fix walk-home misses when a speed buff (Bear, Haste) changes mid-walk",
-      "detail": "Draft. Retest on Pine Tree, Sunflower, Rose queued tonight."
-    },
-    {
-      "pr": 156,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/156",
-      "title": "Startup hive claim: skip it when the alt already has a hive",
-      "detail": "Draft. Saves about 2.7 minutes at start."
-    },
-    {
-      "pr": 154,
-      "url": "https://github.com/levihgibbons/apex-macro/pull/154",
-      "title": "Settings files with unknown keys load cleanly",
-      "detail": "Draft."
-    },
-    {
       "pr": 62,
       "url": "https://github.com/levihgibbons/apex-macro/pull/62",
       "title": "Movespeed: detect Hasty Guards / Gifted Hasty from in-game speed, like Natro",
@@ -240,6 +216,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-14T01:42:00-08:00",
+      "title": "Rebuild movement in-game test passed: Pine Tree, Sunflower and Rose full loops 9/9 after the walk-home speed fix, and 14 of 17 fields did a full loop. Blue Flower and Bamboo need the blue-cannon home fix; Coconut still blocked by the crab.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/150"
+    },
     {
       "title": "Walk-home speed fix merged into rebuild (PR #153)",
       "when": "Nov 14, 12:55 AM",

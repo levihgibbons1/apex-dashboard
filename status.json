@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T18:25:00-08:00",
+  "last_updated": "2026-11-13T19:15:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,23 +9,23 @@
   "now": [
     {
       "who": "AI video (laptop)",
-      "task": "Waiting for new footage (take set v4) to label bombs, Inspire and Gumdrops, and for models v12/v13 to check each token type",
-      "detail": "Training set v10 is ready with real Token Link (102) and Focus (866) examples, and the clean overlay change (#147, no balloon or ground-mark boxes) was merged."
+      "task": "Hand-checking model v13 labels on about 400 Pine Tree and 200 Bamboo frames from footage v4 and v5, relabeling Melody, to build training set v12",
+      "detail": "Model v11 caught under 85% of every token type (Honey 74%, Token Link 55%, Focus 50%), and no bombs or Inspire were found in v4, so more labeled examples are needed before any video."
     },
     {
       "who": "AI video (main PC)",
-      "task": "Training model v12, then fine-tuning it into model v13 on training set v10",
-      "detail": "Model v10 caught under 85% of every token type, so newer models with real Token Link and Focus examples are being trained; new Pine Tree and Bamboo footage (v4) is also due."
+      "task": "Waiting for training set v12 to fine-tune model v13; the character is parked in Pine Tree with anti-idle until 8 AM",
+      "detail": "Model v13 finished training (overall score 0.646 vs 0.585 for v11), and 15 minutes of new Pine Tree footage (v5) was recorded and uploaded."
     },
     {
       "who": "Game tests (laptop)",
-      "task": "Waiting to re-run the movement leg test after the code fixes land",
-      "detail": "The last leg test counted distance correctly, but the walk back to the hive overshot by 13-35%; 6 of 7 runs still ended on the hive pad."
+      "task": "Running the 16-field route test, then the 60-minute soak for PR #16",
+      "detail": "The movement core (PR #145) passed 7 of 7 on the hive pad and was merged into main tonight."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Fixing four leg-test problems: hive check after the walk, releasing the key on time, accepting the Collect Pollen banner, and claiming a hive",
-      "detail": "These fixes target the return-walk overshoot found in the latest leg test (PR #145 stays a draft until it passes)."
+      "task": "Rebasing PR #146 and the phase 4 work onto main, and writing cannon legs by hand in studs",
+      "detail": "Natro is used only as a reference; the cannon legs come with a test and a separate steering change for review."
     },
     {
       "who": "App / menu (laptop)",

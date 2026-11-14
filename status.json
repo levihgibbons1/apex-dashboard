@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-14T06:10:00-08:00",
+  "last_updated": "2026-11-14T09:16:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -19,12 +19,12 @@
     },
     {
       "who": "Game tests (laptop)",
-      "task": "30-minute rotation soak on the rebuild branch with PR #160 (Pine Tree, Rose, Sunflower at 120 s each, then stop and restart to check it resumes on Rose)",
+      "task": "Reporting the 30-minute rotation soak on the rebuild branch (PR #160), then testing popup handling (PR #163) in game",
       "detail": "Rebuild branch (hive 2): Blue Flower and Bamboo now walk home 3/3 each with the blue-cannon fix (#158), so every testable field walks home on the rebuild engine. Convert + hive return on Pine Tree passed 2/2 (balloon convert 52 s). Coconut still blocked by the crab. STOP-file and F3 hotkey re-test passed: both stopped the soak in about 2 minutes with every key released."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Next on the rebuild branch: in-game popup handling, then recovery after death or getting stuck, then live speed and jump buffs, then tester build packaging",
+      "task": "Popup and focus-guard handling on the rebuild branch (draft PR #163), then recovery after death or getting stuck, then live speed and jump buffs, then tester build packaging",
       "detail": "Merged into the rebuild branch tonight: walk-home speed fix (PR #153, re-checks speed during long walks so a buff running out no longer leaves Pine Tree short), legs for the other 13 fields (PR #152) and the owned-hive claim fix (PR #156). Unknown settings keys no longer reset settings to defaults (PR #154 rebuild, PR #155 tester build)."
     },
     {

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-14T01:58:00-08:00",
+  "last_updated": "2026-11-14T02:08:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -175,6 +175,12 @@
   ],
   "building": [
     {
+      "pr": 158,
+      "url": "https://github.com/levihgibbons/apex-macro/pull/158",
+      "title": "Blue Flower and Bamboo walk home: use the blue-cannon route home like Natro",
+      "detail": "Draft. Tests pass. Being rebased on #157, then 3 in-game loops each on the laptop."
+    },
+    {
       "pr": 62,
       "url": "https://github.com/levihgibbons/apex-macro/pull/62",
       "title": "Movespeed: detect Hasty Guards / Gifted Hasty from in-game speed, like Natro",
@@ -216,6 +222,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-14T02:05:00-08:00",
+      "title": "Natro gather patterns 1:1 merged into rebuild (PR #157): every pattern's key timing checked against Natro's own files. In-game soaks on Pine Tree, Sunflower, Fork and SuperCat are running on the laptop now.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/157"
+    },
     {
       "when": "2026-11-14T01:42:00-08:00",
       "title": "Rebuild movement in-game test passed: Pine Tree, Sunflower and Rose full loops 9/9 after the walk-home speed fix, and 14 of 17 fields did a full loop. Blue Flower and Bamboo need the blue-cannon home fix; Coconut still blocked by the crab.",

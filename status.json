@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T19:15:00-08:00",
+  "last_updated": "2026-11-13T20:05:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -24,8 +24,8 @@
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Rebasing PR #146 and the phase 4 work onto main, and writing cannon legs by hand in studs",
-      "detail": "Natro is used only as a reference; the cannon legs come with a test and a separate steering change for review."
+      "task": "Starting rebuild phase 5 (cannon landing) at 9 PM, then hand-written legs for the remaining fields",
+      "detail": "Phase 4 (gather loop on the new legs, with cannon steering) merged into the rebuild branch (PR #149); the laptop will test it in game."
     },
     {
       "who": "App / menu (laptop)",
@@ -216,6 +216,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-13T20:00:00-08:00",
+      "title": "Rebuild phase 4 merged into the rebuild branch: the gather loop now runs the new hand-written legs (in studs), plus cannon steering. Full test suite passed. In-game test on the laptop is next.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/149"
+    },
     {
       "when": "2026-11-13T18:25:00-08:00",
       "title": "Rebuild phase 1 merged into main: new movement core that measures walks in studs at the live speed. Laptop in-game test: 7/7 walks ended back on the hive pad, timing within 0.5%.",

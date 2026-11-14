@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T17:17:00-08:00",
+  "last_updated": "2026-11-13T18:25:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -216,6 +216,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-13T18:25:00-08:00",
+      "title": "Rebuild phase 1 merged into main: new movement core that measures walks in studs at the live speed. Laptop in-game test: 7/7 walks ended back on the hive pad, timing within 0.5%.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/145"
+    },
     {
       "when": "2026-11-13T05:24:00-08:00",
       "title": "AI Gathering video saved: apex_ai_gathering_final_v3.mp4 (1:53, alt, Pine Tree then Bamboo, click held, no jumping, closer camera, bold labels). Boxes Focus, Blue Boost, Honey, Melody, Surprise Party, Treat, Bubble, Balloon and Sprinkler; Token Link, bombs, Haste, Inspire and Gumdrops didn't show up in these takes.",

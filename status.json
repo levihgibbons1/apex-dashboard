@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-14T03:55:00-08:00",
+  "last_updated": "2026-11-14T06:00:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -24,7 +24,7 @@
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Convert/hive return (PR #159), then rotation; checking a bug where the STOP signal was ignored mid-pattern on the rebuild engine",
+      "task": "Field rotation on the rebuild branch (PR #160, Natro 1:1): updating it to the latest rebuild and getting tests green, then handing it to the game tests for a 30-minute soak",
       "detail": "Merged into the rebuild branch tonight: walk-home speed fix (PR #153, re-checks speed during long walks so a buff running out no longer leaves Pine Tree short), legs for the other 13 fields (PR #152) and the owned-hive claim fix (PR #156). Unknown settings keys no longer reset settings to defaults (PR #154 rebuild, PR #155 tester build)."
     },
     {
@@ -216,6 +216,16 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-14T05:55:00-08:00",
+      "title": "Settings fix merged (PR #161 rebuild, PR #162 tester build): a settings file missing a section (like rotation) now keeps every other value instead of resetting to classic movement, movespeed 28 and hive 1. This had voided one rebuild test.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/161"
+    },
+    {
+      "when": "2026-11-14T03:55:00-08:00",
+      "title": "Convert + hive return merged into rebuild (PR #159): walk home hands over to Natro's hive-slot convert step.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/159"
+    },
     {
       "when": "2026-11-14T03:00:00-08:00",
       "title": "Blue Flower and Bamboo walk home fixed (PR #158, merged into rebuild): 3/3 full loops each in game. Convert + hive return on Pine Tree passed 2/2.",

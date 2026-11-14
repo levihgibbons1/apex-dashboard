@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T20:05:00-08:00",
+  "last_updated": "2026-11-13T21:55:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -14,7 +14,7 @@
     },
     {
       "who": "AI video (main PC)",
-      "task": "Waiting for training set v12 to fine-tune model v13; the character is parked in Pine Tree with anti-idle until 8 AM",
+      "task": "Waiting for training set v12 to fine-tune a new model (v14); retrain starts automatically when v12 is posted",
       "detail": "Model v13 finished training (overall score 0.646 vs 0.585 for v11), and 15 minutes of new Pine Tree footage (v5) was recorded and uploaded."
     },
     {
@@ -24,8 +24,8 @@
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Starting rebuild phase 5 (cannon landing) at 9 PM, then hand-written legs for the remaining fields",
-      "detail": "Phase 4 (gather loop on the new legs, with cannon steering) merged into the rebuild branch (PR #149); the laptop will test it in game."
+      "task": "Next: hand-written legs for the remaining fields (rebuild branch)",
+      "detail": "Phase 5 part 1 (all 12 cannon legs, a landing measurement tool, and a flaky app test fixed) merged into the rebuild branch tonight (PR #151)."
     },
     {
       "who": "App / menu (laptop)",
@@ -216,6 +216,11 @@
     }
   ],
   "done": [
+    {
+      "when": "2026-11-13T21:52:00-08:00",
+      "title": "Rebuild phase 5 (part 1) merged into the rebuild branch: all 12 cannon legs, a tool to measure cannon landings, and a flaky app test fixed. Full test suite passed.",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/151"
+    },
     {
       "when": "2026-11-13T20:00:00-08:00",
       "title": "Rebuild phase 4 merged into the rebuild branch: the gather loop now runs the new hand-written legs (in studs), plus cannon steering. Full test suite passed. In-game test on the laptop is next.",

@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T15:13:00-08:00",
+  "last_updated": "2026-11-13T17:17:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -9,23 +9,23 @@
   "now": [
     {
       "who": "AI video (laptop)",
-      "task": "Building training set v9 with Token Link labelled (named from the coin sheet), then checking each token type when a new model lands",
-      "detail": "Token Link was found in new main-account footage (5 confirmed pickups); bombs, Inspire and Gumdrops still have no labels. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
+      "task": "Waiting for new footage (take set v4) to label bombs, Inspire and Gumdrops, and for models v12/v13 to check each token type",
+      "detail": "Training set v10 is ready with real Token Link (102) and Focus (866) examples, and the clean overlay change (#147, no balloon or ground-mark boxes) was merged."
     },
     {
       "who": "AI video (main PC)",
-      "task": "Finishing model v10 training on the GPU, then recording new Pine Tree and Bamboo footage (take set v4) for the missing token types",
-      "detail": "Model v10 was on round 21 of 25 (score about 0.61) but was trained before Token Link had labels; Roblox is idling in Bamboo. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
+      "task": "Training model v12, then fine-tuning it into model v13 on training set v10",
+      "detail": "Model v10 caught under 85% of every token type, so newer models with real Token Link and Focus examples are being trained; new Pine Tree and Bamboo footage (v4) is also due."
     },
     {
       "who": "Game tests (laptop)",
-      "task": "Re-running the new movement core leg test before draft PR #145 can be marked ready",
-      "detail": "The Pine Tree fix (#143) proof runs are done: Pine 4/5, Sunflower 5/5, Dandelion 5/5; the Pine misses came from laptop lag. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
+      "task": "Waiting to re-run the movement leg test after the code fixes land",
+      "detail": "The last leg test counted distance correctly, but the walk back to the hive overshot by 13-35%; 6 of 7 runs still ended on the hive pad."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Fixing speed checks during route steps (no checks near the end of a step) plus a Pine Tree x5 proof under load",
-      "detail": "This targets the lag-caused Pine Tree misses found in the #143 proof runs. Paused until about 4:10 PM PT, when the shared Claude usage limit resets."
+      "task": "Fixing four leg-test problems: hive check after the walk, releasing the key on time, accepting the Collect Pollen banner, and claiming a hive",
+      "detail": "These fixes target the return-walk overshoot found in the latest leg test (PR #145 stays a draft until it passes)."
     },
     {
       "who": "App / menu (laptop)",

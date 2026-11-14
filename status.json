@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-13T23:55:00-08:00",
+  "last_updated": "2026-11-14T00:58:00-08:00",
   "goal": {
     "title": "All 17 fields: walk to field + gather + walk home, Natro 1:1",
     "target": "By morning Nov 12",
@@ -19,13 +19,13 @@
     },
     {
       "who": "Game tests (laptop)",
-      "task": "Paused until the next usage reset; next: re-test Pine Tree on the rebuild movement, then pattern, convert and rotation checks",
+      "task": "In-game test on the merged rebuild: Pine Tree, Sunflower and Rose 3 loops, then all 17 fields",
       "detail": "Rebuild movement (PR #149) in game, 3 loops per field: every trip out reached its field; walked home Dandelion 3/3, Sunflower 2/3, Rose 2/3, Pine Tree 1/3 (the reset fallback worked each time)."
     },
     {
       "who": "Code fixes (laptop)",
-      "task": "Next: hand-written legs for the remaining fields (rebuild branch)",
-      "detail": "Phase 5 part 1 (all 12 cannon legs, a landing measurement tool, and a flaky app test fixed) merged into the rebuild branch tonight (PR #151). Also queued: fix the startup hive claim when the alt already owns a hive, settings files with unknown keys, and the rebuild walk-home misses."
+      "task": "Next: any walk-home fixes from tonight's in-game test, then gather patterns, convert and rotation (rebuild branch)",
+      "detail": "Merged into the rebuild branch tonight: walk-home speed fix (PR #153, re-checks speed during long walks so a buff running out no longer leaves Pine Tree short), legs for the other 13 fields (PR #152) and the owned-hive claim fix (PR #156). Unknown settings keys no longer reset settings to defaults (PR #154 rebuild, PR #155 tester build)."
     },
     {
       "who": "App / menu (laptop)",
@@ -240,6 +240,21 @@
     }
   ],
   "done": [
+    {
+      "title": "Walk-home speed fix merged into rebuild (PR #153)",
+      "when": "Nov 14, 12:55 AM",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/153"
+    },
+    {
+      "title": "Legs for the other 13 fields merged into rebuild (PR #152)",
+      "when": "Nov 14, 12:55 AM",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/152"
+    },
+    {
+      "title": "Owned-hive claim fix and settings unknown-keys fix merged (PRs #156, #154, #155)",
+      "when": "Nov 14, 12:55 AM",
+      "url": "https://github.com/levihgibbons/apex-macro/pull/156"
+    },
     {
       "when": "2026-11-13T22:05:00-08:00",
       "title": "First in-game test of the rebuild movement: all trips out reached their fields; walks home Dandelion 3/3, Sunflower 2/3, Rose 2/3, Pine Tree 1/3. Misses being looked into.",
